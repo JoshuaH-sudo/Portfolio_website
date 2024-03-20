@@ -33,7 +33,7 @@ export default function RootLayout({
                 <Link href="/projects">Projects</Link>
               </li>
               <li>
-                <Link href="/resume">Resume</Link>
+                <a href="/resume.pdf" target="_blank">Resume</a>
               </li>
             </ul>
           </nav>

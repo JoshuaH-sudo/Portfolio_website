@@ -9,11 +9,11 @@ export default function Home() {
     >
       <div className="flex flex-row gap-5">
         <Image
-          src="/images/profile.jpg"
+          src="/images/image_8.jpg"
           alt="Joshua Hoban"
           width={200}
           height={200}
-          className=" rounded-3xl"
+          className="rounded-3xl"
         />
         <section className="flex flex-col gap-1">
           <h4 className="text-sm font-bold">{`G'day my name is,`}</h4>
