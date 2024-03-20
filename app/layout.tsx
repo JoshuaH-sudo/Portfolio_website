@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="h-28">
+        <header className="h-20">
           <nav
             className="
             flex flex-row justify-center items-end h-full

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-br from-slate-300 to-slate-600 text-white
+      className="flex flex-col gap-10 items-center justify-between p-24 bg-gradient-to-br from-slate-300 to-slate-600 text-white
      "
     >
       <div className="flex flex-row gap-5">
