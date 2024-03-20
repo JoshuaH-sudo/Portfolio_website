@@ -18,14 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <nav>
-            <ul className="flex flex-row justify-center gap-5" >
+        <header className="h-28">
+          <nav
+            className="
+            flex flex-row justify-center items-end h-full
+            bg-slate-900 text-white text-lg font-bold
+          "
+          >
+            <ul className="flex flex-row justify-center gap-5">
               <li>
                 <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
               </li>
               <li>
                 <Link href="/projects">Projects</Link>
