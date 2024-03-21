@@ -18,14 +18,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="h-20">
+        <header className="relative h-20">
+          <Link href="/">
+            <h1 className="text-offBlack absolute -bottom-3 left-5 text-7xl font-extrabold italic">
+              JH
+            </h1>
+          </Link>
           <nav
             className="
-            bg-primaryLight text-offWhite flex h-full flex-row
-            items-end justify-center text-lg font-bold
+            text-offWhite flex h-full flex-row items-end
+            justify-center bg-primaryLight text-lg font-bold
           "
           >
-            <ul className="flex flex-row justify-center gap-5 text-offBlack">
+            <ul className="text-offBlack flex flex-row justify-center gap-5">
               <li>
                 <Link href="/">Home</Link>
               </li>
