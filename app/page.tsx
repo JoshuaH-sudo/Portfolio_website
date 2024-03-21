@@ -11,13 +11,13 @@ export default function Home() {
           height={200}
           className="rounded-3xl"
         />
-        <section className="flex flex-col gap-1">
+        <section className="flex flex-col gap-1 max-w-3xl">
           <h4 className="text-sm font-bold text-accent">{`G'day my name is,`}</h4>
-          <h1 className="text-8xl font-bold text-primary">Joshua Hoban</h1>
+          <h1 className="text-8xl font-bold text-primary">Joshua <span className="text-primaryDark">Hoban</span></h1>
           <h2 className="text-4xl font-bold text-highlight1">
             Experienced Full-Stack Web Developer
           </h2>
-          <p className="text-highlight2">
+          <p className="text-highlight2 max-w-xl">
             Aussie software developer based in Berlin, excelling in Frontend
             design and client satisfaction, while fostering lively work
             environments and expediting projects through efficient prototyping
