@@ -21,11 +21,11 @@ export default function RootLayout({
         <header className="h-20">
           <nav
             className="
-            flex flex-row justify-center items-end h-full
-            bg-slate-900 text-white text-lg font-bold
+            bg-primaryLight text-offWhite flex h-full flex-row
+            items-end justify-center text-lg font-bold
           "
           >
-            <ul className="flex flex-row justify-center gap-5">
+            <ul className="flex flex-row justify-center gap-5 text-offBlack">
               <li>
                 <Link href="/">Home</Link>
               </li>
@@ -33,7 +33,9 @@ export default function RootLayout({
                 <Link href="/projects">Projects</Link>
               </li>
               <li>
-                <a href="/resume.pdf" target="_blank">Resume</a>
+                <a href="/resume.pdf" target="_blank">
+                  Resume
+                </a>
               </li>
             </ul>
           </nav>

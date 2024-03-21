@@ -4,8 +4,8 @@ export default async function ProjectsPage() {
   const projects = await getRepositories();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-purple-500 to-purple-700 p-24">
-      <h1 className="text-6xl font-bold">Projects</h1>
+    <main className="bg-offBlack flex min-h-screen flex-col items-center justify-between p-24">
+      <h1 className="text-6xl font-bold text-offWhite">Projects</h1>
       <div className="grid grid-cols-3 gap-5">
         {projects.map((project) => (
           <a
@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
               backgroundImage: randomColor(),
             }}
             className={
-              "mb-4 transform rounded-md p-4 shadow-md transition-transform hover:scale-105"
+              "mb-4 transform rounded-md p-4 shadow-md transition-transform hover:scale-105 text-offBlack"
             }
           >
             <h2 className="line-clamp-1 overflow-hidden text-ellipsis text-2xl font-bold">
@@ -35,11 +35,11 @@ function randomColor() {
 
   // Set saturation and lightness values to ensure good contrast and visibility
   const saturation = 50 + Math.random() * 30; // 50-100%
-  const lightness = 30 + Math.random() * 20; // 40-60%
+  const lightness = 70 + Math.random() * 20; // 40-60%
 
   // Define starting and ending points for the gradient
   const startColor: string = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-  const endColor: string = `hsl(${(hue + 300) % 360}, ${saturation}%, ${lightness}%)`;
+  const endColor: string = `hsl(${(hue + Math.random() * 1000) % 360}, ${saturation}%, ${lightness}%)`;
 
   // Construct the linear gradient argument
   const linearGradient = `linear-gradient(to bottom right, ${startColor}, ${endColor})`;

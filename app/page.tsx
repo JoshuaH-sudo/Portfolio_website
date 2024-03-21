@@ -1,12 +1,8 @@
-import EmailIcon from "@/components/icons/email";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main
-      className="flex flex-col gap-10 items-center justify-between p-24 bg-gradient-to-br from-slate-300 to-slate-600 text-white
-     "
-    >
+    <main className="text-offWhite bg-offBlack flex h-screen flex-col items-center justify-between gap-10 p-24">
       <div className="flex flex-row gap-5">
         <Image
           src="/images/image_8.jpg"
@@ -16,12 +12,12 @@ export default function Home() {
           className="rounded-3xl"
         />
         <section className="flex flex-col gap-1">
-          <h4 className="text-sm font-bold">{`G'day my name is,`}</h4>
-          <h1 className="text-8xl font-bold">Joshua Hoban</h1>
-          <h2 className="text-4xl font-bold">
+          <h4 className="text-sm font-bold text-accent">{`G'day my name is,`}</h4>
+          <h1 className="text-8xl font-bold text-primary">Joshua Hoban</h1>
+          <h2 className="text-4xl font-bold text-highlight1">
             Experienced Full-Stack Web Developer
           </h2>
-          <p>
+          <p className="text-highlight2">
             Aussie software developer based in Berlin, excelling in Frontend
             design and client satisfaction, while fostering lively work
             environments and expediting projects through efficient prototyping
@@ -30,8 +26,8 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="flex flex-row w-full justify-between items-start">
-        <section className="flex flex-col gap-1">
+      <div className="flex w-full flex-row items-start justify-between">
+        <section className="text-offWhite flex flex-col gap-1">
           <h4 className="text-sm font-bold">Location: Berlin, Germany</h4>
           <h4 className="text-sm font-bold">{`Visa: (German) EU Blue Card`}</h4>
         </section>
