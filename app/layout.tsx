@@ -21,6 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const underline = <span className="bg-offBlack block h-0.5 max-w-0 transition-all duration-500 group-hover:max-w-full"></span>
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -32,21 +33,24 @@ export default function RootLayout({
           </Link>
           <nav
             className="
-            text-offWhite flex h-full flex-row items-end
+            text-offWhite flex h-full flex-row items-end pb-0.5
             justify-center bg-primaryLight text-lg font-bold
           "
           >
             <ul className="text-offBlack flex flex-row justify-center gap-5">
-              <li>
+              <li className="group transition duration-300">
                 <Link href="/">Home</Link>
+                {underline}
               </li>
-              <li>
+              <li className="group transition duration-300">
                 <Link href="/projects">Projects</Link>
+                {underline}
               </li>
-              <li>
+              <li className="group transition duration-300">
                 <a href="/resume.pdf" target="_blank">
                   Resume
                 </a>
+                {underline}
               </li>
             </ul>
           </nav>
