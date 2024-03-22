@@ -7,16 +7,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-offBlack flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-offWhite flex max-w-2xl flex-col gap-5">
-        <h1 className="text-offWhite text-5xl font-bold">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-offBlack p-10 sm:p-24">
+      <div className="flex max-w-2xl flex-col gap-5 text-offWhite">
+        <h1 className="text-2xl font-bold text-offWhite sm:text-5xl">
           Welcome to my corner of the web! I&apos;m{" "}
-          <span className="text-primaryLight">Joshua</span>{" "}<span className="text-secondaryLight">Hoban</span>
+          <span className="text-primaryLight">Joshua</span>{" "}
+          <span className="text-secondaryLight">Hoban</span>
         </h1>
         <p>
-          I am a 26-year-old full stack web developer hailing from the vibrant city of Canberra,
-          Australia. With a passion for crafting seamless digital experiences, I
-          specialize in{" "}
+          I am a 26-year-old full stack web developer hailing from the vibrant
+          city of Canberra, Australia. With a passion for crafting seamless
+          digital experiences, I specialize in{" "}
           <span className="text-highlight2">front-end development</span> while
           embracing the challenges of back-end intricacies.
         </p>
