@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",
-  description: "Fullstack web developer based in Berlin",
+  description:
+    "Fullstack web developer based in Berlin, Germany. Aussie software developer excelling in Frontend design and client satisfaction.",
   openGraph: {
     title: "Joshua Hoban",
     description: "Fullstack web developer based in Berlin",
