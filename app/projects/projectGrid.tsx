@@ -28,7 +28,7 @@ export default async function ProjectGrid() {
             backgroundImage: randomColor(),
           }}
           className={
-            " min-h-[100px] mb-4 transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
+            " mb-4 min-h-[100px] transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
           }
         >
           <h2 className="line-clamp-1 overflow-x-hidden text-ellipsis text-sm font-bold sm:text-2xl">
@@ -63,7 +63,7 @@ async function getRepositories() {
       .map((repo) => {
         return {
           id: repo.id,
-          name: repo.name,
+          name: cleanRepoName(repo.name),
           description: repo.description,
           href: repo.html_url,
         };
@@ -75,4 +75,14 @@ async function getRepositories() {
     errorLogger("Error fetching repositories from GitHub", error);
     return [];
   }
+}
+
+function cleanRepoName(name: string) {
+  const cleanName = name
+    // Replace hyphens and underscores with spaces
+    .replace(/[-_]/g, " ")
+    // Capitalize every word
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  return cleanName;
 }
