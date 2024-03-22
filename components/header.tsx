@@ -1,32 +1,45 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../tailwind.config";
+import { useEffect, useState } from "react";
+import { Config } from "tailwindcss";
 
 export default function Header() {
+  //Ignore the type error here as it does not know about the custom properties in the tailwind config
+  const twConfig = resolveConfig<Config & any>(tailwindConfig);
+  const colors = twConfig.theme.colors;
   const pathname = usePathname();
+  const [headerColor, setHeaderColor] = useState(colors.primaryLight);
 
   const underlineClass =
     "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
 
-  let headerColor = "primaryLight";
-  switch (pathname) {
-    case "/":
-      headerColor = "primaryLight";
-      break;
-    case "/about":
-      headerColor = "secondaryLight";
-      break;
-    case "/projects":
-      headerColor = "highlight1";
-      break;
-    default:
-      headerColor = "primaryLight";
-      break;
-  }
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setHeaderColor(colors.primaryLight);
+        break;
+      case "/about":
+        setHeaderColor(colors.secondaryLight);
+        break;
+      case "/projects":
+        setHeaderColor(colors.highlight1);
+        break;
+      default:
+        setHeaderColor(colors.primaryLight);
+        break;
+    }
+  }, [colors.highlight1, colors.primaryLight, colors.secondaryLight, pathname]);
 
   return (
     <header
-      className={`fixed top-0 h-14 w-full shadow-md bg-${headerColor} shadow-xl transition-colors duration-300 sm:h-20`}
+      style={{
+        //Need to set the color here as tailwind will not be able to resolve the color after state change
+        backgroundColor: headerColor,
+      }}
+      className={`fixed top-0 h-14 w-full shadow-xl transition-colors duration-300 sm:h-20`}
     >
       <Link href="/">
         <h1 className="absolute -bottom-0 left-1 text-4xl font-extrabold italic text-offBlack sm:-bottom-0 sm:left-5 sm:text-7xl">
