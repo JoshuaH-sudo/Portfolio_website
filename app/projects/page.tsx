@@ -1,11 +1,19 @@
 import { Octokit } from "octokit";
+import debug from "debug";
+const errorLogger = debug("error");
+const infoLogger = debug("info");
 
 export default async function ProjectsPage() {
   const projects = await getRepositories();
 
   return (
-    <main className="bg-offBlack flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-offBlack p-24">
       <h1 className="text-6xl font-bold text-offWhite">Projects</h1>
+      {projects.length === 0 && (
+        <p className="col-span-3 text-center text-offWhite">
+          <span className="text-highlight2">Error Occurred:</span> No projects found, Please try again later.
+        </p>
+      )}
       <div className="grid grid-cols-3 gap-5">
         {projects.map((project) => (
           <a
@@ -16,7 +24,7 @@ export default async function ProjectsPage() {
               backgroundImage: randomColor(),
             }}
             className={
-              "mb-4 transform rounded-md p-4 shadow-md transition-transform hover:scale-105 text-offBlack"
+              "mb-4 transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
             }
           >
             <h2 className="line-clamp-1 overflow-hidden text-ellipsis text-2xl font-bold">
@@ -52,22 +60,31 @@ const octokit = new Octokit({
 });
 
 async function getRepositories() {
-  const results = await octokit.request("GET /users/{username}/repos", {
-    username: "JoshuaH-sudo",
-    sort: "pushed",
-  });
-
-  const names = results.data
-    .filter((repo) => repo.stargazers_count && repo.stargazers_count > 0)
-    .sort((a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0))
-    .map((repo) => {
-      return {
-        id: repo.id,
-        name: repo.name,
-        description: repo.description,
-        href: repo.html_url,
-      };
+  infoLogger("Fetching repositories from GitHub");
+  try {
+    const results = await octokit.request("GET /users/{username}/repos", {
+      username: "JoshuaH-sudo",
+      sort: "pushed",
     });
+    infoLogger("GitHub API response", results);
 
-  return names;
+    infoLogger("Filtering and sorting repositories");
+    const names = results.data
+      .filter((repo) => repo.stargazers_count && repo.stargazers_count > 0)
+      .sort((a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0))
+      .map((repo) => {
+        return {
+          id: repo.id,
+          name: repo.name,
+          description: repo.description,
+          href: repo.html_url,
+        };
+      });
+
+    infoLogger("Filtered repositories", names);
+    return names;
+  } catch (error) {
+    errorLogger("Error fetching repositories from GitHub", error);
+    return [];
+  }
 }
