@@ -31,6 +31,16 @@ const config: Config = {
         highlight1: "#F9B5AC",
         highlight2: "#EE7674",
       },
+      keyframes: {
+        'fade-in-out': {
+          '0%': { opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        }
+      },
+      animation: {
+        'fade-in-out': 'fade-in-out 2s infinite',
+      },
     },
   },
   plugins: [],

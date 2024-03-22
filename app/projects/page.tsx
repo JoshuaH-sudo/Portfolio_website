@@ -16,7 +16,9 @@ export default function ProjectsPage() {
       <h1 className="text-6xl font-bold text-offWhite">Projects</h1>
       <Suspense
         fallback={
-          <p className="text-center text-highlight2">Fetching Projects...</p>
+          <h2 className="animate-fade-in-out text-center text-4xl font-bold text-highlight2 ">
+            Fetching Projects...
+          </h2>
         }
       >
         <ProjectGrid />
