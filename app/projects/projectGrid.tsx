@@ -18,7 +18,7 @@ export default async function ProjectGrid() {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid h-full grid-cols-2 gap-5 sm:grid-cols-3">
       {projects.map((project) => (
         <a
           key={project.id}
@@ -28,13 +28,15 @@ export default async function ProjectGrid() {
             backgroundImage: randomColor(),
           }}
           className={
-            "mb-4 transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
+            " min-h-[100px] mb-4 transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
           }
         >
-          <h2 className="line-clamp-1 overflow-hidden text-ellipsis text-2xl font-bold">
+          <h2 className="line-clamp-1 overflow-x-hidden text-ellipsis text-sm font-bold sm:text-2xl">
             {project.name}
           </h2>
-          <p className="line-clamp-3 text-ellipsis">{project.description}</p>
+          <p className="sm:text-md line-clamp-3 h-full text-ellipsis text-xs">
+            {project.description}
+          </p>
         </a>
       ))}
     </div>
