@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: "A list of my GitHub projects",
 };
 
+// Revalidate every week
+export const revalidate = 60 * 60 * 24 * 7;
+
 export default function ProjectsPage() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-5 bg-offBlack p-24">
