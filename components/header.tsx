@@ -23,13 +23,13 @@ export default function Header() {
         setHeaderColor(colors.secondaryLight);
         break;
       case "/projects":
-        setHeaderColor(colors.highlight1);
+        setHeaderColor(colors.highlight2);
         break;
       default:
         setHeaderColor(colors.primaryLight);
         break;
     }
-  }, [colors.highlight1, colors.primaryLight, colors.secondaryLight, pathname]);
+  }, [colors.highlight2, colors.primaryLight, colors.secondaryLight, pathname]);
 
   const underlineClass =
     "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
@@ -47,7 +47,7 @@ export default function Header() {
           JH
         </h1>
       </Link>
-      
+
       <nav className="flex h-full flex-row items-end justify-center pb-0.5 text-xs font-bold text-offWhite sm:text-lg">
         <ul className="flex flex-row justify-center gap-5 text-offBlack">
           <li className="group transition duration-300">
