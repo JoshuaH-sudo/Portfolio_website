@@ -9,11 +9,12 @@ export default function AboutPage() {
   return (
     <main className="bg-offBlack flex min-h-screen flex-col items-center justify-between p-24">
       <div className="text-offWhite flex max-w-2xl flex-col gap-5">
-        <h1 className="text-offWhite text-6xl font-bold">About</h1>
-        <p>
+        <h1 className="text-offWhite text-5xl font-bold">
           Welcome to my corner of the web! I&apos;m{" "}
-          <span className="text-accent">Joshua Hoban</span>, a 26-year-old full
-          stack web developer hailing from the vibrant city of Canberra,
+          <span className="text-primaryLight">Joshua</span>{" "}<span className="text-secondaryLight">Hoban</span>
+        </h1>
+        <p>
+          I am a 26-year-old full stack web developer hailing from the vibrant city of Canberra,
           Australia. With a passion for crafting seamless digital experiences, I
           specialize in{" "}
           <span className="text-highlight2">front-end development</span> while

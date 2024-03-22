@@ -12,7 +12,7 @@ export const revalidate = 60 * 60 * 24 * 7;
 
 export default function ProjectsPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-5 bg-offBlack p-24">
+    <main className="flex min-h-screen flex-col gap-5 bg-offBlack p-24">
       <h1 className="text-6xl font-bold text-offWhite">Projects</h1>
       <Suspense
         fallback={
