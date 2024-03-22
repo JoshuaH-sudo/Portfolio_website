@@ -1,7 +1,13 @@
 import { Octokit } from "octokit";
 import debug from "debug";
+import { Metadata } from "next";
 const errorLogger = debug("error");
 const infoLogger = debug("info");
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "A list of my GitHub projects",
+};
 
 export default async function ProjectsPage() {
   const projects = await getRepositories();
@@ -11,7 +17,8 @@ export default async function ProjectsPage() {
       <h1 className="text-6xl font-bold text-offWhite">Projects</h1>
       {projects.length === 0 && (
         <p className="col-span-3 text-center text-offWhite">
-          <span className="text-highlight2">Error Occurred:</span> No projects found, Please try again later.
+          <span className="text-highlight2">Error Occurred:</span> No projects
+          found, Please try again later.
         </p>
       )}
       <div className="grid grid-cols-3 gap-5">

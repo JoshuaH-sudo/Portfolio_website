@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn more about Joshua Hoban",
+};
+
 export default function AboutPage() {
   return (
     <main className="bg-offBlack flex min-h-screen flex-col items-center justify-between p-24">
