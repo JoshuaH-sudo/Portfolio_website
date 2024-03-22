@@ -26,12 +26,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="flex w-full flex-row items-start justify-between">
-        <section className="text-offWhite flex flex-col gap-1">
-          <h4 className="text-sm font-bold">Location: Berlin, Germany</h4>
-          <h4 className="text-sm font-bold">{`Visa: (German) EU Blue Card`}</h4>
-        </section>
-        {/* Social links LinkedIn, Github and email */}
+      <div className="flex w-full flex-row justify-end">
         <div className="flex flex-row gap-2">
           <a
             href="https://linkedin.com/in/joshua-hoban"
