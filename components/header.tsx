@@ -49,15 +49,15 @@ export default function Header() {
         <ul className="flex flex-row justify-center gap-5 text-offBlack">
           <li className="group transition duration-300">
             <Link href="/">Home</Link>
-            <Underline pathname={pathname} />
+            <Underline pathname={pathname} targetPathname="/" />
           </li>
           <li className="group transition duration-300">
             <Link href="/about">About</Link>
-            <Underline pathname={pathname} />
+            <Underline pathname={pathname} targetPathname="/about" />
           </li>
           <li className="group transition duration-300">
             <Link href="/projects">Projects</Link>
-            <Underline pathname={pathname} />
+            <Underline pathname={pathname} targetPathname="/projects" />
           </li>
           <li className="group transition duration-300">
             <a href="/resume.pdf" target="_blank">
@@ -74,8 +74,11 @@ export default function Header() {
 const underlineClass =
   "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
 
-const Underline: FC<{ pathname: string }> = ({ pathname }) => (
+const Underline: FC<{ pathname: string; targetPathname: string }> = ({
+  pathname,
+  targetPathname,
+}) => (
   <span
-    className={`${underlineClass} ${pathname === "/projects" ? "max-w-full" : "max-w-0"}`}
+    className={`${underlineClass} ${pathname === targetPathname ? "max-w-full" : "max-w-0"}`}
   ></span>
 );
