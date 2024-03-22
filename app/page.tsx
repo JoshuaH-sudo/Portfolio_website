@@ -1,15 +1,26 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Joshua Hoban",
+  description: "Fullstack web developer based in Berlin",
+  openGraph: {
+    title: "Joshua Hoban",
+    description: "Fullstack web developer based in Berlin",
+    images: "/images/image_5.jpg",
+  },
+};
 
 export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-between gap-10 bg-offBlack p-12 text-offWhite sm:p-24">
-      <div className="flex flex-col-reverse gap-5 sm:flex-row items-center">
+      <div className="flex flex-col-reverse items-center gap-5 sm:flex-row">
         <Image
           src="/images/image_8.jpg"
           alt="Joshua Hoban"
           width={200}
           height={200}
-          className="w-full sm:w-[200px] sm:h-[200px] object-cover rounded-3xl"
+          className="w-full rounded-3xl object-cover sm:h-[200px] sm:w-[200px]"
         />
         <section className="flex max-w-3xl flex-col gap-1">
           <h4 className="text-md font-bold text-accent sm:text-sm">
@@ -21,7 +32,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-highlight1 sm:text-2xl">
             Experienced Full-Stack Web Developer
           </h2>
-          <p className="text-highlight2 max-w-xl text-xs sm:text-lg">
+          <p className="max-w-xl text-xs text-highlight2 sm:text-lg">
             Aussie software developer based in Berlin, excelling in Frontend
             design and client satisfaction, while fostering lively work
             environments and expediting projects through efficient prototyping
