@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../tailwind.config";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Config } from "tailwindcss";
 
 export default function Header() {
@@ -31,9 +31,6 @@ export default function Header() {
     }
   }, [colors.highlight2, colors.primaryLight, colors.secondaryLight, pathname]);
 
-  const underlineClass =
-    "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
-
   return (
     <header
       style={{
@@ -52,21 +49,15 @@ export default function Header() {
         <ul className="flex flex-row justify-center gap-5 text-offBlack">
           <li className="group transition duration-300">
             <Link href="/">Home</Link>
-            <span
-              className={`${underlineClass} ${pathname === "/" ? "max-w-full" : "max-w-0"}`}
-            ></span>
+            <Underline pathname={pathname} />
           </li>
           <li className="group transition duration-300">
             <Link href="/about">About</Link>
-            <span
-              className={`${underlineClass} ${pathname === "/about" ? "max-w-full" : "max-w-0"}`}
-            ></span>
+            <Underline pathname={pathname} />
           </li>
           <li className="group transition duration-300">
             <Link href="/projects">Projects</Link>
-            <span
-              className={`${underlineClass} ${pathname === "/projects" ? "max-w-full" : "max-w-0"}`}
-            ></span>
+            <Underline pathname={pathname} />
           </li>
           <li className="group transition duration-300">
             <a href="/resume.pdf" target="_blank">
@@ -79,3 +70,12 @@ export default function Header() {
     </header>
   );
 }
+
+const underlineClass =
+  "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
+
+const Underline: FC<{ pathname: string }> = ({ pathname }) => (
+  <span
+    className={`${underlineClass} ${pathname === "/projects" ? "max-w-full" : "max-w-0"}`}
+  ></span>
+);
