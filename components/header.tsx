@@ -8,18 +8,36 @@ export default function Header() {
   const underlineClass =
     "bg-offBlack block h-0.5 transition-all duration-500 group-hover:max-w-full";
 
+  let headerColor = "primaryLight";
+  switch (pathname) {
+    case "/":
+      headerColor = "primaryLight";
+      break;
+    case "/about":
+      headerColor = "secondaryLight";
+      break;
+    case "/projects":
+      headerColor = "highlight1";
+      break;
+    default:
+      headerColor = "primaryLight";
+      break;
+  }
+
   return (
-    <header className="relative h-14 sm:h-20">
+    <header
+      className={`fixed top-0 h-14 w-full shadow-md bg-${headerColor} shadow-xl transition-colors duration-300 sm:h-20`}
+    >
       <Link href="/">
-        <h1 className="absolute -bottom-2 left-1 text-4xl font-extrabold italic text-offBlack sm:-bottom-3 sm:left-5 sm:text-7xl">
+        <h1 className="absolute -bottom-0 left-1 text-4xl font-extrabold italic text-offBlack sm:-bottom-0 sm:left-5 sm:text-7xl">
           JH
         </h1>
       </Link>
       <nav
-        className="
-      flex h-full flex-row items-end justify-center bg-primaryLight
-      pb-0.5 text-xs font-bold text-offWhite sm:text-lg
-    "
+        className={`
+      flex h-full flex-row items-end justify-center pb-0.5 text-xs
+      font-bold text-offWhite sm:text-lg
+    `}
       >
         <ul className="flex flex-row justify-center gap-5 text-offBlack">
           <li className="group transition duration-300">
