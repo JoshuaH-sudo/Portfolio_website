@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         offBlack: "#2D2828",
         offWhite: "#F4F0F0",
+
         primaryLight: "#9BCFCC",
         primary: "#75B9BE",
         primaryDark: "#4293A5",
