@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cypress:open": "cypress open",
-    "test": "cypress run",
-    "prepare": "husky"
+    "test": "cypress run"
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
