@@ -5,6 +5,12 @@ import { PostHogProvider } from "posthog-js/react";
 import { PropsWithChildren, useEffect, useState } from "react";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
+if (typeof window !== "undefined") {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "", {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+  });
+}
+
 export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
   const [hasConsent, setHasConsent] = useState(false);
 
@@ -19,10 +25,10 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
   }, []);
 
   useEffect(() => {
-    if (hasConsent && typeof window !== "undefined") {
-      posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "", {
-        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-      });
+    if (hasConsent) {
+      posthog.opt_in_capturing();
+    } else {
+      posthog.opt_out_capturing();
     }
   }, [hasConsent]);
 
