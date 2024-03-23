@@ -37,7 +37,7 @@ export default function Header() {
         //Need to set the color here as tailwind will not be able to resolve the color after state change
         backgroundColor: headerColor,
       }}
-      className="fixed top-0 h-14 w-full shadow-xl transition-colors duration-300 sm:h-20"
+      className="fixed z-10 top-0 h-14 w-full shadow-xl transition-colors duration-300 sm:h-20"
     >
       <Link href="/">
         <h1 className="absolute -bottom-0 left-1 text-4xl font-extrabold italic text-offBlack sm:-bottom-0 sm:left-5 sm:text-7xl">
