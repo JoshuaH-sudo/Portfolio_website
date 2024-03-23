@@ -30,21 +30,23 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
     <>
       <PostHogProvider client={posthog}>{children}</PostHogProvider>
       <CookieConsent
-        enableDeclineButton
         style={{ background: "#75B9BE" }}
         buttonStyle={{
           background: "#9BCFCC",
           color: "#2D2828",
           borderRadius: "0.25rem",
         }}
+        buttonClasses="hover:scale-105 transition-transform w-28 shadow-md"
+        buttonText="Accept"
+        onAccept={() => setHasConsent(true)}
+        enableDeclineButton
         declineButtonStyle={{
           background: "#9BCFCC",
           color: "#2D2828",
           borderRadius: "0.25rem",
         }}
         declineButtonClasses="hover:scale-105 transition-transform w-28 shadow-md"
-        buttonClasses="hover:scale-105 transition-transform w-28 shadow-md"
-        onAccept={() => setHasConsent(true)}
+        declineButtonText="Decline"
         onDecline={() => setHasConsent(false)}
       >
         <p className="text-offBlack">
