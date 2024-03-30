@@ -27,7 +27,7 @@ export default function RootLayout({
       <CSPostHogProvider>
         <body className={inter.className + " bg-offBlack"}>
           <Header />
-          <div className="animate-fade-in">{children}</div>
+          <div className="animate-fade-in mt-4 bg-offBlack">{children}</div>
           <Analytics />
           <SpeedInsights />
         </body>
