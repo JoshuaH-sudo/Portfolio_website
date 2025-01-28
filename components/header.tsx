@@ -1,41 +1,35 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../tailwind.config";
 import { FC, useEffect, useState } from "react";
-import { Config } from "tailwindcss";
 
 export default function Header() {
   const pathname = usePathname();
 
   //Ignore the type error here as it does not know about the custom properties in the tailwind config
-  const twConfig = resolveConfig<Config & any>(tailwindConfig);
-  const colors = twConfig.theme.colors;
-  const [headerColor, setHeaderColor] = useState(colors.primaryLight);
+  const [headerColor, setHeaderColor] = useState("--color-primary-light");
 
   useEffect(() => {
     switch (pathname) {
       case "/":
-        setHeaderColor(colors.primaryLight);
+        setHeaderColor("--color-primary-light");
         break;
       case "/about":
-        setHeaderColor(colors.secondaryLight);
+        setHeaderColor("--color-secondary-light");
         break;
       case "/projects":
-        setHeaderColor(colors.highlight2);
+        setHeaderColor("--color-highlight2");
         break;
       default:
-        setHeaderColor(colors.primaryLight);
+        setHeaderColor("--color-primary-light");
         break;
     }
-  }, [colors.highlight2, colors.primaryLight, colors.secondaryLight, pathname]);
+  }, [pathname]);
 
   return (
     <header
       style={{
-        //Need to set the color here as tailwind will not be able to resolve the color after state change
-        backgroundColor: headerColor,
+        backgroundColor: `var(${headerColor})`,
       }}
       className="fixed z-10 top-0 h-14 w-full shadow-xl transition-colors duration-300 sm:h-20"
     >
