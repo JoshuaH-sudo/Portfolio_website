@@ -10,7 +10,7 @@ export default async function ProjectGrid() {
 
   if (projects.length === 0) {
     return (
-      <p className="text-center text-offWhite">
+      <p className="text-center text-off-white">
         <span className="text-highlight2">Error Occurred:</span> No projects
         found, Please try again later.
       </p>
@@ -28,7 +28,7 @@ export default async function ProjectGrid() {
             backgroundImage: randomColor(),
           }}
           className={
-            " mb-4 min-h-[100px] transform rounded-md p-4 text-offBlack shadow-md transition-transform hover:scale-105"
+            " mb-4 min-h-[100px] transform rounded-md p-4 text-off-black shadow-md transition-transform hover:scale-105"
           }
         >
           <h2 className="line-clamp-1 overflow-x-hidden text-ellipsis text-sm font-bold sm:text-2xl">

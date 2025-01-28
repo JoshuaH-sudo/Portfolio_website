@@ -7,12 +7,12 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col items-center justify-between bg-offBlack p-10 sm:p-24">
-      <div className="flex max-w-2xl flex-col gap-5 text-offWhite">
-        <h1 className="text-2xl font-bold text-offWhite sm:text-5xl">
+    <main className="flex flex-col items-center justify-between bg-off-black p-10 sm:p-24">
+      <div className="flex max-w-2xl flex-col gap-5 text-off-white">
+        <h1 className="text-2xl font-bold text-off-white sm:text-5xl">
           Welcome to my corner of the web! I&apos;m{" "}
-          <span className="text-primaryLight">Joshua</span>{" "}
-          <span className="text-secondaryLight">Hoban</span>
+          <span className="text-primary-light">Joshua</span>{" "}
+          <span className="text-secondary-light">Hoban</span>
         </h1>
         <p>
           I am a 26-year-old full stack web developer hailing from the vibrant
@@ -26,7 +26,7 @@ export default function AboutPage() {
           a continuous drive for growth and innovation. One aspect that sets me
           apart is my unwavering commitment to enhancing team collaboration.
           Despite my initial <span className="text-highlight1">shyness</span>{" "}
-          and <span className="text-accentLight">comfort zone tendencies</span>,
+          and <span className="text-accent-light">comfort zone tendencies</span>,
           I&apos;ve learned to harness the power of stepping outside these
           boundaries, inspiring my colleagues to do the same. By fostering an
           environment of open communication and mutual support, I believe we can
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </p>
         <p>
           Driven by a{" "}
-          <span className="text-primaryDark">thirst for adventure</span> and a
+          <span className="text-primary-dark">thirst for adventure</span> and a
           hunger for knowledge, I embarked on a journey to Europe to expand my
           skill set and broaden my horizons. Immersing myself in diverse
           cultures and perspectives has not only enriched my personal growth but

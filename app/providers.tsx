@@ -55,7 +55,7 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
         declineButtonText="Decline"
         onDecline={() => setHasConsent(false)}
       >
-        <p className="text-offBlack">
+        <p className="text-off-black">
           This website uses cookies to enhance the user experience.
         </p>
       </CookieConsent>
