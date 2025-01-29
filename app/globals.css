@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-monomaniac-one: "Monomaniac One", "sans-serif";
+  --font-andale-mono: "Andale Mono", "monospace";
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(
     from 180deg at 50% 50%,
@@ -80,6 +82,24 @@
       --background-start-rgb: 0, 0, 0;
       --background-end-rgb: 0, 0, 0;
     }
+  }
+  @font-face {
+    font-family: "andale mono";
+    src: url("/fonts/andalemono.tff");
+  }
+  .andale-mono {
+    font-family: var(--font-andale-mono);
+    font-weight: "regular";
+  }
+  @font-face {
+    font-family: "monomaniac one";
+    src: url("/fonts/MonomaniacOne-Regular.ttf");
+  }
+
+  .monomaniac-one-regular {
+    font-family: var(--font-monomaniac-one);
+    font-weight: 400;
+    font-style: normal;
   }
 
   body {

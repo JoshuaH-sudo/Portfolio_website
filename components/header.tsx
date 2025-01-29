@@ -27,52 +27,32 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header
-      style={{
-        backgroundColor: `var(${headerColor})`,
-      }}
-      className="fixed z-10 top-0 h-14 w-full shadow-xl transition-colors duration-300 sm:h-20"
-    >
+    <header className="font-andale-mono fixed top-0 z-10 flex w-full items-center justify-between px-5 py-1 transition-colors duration-300">
       <Link href="/">
-        <h1 className="absolute -bottom-0 left-1 text-4xl font-extrabold italic text-off-black sm:-bottom-0 sm:left-5 sm:text-7xl">
-          JH
-        </h1>
+        <p className="text-off-black font-monomaniac-one text-xl font-extrabold">
+          Joshua Hoban
+        </p>
       </Link>
 
-      <nav className="flex h-full flex-row items-end justify-center pb-0.5 text-xs font-bold text-off-white sm:text-lg">
-        <ul className="flex flex-row justify-center gap-5 text-off-black">
+      <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
+        <ul className="text-off-black flex flex-row justify-center gap-5">
           <li className="group transition duration-300">
-            <Link href="/">Home</Link>
-            <Underline pathname={pathname} targetPathname="/" />
+            <Link href="/">//Home</Link>
           </li>
           <li className="group transition duration-300">
-            <Link href="/about">About</Link>
-            <Underline pathname={pathname} targetPathname="/about" />
+            <Link href="/about">//Skills</Link>
           </li>
           <li className="group transition duration-300">
-            <Link href="/projects">Projects</Link>
-            <Underline pathname={pathname} targetPathname="/projects" />
+            <Link href="/projects">//Projects</Link>
           </li>
           <li className="group transition duration-300">
-            <a href="/resume.pdf" target="_blank">
-              Resume
-            </a>
-            <span className={`${underlineClass} max-w-0`}></span>
+            <Link href="/experience">//Experience</Link>
+          </li>
+          <li className="group transition duration-300">
+            <Link href="/contact">//Contact</Link>
           </li>
         </ul>
       </nav>
     </header>
   );
 }
-
-const underlineClass =
-  "bg-off-black block h-0.5 transition-all duration-500 group-hover:max-w-full";
-
-const Underline: FC<{ pathname: string; targetPathname: string }> = ({
-  pathname,
-  targetPathname,
-}) => (
-  <span
-    className={`${underlineClass} ${pathname === targetPathname ? "max-w-full" : "max-w-0"}`}
-  ></span>
-);

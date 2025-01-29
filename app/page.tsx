@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between gap-10 bg-off-black p-12 text-off-white sm:p-24">
+    <main className="flex flex-col items-center justify-between gap-10 p-12 text-off-white sm:p-24">
       <div className="flex flex-col-reverse items-center gap-5 sm:flex-row">
         <Image
           src="/images/image_8.jpg"
