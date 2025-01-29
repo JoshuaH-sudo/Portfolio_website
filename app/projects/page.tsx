@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: "A list of my GitHub projects",
 };
 
-// Revalidate every week
-export const revalidate = 60 * 60 * 24 * 7;
+// Revalidate every hour
+export const revalidate = 3600 
 
 export default function ProjectsPage() {
   return (
