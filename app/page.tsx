@@ -1,3 +1,4 @@
+import { EvervaultCard } from "@/components/ui/evervault-card";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -10,14 +11,18 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-center">
-      <h1>Joshua Hoban</h1>
-      <h2>Front-end Specialized Full-stack Developer.</h2>
-      <Image
-        src="/images/profile.png"
-        width={322}
-        height={322}
-        alt="profile photo"
-      />
+      <EvervaultCard>
+        <div className="flex h-screen flex-col items-center justify-center">
+          <h1>Joshua Hoban</h1>
+          <h2>Front-end Specialized Full-stack Developer.</h2>
+          <Image
+            src="/images/profile.png"
+            width={322}
+            height={322}
+            alt="profile photo"
+          />
+        </div>
+      </EvervaultCard>
     </main>
   );
 }
