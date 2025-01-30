@@ -1,30 +1,30 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { FC, useEffect, useState } from "react";
+// import { usePathname } from "next/navigation";
+// import { FC, useEffect, useState } from "react";
 
 export default function Header() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  //Ignore the type error here as it does not know about the custom properties in the tailwind config
-  const [headerColor, setHeaderColor] = useState("--color-primary-light");
+  // //Ignore the type error here as it does not know about the custom properties in the tailwind config
+  // const [headerColor, setHeaderColor] = useState("--color-primary-light");
 
-  useEffect(() => {
-    switch (pathname) {
-      case "/":
-        setHeaderColor("--color-primary-light");
-        break;
-      case "/about":
-        setHeaderColor("--color-secondary-light");
-        break;
-      case "/projects":
-        setHeaderColor("--color-highlight2");
-        break;
-      default:
-        setHeaderColor("--color-primary-light");
-        break;
-    }
-  }, [pathname]);
+  // useEffect(() => {
+  //   switch (pathname) {
+  //     case "/":
+  //       setHeaderColor("--color-primary-light");
+  //       break;
+  //     case "/about":
+  //       setHeaderColor("--color-secondary-light");
+  //       break;
+  //     case "/projects":
+  //       setHeaderColor("--color-highlight2");
+  //       break;
+  //     default:
+  //       setHeaderColor("--color-primary-light");
+  //       break;
+  //   }
+  // }, [pathname]);
 
   return (
     <header className="font-andale-mono fixed top-0 z-10 flex w-full items-center justify-between px-5 py-1 transition-colors duration-300">
