@@ -1,4 +1,4 @@
-import { EvervaultCard } from "@/components/ui/evervault-card";
+import { EverVault } from "@/components/ui/EverVault";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export default function Home() {
         id="home"
         className="flex h-screen flex-col items-center justify-center"
       >
-        <EvervaultCard>
+        <EverVault>
           <div className="relative flex h-screen flex-col items-center justify-center">
             <h1>Joshua Hoban</h1>
             <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
@@ -26,7 +26,7 @@ export default function Home() {
               alt="profile photo"
             />
           </div>
-        </EvervaultCard>
+        </EverVault>
       </div>
       <div
         id="skills"
