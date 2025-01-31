@@ -25,9 +25,6 @@ export const EverVault = ({
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-
-    // const str = generateRandomString(15000);
-    // setRandomString(str);
   }
 
   return (
@@ -69,7 +66,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
         className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
         style={style}
       >
-        <p className="absolute inset-x-0 h-full font-mono text-xs font-bold break-words whitespace-pre-wrap text-white transition duration-500 dark:text-black">
+        <p className="absolute inset-x-0 h-full font-mono text-xs font-bold break-words whitespace-pre-wrap text-white transition duration-500">
           {randomString}
         </p>
       </motion.div>

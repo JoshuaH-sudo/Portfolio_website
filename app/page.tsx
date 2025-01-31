@@ -1,7 +1,6 @@
-import { EverVault } from "@/components/ui/EverVault";
 import { TracingBeam } from "@/components/ui/TracingBeam";
 import { Metadata } from "next";
-import Image from "next/image";
+import { HomePage } from "@/components/home/HomePage";
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",
@@ -13,23 +12,7 @@ export default function Home() {
   return (
     <main>
       <TracingBeam>
-        <div
-          id="home"
-          className="flex h-screen flex-col items-center justify-center"
-        >
-          <EverVault>
-            <div className="relative flex h-screen flex-col items-center justify-center">
-              <h1>Joshua Hoban</h1>
-              <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
-              <Image
-                src="/images/profile.png"
-                width={322}
-                height={322}
-                alt="profile photo"
-              />
-            </div>
-          </EverVault>
-        </div>
+        <HomePage />
         <div
           id="skills"
           className="flex h-screen flex-col items-center justify-center"

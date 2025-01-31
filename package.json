@@ -11,6 +11,7 @@
     "test": "cypress run"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.12.3",
     "@next/eslint-plugin-next": "^15.1.6",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
