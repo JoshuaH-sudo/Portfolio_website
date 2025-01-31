@@ -12,12 +12,20 @@ export const HomePage = () => {
           <div className="relative flex h-screen flex-col items-center justify-center">
             <h1>Joshua Hoban</h1>
             <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
-            <Image
+            {/* <Image
               src="/images/profile.png"
               width={322}
               height={322}
               alt="profile photo"
-            />
+            /> */}
+            <div
+              style={{
+                width: "322px",
+                height: "322px",
+              }}
+            >
+              <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
+            </div>
           </div>
         </EverVault>
         <div
