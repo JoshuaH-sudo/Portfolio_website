@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="font-andale-mono fixed top-0 z-10 flex w-full items-center justify-between  pl-20 pr-5 py-1 transition-colors duration-300">
+    <header className="font-andale-mono fixed top-0 z-100 flex w-full items-center justify-between  pl-20 pr-5 py-1 transition-colors duration-300 bg-off-white">
       <Link href="#home">
         <p className="text-off-black font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
