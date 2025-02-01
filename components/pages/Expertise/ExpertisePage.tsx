@@ -27,8 +27,8 @@ const ExpertisePage = () => {
     >
       <h1>Expertise</h1>
       <div className="z-1 flex h-full flex-row items-center justify-center">
-        <div className="h-full w-2xl text-left">
-          <p id="description" className="text-left">
+        <div className="h-full w-3xl text-left">
+          <p id="description" className="text-left text-xl">
             I am a results-driven full-stack web developer with a passion for
             building impactful digital experiences. I have accelerated project
             timelines, revitalized a legacy application for 10,000 users, and
@@ -70,14 +70,7 @@ const ExpertisePage = () => {
               className="flex h-36 w-36 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg"
               drag
             >
-              <div
-                style={{
-                  pointerEvents: "none",
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "1rem",
-                }}
-              >
+              <div className="pointer-events-none flex items-center justify-center p-1">
                 <Image
                   src={`/images/logos/${logo}.svg`}
                   width={100}
