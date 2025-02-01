@@ -78,9 +78,9 @@ const items = [
     ),
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
+    title: "Dating Profile Website",
+    description: "A website to show off in my tinder bio and see how compatible we are.",
+    header: <Image src="/images/projects/dating-website.png" alt="Dating Profile Website" width={400} height={200} />,
   },
   {
     title: "The Art of Design",

@@ -17,7 +17,6 @@ export default function Home() {
         <HomePage />
         <ExpertisePage />
         <ProjectsPage />
-
         <div
           id="experience"
           className="flex h-screen flex-col items-center justify-center"
