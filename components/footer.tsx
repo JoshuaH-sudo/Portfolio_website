@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="font-andale-mono bg-off-white fixed bottom-0 z-100 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
+    <footer className="font-andale-mono bg-off-white h-16 flex-shrink-0 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
         <ul className="text-off-black flex flex-row justify-center gap-5">
           <li>
