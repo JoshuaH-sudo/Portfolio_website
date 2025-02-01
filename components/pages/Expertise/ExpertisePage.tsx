@@ -1,10 +1,9 @@
 "use client";
-import { BackgroundBeams } from "@/components/ui/backgroundBeams";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
 
-const spring = { damping: 3, stiffness: 50, restDelta: 0.001 };
 const logos = [
   "react",
   "react-native",
