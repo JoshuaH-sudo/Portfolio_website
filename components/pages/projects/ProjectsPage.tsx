@@ -2,6 +2,8 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollision";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { motion, Variants } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ProjectsPage = () => {
@@ -20,10 +22,7 @@ const ProjectsPage = () => {
               viewport={{ amount: 0.8 }}
             >
               <motion.div variants={cardVariants}>
-                <BentoGridItem
-                  key={i}
-                  {...item}
-                />
+                <BentoGridItem key={i} {...item} />
               </motion.div>
             </motion.div>
           ))}
@@ -62,9 +61,21 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
+    title: (
+      <Link href="https://apsj.com.au/index.php/journal" target="_blank" className="text-blue-500">
+        The Australian Pharmacy Students (APSJ)
+      </Link>
+    ),
+    description:
+      "It is the only peer-reviewed pharmacy student journal in the world, providing pharmacy students around the world with the opportunity to develop research skills and publish their work.",
+    header: (
+      <Image
+        src="/images/projects/apsj.png"
+        alt="The Australian Pharmacy Students"
+        width={400}
+        height={200}
+      />
+    ),
   },
   {
     title: "The Digital Revolution",
