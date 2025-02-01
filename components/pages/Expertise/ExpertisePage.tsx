@@ -1,4 +1,5 @@
 "use client";
+import { BackgroundBeams } from "@/components/ui/backgroundBeams";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
@@ -20,10 +21,10 @@ const ExpertisePage = () => {
   return (
     <div
       id="expertise"
-      className="flex h-screen flex-col items-center justify-start bg-black pb-5"
+      className="relative flex h-screen flex-col items-center justify-start pb-5"
     >
       <h1>Expertise</h1>
-      <div className="flex h-full flex-row items-center justify-center">
+      <div className="z-10 flex h-full flex-row items-center justify-center">
         <div className="h-full w-2xl text-left">
           <p id="description" className="text-left">
             I am a results-driven full-stack web developer with a passion for
@@ -85,6 +86,7 @@ const ExpertisePage = () => {
           ))}
         </div>
       </div>
+      <BackgroundBeams />
     </div>
   );
 };
