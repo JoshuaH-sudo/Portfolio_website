@@ -1,5 +1,5 @@
 "use client";
-import BackgroundBeams from "@/components/ui/background-beams";
+import { EverVault } from "@/components/ui/ever-vault";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
@@ -24,6 +24,7 @@ const ExpertisePage = () => {
       id="expertise"
       className="relative flex h-screen flex-col items-center justify-start pb-5"
     >
+      <EverVault>
       <h1>Expertise</h1>
       <div className="z-1 flex h-full flex-row items-center justify-center">
         <div className="h-full w-3xl text-left">
@@ -81,7 +82,7 @@ const ExpertisePage = () => {
           ))}
         </div>
       </div>
-      <BackgroundBeams />
+      </EverVault>
     </div>
   );
 };
