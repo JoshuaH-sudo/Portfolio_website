@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const tabs = [
   {
     name: "Home",
@@ -25,7 +25,12 @@ const tabs = [
   },
 ];
 export default function Header() {
-  const [activeTab, setActiveTab] = useState(window.location.hash || "#home");
+  const [activeTab, setActiveTab] = useState("");
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash) setActiveTab(window.location.hash);
+    else setActiveTab("#home");
+  }, []);
 
   return (
     <header className="font-andale-mono bg-off-white fixed top-0 z-100 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
