@@ -1,9 +1,34 @@
 "use client";
+import { motion } from "motion/react";
 import Link from "next/link";
-
+import { useState } from "react";
+const tabs = [
+  {
+    name: "Home",
+    href: "#home",
+  },
+  {
+    name: "Expertise",
+    href: "#expertise",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+  },
+  {
+    name: "Experience",
+    href: "#experience",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
 export default function Header() {
+  const [activeTab, setActiveTab] = useState(window.location.hash || "#home");
+
   return (
-    <header className="font-andale-mono fixed top-0 z-100 flex w-full items-center justify-between  pl-20 pr-5 py-1 transition-colors duration-300 bg-off-white">
+    <header className="font-andale-mono bg-off-white fixed top-0 z-100 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
       <Link href="#home">
         <p className="text-off-black font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
@@ -12,21 +37,20 @@ export default function Header() {
 
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
         <ul className="text-off-black flex flex-row justify-center gap-5">
-          <li className="group transition duration-300">
-            <Link href="#home">//Home</Link>
-          </li>
-          <li className="group transition duration-300">
-            <Link href="#expertise">//Expertise</Link>
-          </li>
-          <li className="group transition duration-300">
-            <Link href="#projects">//Projects</Link>
-          </li>
-          <li className="group transition duration-300">
-            <Link href="#experience">//Experience</Link>
-          </li>
-          <li className="group transition duration-300">
-            <Link href="#contact">//Contact</Link>
-          </li>
+          {tabs.map((tab) => (
+            <li key={tab.name} className="group transition duration-300">
+              <Link href={tab.href} onClick={() => setActiveTab(tab.href)}>
+                {tab.name}
+              </Link>
+              {activeTab === tab.href && (
+                <motion.div
+                  layoutId="clickedbutton"
+                  transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+                  className="h-1 rounded-full bg-gray-800"
+                />
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
