@@ -8,14 +8,16 @@ const spring = { damping: 3, stiffness: 50, restDelta: 0.001 };
 const logos = [
   "react",
   "react-native",
-  "nodejs",
-  "next-js",
   "typescript",
   "tailwind-css",
+  "nodejs",
+  "next-js",
   "docker",
+  "prisma",
   "mongodb",
   "postgresql",
   "figma",
+  "posthog",
 ];
 const ExpertisePage = () => {
   return (
@@ -24,7 +26,7 @@ const ExpertisePage = () => {
       className="relative flex h-screen flex-col items-center justify-start pb-5"
     >
       <h1>Expertise</h1>
-      <div className="z-10 flex h-full flex-row items-center justify-center">
+      <div className="z-1 flex h-full flex-row items-center justify-center">
         <div className="h-full w-2xl text-left">
           <p id="description" className="text-left">
             I am a results-driven full-stack web developer with a passion for
@@ -64,7 +66,7 @@ const ExpertisePage = () => {
               whileTap={{ scale: 0.95 }}
               whileDrag={{ scale: 0.95 }}
               dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-              dragElastic={0.5}
+              dragElastic={0.3}
               className="flex h-36 w-36 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg"
               drag
             >
@@ -73,6 +75,7 @@ const ExpertisePage = () => {
                   pointerEvents: "none",
                   display: "flex",
                   justifyContent: "center",
+                  padding: "1rem",
                 }}
               >
                 <Image
