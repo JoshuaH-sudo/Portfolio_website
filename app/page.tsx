@@ -1,7 +1,7 @@
 import { TracingBeam } from "@/components/ui/TracingBeam";
 import { Metadata } from "next";
 import { HomePage } from "@/components/pages/home/HomePage";
-import ExpertisePage from "@/components/pages/expertise/ExpertisePage";
+import SkillsPage from "@/components/pages/skills/SkillsPage";
 import ProjectsPage from "@/components/pages/projects/ProjectsPage";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <TracingBeam>
         <HomePage />
-        <ExpertisePage />
+        <SkillsPage />
         <ProjectsPage />
         <div
           id="experience"
