@@ -1,6 +1,7 @@
 import { TracingBeam } from "@/components/ui/TracingBeam";
 import { Metadata } from "next";
-import { HomePage } from "@/components/home/HomePage";
+import { HomePage } from "@/components/pages/home/HomePage";
+import ExpertisePage from "@/components/pages/Expertise/ExpertisePage";
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",
@@ -13,12 +14,7 @@ export default function Home() {
     <main>
       <TracingBeam>
         <HomePage />
-        <div
-          id="expertise"
-          className="flex h-screen flex-col items-center justify-center"
-        >
-          <h1>Expertise</h1>
-        </div>
+        <ExpertisePage />
         <div
           id="projects"
           className="flex h-screen flex-col items-center justify-center"
