@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
 export const BackgroundBeamsWithCollision = ({
-  children,
+  // children,
   className,
 }: {
-  children: React.ReactNode;
+  // children: React.ReactNode;
   className?: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -70,7 +70,7 @@ export const BackgroundBeamsWithCollision = ({
     <div
       ref={parentRef}
       className={cn(
-        "relative z-0 flex h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b",
+        "absolute top-0 z-0 flex h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b",
         className,
       )}
     >
@@ -85,14 +85,14 @@ export const BackgroundBeamsWithCollision = ({
         />
       ))}
 
-      {children}
+      {/* {children} */}
       <div
         ref={containerRef}
-        className="pointer-events-none absolute inset-x-0 bottom-0 w-full bg-neutral-100"
-        style={{
-          boxShadow:
-            "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
-        }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 w-full"
+        // style={{
+        //   boxShadow:
+        //     "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
+        // }}
       ></div>
     </div>
   );
