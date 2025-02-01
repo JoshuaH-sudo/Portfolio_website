@@ -1,5 +1,5 @@
 # My Portfolio Website
-This is my portfolio website. It is a simple website that showcases my projects and skills. It is built using NextJS (14 App Router) and Tailwind CSS. 
+This is my portfolio website. It is a simple website that showcases my projects and expertise. It is built using NextJS (14 App Router) and Tailwind CSS. 
 
 ## How to run the project
 1. Clone the repository

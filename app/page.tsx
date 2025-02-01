@@ -14,10 +14,10 @@ export default function Home() {
       <TracingBeam>
         <HomePage />
         <div
-          id="skills"
+          id="expertise"
           className="flex h-screen flex-col items-center justify-center"
         >
-          <h1>Skills</h1>
+          <h1>Expertise</h1>
         </div>
         <div
           id="projects"

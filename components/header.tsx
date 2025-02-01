@@ -16,7 +16,7 @@ export default function Header() {
             <Link href="#home">//Home</Link>
           </li>
           <li className="group transition duration-300">
-            <Link href="#skills">//Skills</Link>
+            <Link href="#expertise">//Expertise</Link>
           </li>
           <li className="group transition duration-300">
             <Link href="#projects">//Projects</Link>
