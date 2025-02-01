@@ -1,7 +1,7 @@
 "use client";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import React from "react";
-import { EverVault } from "../../ui/EverVault";
+import { EverVault } from "../../ui/ever-vault";
 import Image from "next/image";
 
 export const HomePage = () => {

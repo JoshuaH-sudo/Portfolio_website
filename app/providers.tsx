@@ -1,4 +1,3 @@
-// app/providers.js
 "use client";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
@@ -6,9 +5,9 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
 if (typeof window !== "undefined") {
-  // posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "", {
-  //   api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-  // });
+  posthog.init("phc_Cneu9QyCvYOGFH5oRyNZXkaC3ws4lo5KxiFgktJzcc9", {
+    api_host: "https://us.i.posthog.com",
+  });
 }
 
 export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {

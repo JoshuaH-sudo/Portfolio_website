@@ -1,8 +1,8 @@
-import { TracingBeam } from "@/components/ui/TracingBeam";
+import ExpertisePage from "@/components/pages/expertise/expertise-page";
+import { HomePage } from "@/components/pages/home/home-page";
+import ProjectsPage from "@/components/pages/projects/projects-page";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Metadata } from "next";
-import { HomePage } from "@/components/pages/home/HomePage";
-import ProjectsPage from "@/components/pages/projects/ProjectsPage";
-import ExpertisePage from "@/components/pages/expertise/ExpertisePage";
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",

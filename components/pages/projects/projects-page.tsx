@@ -1,6 +1,6 @@
 "use client";
-import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollision";
-import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { motion, Variants } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
