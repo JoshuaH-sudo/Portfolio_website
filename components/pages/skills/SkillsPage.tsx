@@ -1,5 +1,5 @@
 "use client";
-import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import BackgroundBeams from "@/components/ui/BackgroundBeams";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
