@@ -18,7 +18,7 @@ const logos = [
   "figma",
   "posthog",
 ];
-const SkillsPage = () => {
+const ExpertisePage = () => {
   return (
     <div
       id="expertise"
@@ -86,4 +86,4 @@ const SkillsPage = () => {
   );
 };
 
-export default SkillsPage;
+export default ExpertisePage;
