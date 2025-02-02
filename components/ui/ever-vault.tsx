@@ -30,7 +30,7 @@ export const EverVault = ({
   return (
     <div
       className={cn(
-        "relative flex aspect-square h-full w-full items-center justify-center bg-transparent p-0.5",
+        "relative flex aspect-square h-screen w-full items-center justify-center bg-transparent p-0.5",
         className,
       )}
     >

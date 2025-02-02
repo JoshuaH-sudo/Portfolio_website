@@ -11,7 +11,7 @@ export const HomePage = () => {
       id="home"
       className="relative flex h-screen flex-col items-center justify-center"
     >
-      <div className="relative flex h-screen flex-col items-center justify-center">
+      <div className="z-10 relative flex h-screen flex-col items-center justify-center">
         <h1>Joshua Hoban</h1>
         <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
         <div
