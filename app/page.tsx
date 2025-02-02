@@ -1,3 +1,4 @@
+import ExperiencePage from "@/components/pages/experience/experience-page";
 import ExpertisePage from "@/components/pages/expertise/expertise-page";
 import { HomePage } from "@/components/pages/home/home-page";
 import ProjectsPage from "@/components/pages/projects/projects-page";
@@ -17,7 +18,7 @@ export default function Home() {
         <HomePage />
         <ExpertisePage />
         <ProjectsPage />
-        <ExpertisePage />
+        <ExperiencePage />
         <div
           id="contact"
           className="flex h-screen flex-col items-center justify-center"
