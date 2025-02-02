@@ -1,9 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="font-andale-mono bg-off-white z-100 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
+    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
         <ul className="text-off-black flex flex-row justify-center gap-5">
           <li>
@@ -17,15 +16,15 @@ export default function Footer() {
               <p>Berlin</p>
             </span>
           </li>
-          <li className="group transition duration-300">
-            <Link href="https://www.linkedin.com/in/joshua-hoban">
-              <p>//LinkedIn</p>
-            </Link>
+          <li>
+            <a href="https://www.linkedin.com/in/joshua-hoban" target="_blank" rel="noopener noreferrer" >
+              //LinkedIn
+            </a>
           </li>
-          <li className="group transition duration-300">
-            <Link href="https://github.com/JoshuaH-sudo">
-              <p>//GitHub</p>
-            </Link>
+          <li>
+            <a href="https://github.com/JoshuaH-sudo" target="_blank" rel="noopener noreferrer" >
+              //GitHub
+            </a>
           </li>
         </ul>
       </nav>

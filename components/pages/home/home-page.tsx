@@ -3,6 +3,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import React from "react";
 import BackgroundBeams from "@/components/ui/background-beams";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export const HomePage = () => {
   return (
@@ -28,6 +29,7 @@ export const HomePage = () => {
       >
         <DotLottieReact src="/lottie/arrow-indicator.json" loop autoplay />
       </div>
+      <Footer />
       <BackgroundBeams />
     </div>
   );
