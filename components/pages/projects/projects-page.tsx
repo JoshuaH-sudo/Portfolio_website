@@ -14,7 +14,6 @@ const ProjectsPage = () => {
         <BentoGrid className="mx-auto max-w-4xl">
           {items.map((item, i) => (
             <motion.div
-              // className={`card-container-${i}`}
               key={i}
               className={i === 3 || i === 6 ? "md:col-span-2" : ""}
               initial="offscreen"
@@ -62,7 +61,11 @@ const Skeleton = () => (
 const items = [
   {
     title: (
-      <Link href="https://apsj.com.au/index.php/journal" target="_blank" className="text-blue-500">
+      <Link
+        href="https://apsj.com.au/index.php/journal"
+        target="_blank"
+        className="text-blue-500 underline"
+      >
         The Australian Pharmacy Students (APSJ)
       </Link>
     ),
@@ -79,24 +82,27 @@ const items = [
   },
   {
     title: "Dating Profile Website",
-    description: "A website to show off in my tinder bio and see how compatible we are.",
-    header: <Image src="/images/projects/dating-website.png" alt="Dating Profile Website" width={400} height={200} />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-  },
-  {
-    title: "The Power of Communication",
     description:
-      "Understand the impact of effective communication in our lives. Understand the impact of effective communication in our lives. Understand the impact of effective communication in our lives. ",
-    header: <Skeleton />,
+      "A website to show off in my tinder bio, including a survey to see how compatible we are. 🥴",
+    header: (
+      <Image
+        src="/images/projects/dating-website.png"
+        alt="Dating Profile Website"
+        width={400}
+        height={200}
+      />
+    ),
   },
   {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
+    title: "Helsinki city bike (HSL) station finder",
+    description: "An exercise for Solita Dev Academy, Fullstack application with a React frontend and a Node.js backend running on AWS ECS.",
+    header: (
+      <Image
+        src="/images/projects/hsl-transport-app.gif"
+        alt="HSL Transport App"
+        width={400}
+        height={200}
+      />
+    ),
   },
 ];
