@@ -15,7 +15,7 @@ const ProjectsPage = () => {
           {items.map((item, i) => (
             <motion.div
               key={i}
-              // className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+              className={i === 0 || i === 3 ? "md:col-span-2" : ""}
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ amount: 0.8 }}
@@ -63,7 +63,7 @@ const items = [
         target="_blank"
         className="text-blue-500 underline"
       >
-        The Australian Pharmacy Students (APSJ)
+        The Australian Pharmacy Students Journal (APSJ) 💊
       </Link>
     ),
     description:
@@ -72,13 +72,13 @@ const items = [
       <Image
         src="/images/projects/apsj.png"
         alt="The Australian Pharmacy Students"
-        width={400}
+        width={600}
         height={300}
       />
     ),
   },
   {
-    title: "Dating Profile Website",
+    title: "Dating Profile Website 😘",
     description:
       "A website to show off in my tinder bio, including a survey to see how compatible we are. 🥴",
     header: (
@@ -95,9 +95,21 @@ const items = [
     description: "An exercise for Solita Dev Academy, fullstack application with a React frontend and a Node.js backend running on AWS ECS.",
     header: (
       <Image
-        src="/images/projects/hsl-transport-app.gif"
+        src="/images/projects/hsl-transport-app.png"
         alt="HSL Transport App"
         width={400}
+        height={300}
+      />
+    ),
+  },
+  {
+    title: "This website... wow!",
+    description: "Wanna see how I made the website your on right now? Check out the repo!",
+    header: (
+      <Image
+        src="/images/projects/website.png"
+        alt="This website"
+        width={600}
         height={300}
       />
     ),

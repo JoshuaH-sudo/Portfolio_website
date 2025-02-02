@@ -17,12 +17,7 @@ export default function Home() {
         <HomePage />
         <ExpertisePage />
         <ProjectsPage />
-        <div
-          id="experience"
-          className="flex h-screen flex-col items-center justify-center"
-        >
-          <h1>Experience</h1>
-        </div>
+        <ExpertisePage />
         <div
           id="contact"
           className="flex h-screen flex-col items-center justify-center"
