@@ -11,20 +11,18 @@ export const HomePage = () => {
       id="home"
       className="relative flex h-screen flex-col items-center justify-center"
     >
-      <EverVault>
-        <div className="relative flex h-screen flex-col items-center justify-center">
-          <h1>Joshua Hoban</h1>
-          <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
-          <div
-            style={{
-              width: "322px",
-              height: "322px",
-            }}
-          >
-            <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
-          </div>
+      <div className="relative flex h-screen flex-col items-center justify-center">
+        <h1>Joshua Hoban</h1>
+        <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
+        <div
+          style={{
+            width: "322px",
+            height: "322px",
+          }}
+        >
+          <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
         </div>
-      </EverVault>
+      </div>
       <div
         className="absolute bottom-0"
         style={{ width: "100px", height: "100px" }}
