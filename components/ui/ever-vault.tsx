@@ -66,7 +66,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
         className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
         style={style}
       >
-        <p className="absolute inset-x-0 h-full font-mono text-xs font-bold break-words whitespace-pre-wrap text-white transition duration-500">
+        <p className="absolute inset-x-0 h-full font-mono text-xs font-bold break-words whitespace-pre-wrap text-white/[0.8] transition duration-500">
           {randomString}
         </p>
       </motion.div>
@@ -74,15 +74,6 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
   );
 }
 
-const characters =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-export const generateRandomString = (length: number) => {
-  let result = "";
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
-};
 const jsKeywords = [
   "break", "case", "catch", "class", "const", "continue", "debugger", "default", "delete", "do", "else", "export", "extends", "finally", "for", "function", "if", "import", "in", "instanceof", "new", "return", "super", "switch", "this", "throw", "try", "typeof", "var", "void", "while", "with", "yield"
 ];
@@ -147,47 +138,6 @@ const generateRandomJSCode = (length: number) => {
 
   return result.trim();
 };
-
-// const generateRandomJSCode = (length: number) => {
-//   let result = "";
-//   let depth = 0;
-
-//   const getRandomElement = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
-
-//   for (let i = 0; i < length; i++) {
-//     const rand = Math.random();
-//     if (rand < 0.05 && depth > 0) {
-//       result += "} ";
-//       depth--;
-//     } else if (rand < 0.1) {
-//       result += getRandomElement(symbols) + " ";
-//     } else if (rand < 0.15) {
-//       result += getRandomElement(jsOperators) + " ";
-//     } else if (rand < 0.2) {
-//       result += getRandomElement(jsIdentifiers) + " ";
-//     } else if (rand < 0.25) {
-//       result += getRandomElement(jsKeywords) + " ";
-//     } else if (rand < 0.3) {
-//       result += "function " + getRandomElement(jsIdentifiers) + "() { ";
-//       depth++;
-//     } else if (rand < 0.35) {
-//       result += "if (" + getRandomElement(jsIdentifiers) + " " + getRandomElement(jsOperators) + " " + getRandomElement(jsIdentifiers) + ") { ";
-//       depth++;
-//     } else if (rand < 0.4) {
-//       result += "switch (" + getRandomElement(jsIdentifiers) + ") { case " + getRandomElement(jsIdentifiers) + ": break; ";
-//       depth++;
-//     } else {
-//       result += getRandomElement(jsIdentifiers) + " ";
-//     }
-//   }
-
-//   while (depth > 0) {
-//     result += "} ";
-//     depth--;
-//   }
-
-//   return result.trim();
-// };
 
 export const Icon = ({ className, ...rest }: any) => {
   return (
