@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "Joshua Hoban",
   description:
     "Fullstack web developer based in Berlin, Germany. Aussie software developer excelling in Frontend design and client satisfaction.",
+  openGraph: {
+    images: [
+      {
+        url: "https://joshuahoban.com/images/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Joshua Hoban",
+      },
+    ],
+  },
 };
 
 export default function Home() {
