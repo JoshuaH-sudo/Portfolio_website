@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://joshuahoban.com/images/profile.png",
+        url: "https://joshua-hoban.com/images/profile.png",
         width: 1200,
         height: 630,
         alt: "Joshua Hoban",
