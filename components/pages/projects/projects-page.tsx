@@ -10,7 +10,6 @@ const ProjectsPage = () => {
   return (
     <div id="projects" className="relative z-10 h-screen">
       <div className="z-1 flex h-full flex-col items-center justify-start">
-        <h1>Projects</h1>
         <BentoGrid className="mx-auto max-w-4xl">
           {items.map((item, i) => (
             <motion.div
@@ -92,7 +91,8 @@ const items = [
   },
   {
     title: "Helsinki city bike (HSL) station finder",
-    description: "An exercise for Solita Dev Academy, fullstack application with a React frontend and a Node.js backend running on AWS ECS.",
+    description:
+      "An exercise for Solita Dev Academy, fullstack application with a React frontend and a Node.js backend running on AWS ECS.",
     header: (
       <Image
         src="/images/projects/hsl-transport-app.png"
@@ -104,7 +104,8 @@ const items = [
   },
   {
     title: "This website... wow!",
-    description: "Wanna see how I made the website your on right now? Check out the repo!",
+    description:
+      "Wanna see how I made the website your on right now? Check out the repo!",
     header: (
       <Image
         src="/images/projects/website.png"
