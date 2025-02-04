@@ -7,30 +7,13 @@ import {
 import Image from "next/image";
 import React, { FC } from "react";
 import { experiences } from "./constants";
-
-interface Testimonial {
-  name: string;
-  role: string;
-  testimonial: string;
-}
-interface Experience {
-  title: string;
-  date: string;
-  description: string;
-  testimonials: Testimonial[];
-  socials?: Partial<{
-    website: string;
-    linkedin: string;
-    github: string;
-    twitter: string;
-  }>;
-}
+import { Experience, Testimonial } from "./types";
 
 interface TestimonialProps {
   testimonial: Testimonial;
 }
 
-const Testimonial: FC<TestimonialProps> = ({ testimonial }) => {
+const TestimonialItem: FC<TestimonialProps> = ({ testimonial }) => {
   const { name, role, testimonial: content } = testimonial;
 
   return (
@@ -71,7 +54,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
       </div>
       <div id="testimonials" className="h-full">
         {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial.name} testimonial={testimonial} />
+          <TestimonialItem key={testimonial.name} testimonial={testimonial} />
         ))}
       </div>
     </div>
