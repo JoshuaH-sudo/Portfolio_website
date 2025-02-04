@@ -2,32 +2,9 @@ import { Experience } from "./types";
 
 export const experiences: Experience[] = [
   {
-    title: "Countersight",
-    date: "2021 - 2023",
-    description: (
-      <>
-        At Countersight I am entrusted to research, design and implement
-        software solutions from the ground up that meet the clients requirements
-        and ensure strong maintainability of the code base for future
-        development. I am currently the main developer for two big projects for
-        our clients. <br />
-        <br />
-        The first project, I took lead on constructing the Front-end of the
-        application and provide high usability and responsive web front, which
-        utilized a rich UI library that satisfied the clients beyond their
-        expectations. <br />
-        <br />
-        The second project, I had lead on designing both the front and back end
-        of the application, to establish a solid foundation for the rest of my
-        colleagues to develop from. My design allowed them to easily implement
-        more features quickly and easily. <br />
-        <br />I am also responsible for more than just constructing solutions, I
-        am relied upon to provide technical direction on projects and which
-        technologies to use, advise my colleagues and assist in problem solving
-        and to conduct code reviews to ensure that our team's work adheres to
-        the best code practices.
-      </>
-    ),
+    title: "Visi/one",
+    date: "2024 - Present",
+    description: "",
     testimonials: [
       {
         name: "John Doe",
@@ -38,7 +15,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Smunch",
-    date: "2020 - 2021",
+    date: "2023 - 2024",
     description: (
       <>
         In my role, I spearheaded the development of new UI interfaces and features
@@ -71,6 +48,41 @@ export const experiences: Experience[] = [
       {
         name: "Jane Doe",
         role: "CTO",
+        testimonial: "It was a great experience working with you.",
+      },
+    ],
+  },
+  {
+    title: "Countersight",
+    date: "2020 - 2023",
+    description: (
+      <>
+        At Countersight I am entrusted to research, design and implement
+        software solutions from the ground up that meet the clients requirements
+        and ensure strong maintainability of the code base for future
+        development. I am currently the main developer for two big projects for
+        our clients. <br />
+        <br />
+        The first project, I took lead on constructing the Front-end of the
+        application and provide high usability and responsive web front, which
+        utilized a rich UI library that satisfied the clients beyond their
+        expectations. <br />
+        <br />
+        The second project, I had lead on designing both the front and back end
+        of the application, to establish a solid foundation for the rest of my
+        colleagues to develop from. My design allowed them to easily implement
+        more features quickly and easily. <br />
+        <br />I am also responsible for more than just constructing solutions, I
+        am relied upon to provide technical direction on projects and which
+        technologies to use, advise my colleagues and assist in problem solving
+        and to conduct code reviews to ensure that our team's work adheres to
+        the best code practices.
+      </>
+    ),
+    testimonials: [
+      {
+        name: "John Doe",
+        role: "CEO",
         testimonial: "It was a great experience working with you.",
       },
     ],
