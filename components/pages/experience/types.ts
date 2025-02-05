@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export interface Testimonial {
   name: string;
   role: string;
-  testimonial: string;
+  testimonial: ReactNode;
 }
 
 export interface Experience {

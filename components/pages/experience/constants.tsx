@@ -46,9 +46,19 @@ export const experiences: Experience[] = [
     ),
     testimonials: [
       {
-        name: "Jane Doe",
-        role: "CTO",
-        testimonial: "It was a great experience working with you.",
+        name: "Moataz Gouda",
+        role: "Product Manager",
+        testimonial: (
+          <>
+            I have had the pleasure of working closely with Joshua for 6 months at Smuncs. He is an exceptional software engineer with a deep understanding of software development principles and never shies away from a challenge. <br />
+            <br />
+            Joshua consistently impressed me with his ability to tackle complex technical and product challenges. He played a crucial role in developing necessary features such as a preference sorting algorithm, which helped boost session conversion rate and provided a better user experience. <br />
+            <br />
+            Putting Joshua's technical skills aside, he is an amazing team player, is always there to assist his colleagues when needed, and continuously provides feedback on how we can improve things, proposes new ideas from both a technical and business perspective, and is always working on improving his skillset by asking questions and pair programming with other colleagues. <br />
+            <br />
+            I would highly recommend Joshua for any software engineering role, as I believe he would be a valuable asset to any team.
+          </>
+        )
       },
     ],
   },

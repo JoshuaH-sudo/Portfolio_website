@@ -18,20 +18,24 @@ const TestimonialItem: FC<TestimonialProps> = ({ testimonial }) => {
   const { name, role, testimonial: content } = testimonial;
 
   return (
-    <div key={name} className="flex h-full flex-col bg-gray-200">
-      <div className="flex flex-row items-center justify-between bg-gray-400 p-4">
+    <div
+      key={name}
+      className="flex h-full flex-col rounded-r-2xl rounded-bl-2xl bg-gray-200"
+    >
+      <div className="flex flex-row items-center justify-between rounded-r-2xl rounded-bl-2xl bg-gray-400 p-4">
         <div className="flex flex-col bg-gray-400">
           <p>{name}</p>
           <p>{role}</p>
         </div>
         <Image
-          src="/images/profile.png"
-          alt="Picture of the author"
+          src={`/images/testimonials/${name.toLowerCase().replace(" ", "-")}.jpg`}
+          alt={`${name} profile`}
           width={100}
           height={100}
+          className="rounded-full shadow-lg"
         />
       </div>
-      <p className="p-2">{content}</p>
+      <p className="p-2 overflow-y-auto">{content}</p>
     </div>
   );
 };
@@ -68,10 +72,7 @@ const ExperiencePage: React.FC = () => {
       id="experience"
       className="flex h-screen w-full flex-row gap-2 px-20 pt-20 pb-10"
     >
-      <div
-        id="experience"
-        className="flex h-full min-w-5xl flex-col gap-2"
-      >
+      <div id="experience" className="flex h-full min-w-5xl flex-col gap-2">
         {experiences.map((experience, index) => (
           <ExperienceItem
             key={experience.title}
