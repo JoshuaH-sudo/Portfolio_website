@@ -2,14 +2,14 @@ import { Experience } from "./types";
 
 export const experiences: Experience[] = [
   {
-    title: "Visi/one",
+    title: "Visi/One",
     date: "2024 - Present",
     description: "",
     testimonials: [
       {
-        name: "John Doe",
-        role: "CEO",
-        testimonial: "It was a great experience working with you.",
+        name: "Ryan",
+        role: "Software Manager",
+        testimonial: "JOSH IS THE BEST I LIKE KIWI",
       },
     ],
   },
