@@ -43,21 +43,27 @@ const TestimonialItem: FC<TestimonialProps> = ({ testimonial }) => {
   );
 };
 
-interface ExperienceItemProps {
-  onClick?: () => void;
-  experience: Experience;
+interface ExperienceListProps {
+  selectTab?: (index: number) => void;
 }
 
-const ExperienceItem: FC<ExperienceItemProps> = ({ experience, onClick }) => {
-  const { title, date, description, testimonials } = experience;
-
+const ExperienceList: FC<ExperienceListProps> = ({ selectTab }) => {
   return (
-    <AccordionItem value={title}>
-      <AccordionTrigger
-        onClick={onClick}
-      >{`${title} ${date}`}</AccordionTrigger>
-      <AccordionContent>{description}</AccordionContent>
-    </AccordionItem>
+    <div className="w-full text-left">
+      <Accordion type="single" className="w-full bg-gray-300 p-5">
+        {experiences.map((experience, index) => {
+          const { title, date, description } = experience;
+          return (
+            <AccordionItem key={title} value={title}>
+              <AccordionTrigger
+                onClick={() => selectTab && selectTab(index)}
+              >{`${title} ${date}`}</AccordionTrigger>
+              <AccordionContent>{description}</AccordionContent>
+            </AccordionItem>
+          );
+        })}
+      </Accordion>
+    </div>
   );
 };
 
@@ -71,17 +77,7 @@ const ExperiencePage: React.FC = () => {
     >
       <div id="experience" className="flex h-full min-w-5xl flex-col gap-2">
         <div className="flex-row items-start justify-between gap-2">
-          <div className="w-full text-left">
-            <Accordion type="single" className="w-full bg-gray-300 p-5">
-              {experiences.map((experience, index) => (
-                <ExperienceItem
-                  key={experience.title}
-                  experience={experience}
-                  onClick={() => setSelectedExperienceIndex(index)}
-                />
-              ))}
-            </Accordion>
-          </div>
+          <ExperienceList selectTab={setSelectedExperienceIndex} />
         </div>
       </div>
       <div id="testimonials" className="h-full w-full">
