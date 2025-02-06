@@ -9,6 +9,7 @@ import Image from "next/image";
 import React, { FC, useState } from "react";
 import { experiences } from "./constants";
 import { Experience, Testimonial } from "./types";
+import { delay, motion } from "motion/react";
 
 interface TestimonialProps {
   testimonial: Testimonial;
@@ -16,26 +17,28 @@ interface TestimonialProps {
 
 const TestimonialItem: FC<TestimonialProps> = ({ testimonial }) => {
   const { name, role, testimonial: content } = testimonial;
-
   return (
-    <div
-      key={name}
-      className="flex h-full flex-col rounded-r-2xl rounded-bl-2xl bg-gray-200"
-    >
-      <div className="flex flex-row items-center justify-between rounded-r-2xl rounded-bl-2xl bg-gray-400 p-4">
-        <div className="flex flex-col bg-gray-400">
-          <p>{name}</p>
-          <p>{role}</p>
+    <div key={name} className="flex h-full flex-col">
+      <motion.div
+        className="rounded-b-2xl"
+        initial={{ width: 0, overflow: "hidden" }}
+        animate={{ width: "100%" }}
+      >
+        <div className="flex flex-row items-center justify-between rounded-tr-2xl bg-gray-400 p-4">
+          <div className="flex flex-col">
+            <p>{name}</p>
+            <p>{role}</p>
+          </div>
+          <Image
+            src={`/images/testimonials/${name.toLowerCase().replace(" ", "-")}.jpg`}
+            alt={`${name} profile`}
+            width={100}
+            height={100}
+            className="rounded-full shadow-lg"
+          />
         </div>
-        <Image
-          src={`/images/testimonials/${name.toLowerCase().replace(" ", "-")}.jpg`}
-          alt={`${name} profile`}
-          width={100}
-          height={100}
-          className="rounded-full shadow-lg"
-        />
-      </div>
-      <p className="p-2 overflow-y-auto">{content}</p>
+        <p className="h-full overflow-auto bg-gray-300 p-4">{content}</p>
+      </motion.div>
     </div>
   );
 };
@@ -49,18 +52,12 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience, onClick }) => {
   const { title, date, description, testimonials } = experience;
 
   return (
-    <div className="flex-row items-start justify-between gap-2">
-      <div className="w-full text-left">
-        <Accordion type="single" collapsible className="w-full bg-gray-300 p-5">
-          <AccordionItem value="item-1">
-            <AccordionTrigger
-              onClick={onClick}
-            >{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent>{description}</AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    </div>
+    <AccordionItem value={title}>
+      <AccordionTrigger
+        onClick={onClick}
+      >{`${title} ${date}`}</AccordionTrigger>
+      <AccordionContent>{description}</AccordionContent>
+    </AccordionItem>
   );
 };
 
@@ -73,13 +70,19 @@ const ExperiencePage: React.FC = () => {
       className="flex h-screen w-full flex-row gap-2 px-20 pt-20 pb-10"
     >
       <div id="experience" className="flex h-full min-w-5xl flex-col gap-2">
-        {experiences.map((experience, index) => (
-          <ExperienceItem
-            key={experience.title}
-            experience={experience}
-            onClick={() => setSelectedExperienceIndex(index)}
-          />
-        ))}
+        <div className="flex-row items-start justify-between gap-2">
+          <div className="w-full text-left">
+            <Accordion type="single" className="w-full bg-gray-300 p-5">
+              {experiences.map((experience, index) => (
+                <ExperienceItem
+                  key={experience.title}
+                  experience={experience}
+                  onClick={() => setSelectedExperienceIndex(index)}
+                />
+              ))}
+            </Accordion>
+          </div>
+        </div>
       </div>
       <div id="testimonials" className="h-full w-full">
         {testimonials.map((testimonial) => (
