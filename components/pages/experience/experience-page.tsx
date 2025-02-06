@@ -6,23 +6,36 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { experiences } from "./constants";
 import { Experience, Testimonial } from "./types";
 import { delay, motion } from "motion/react";
 
-interface TestimonialProps {
-  testimonial: Testimonial;
+interface TestimonialCarouselProps {
+  testimonials: Testimonial[];
 }
 
-const TestimonialItem: FC<TestimonialProps> = ({ testimonial }) => {
-  const { name, role, testimonial: content } = testimonial;
+const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ testimonials }) => {
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const nextTestimonial = () => {
+    setCurrentTestimonialIndex((currentTestimonialIndex + 1) % testimonials.length);
+  };
+
+  useEffect(() => {
+    if (testimonials.length <= 1) return;
+    const interval = setInterval(nextTestimonial, 3000);
+    return () => clearInterval(interval);
+  }, [currentTestimonialIndex]);
+
+  const { name, role, testimonial: content } = testimonials[currentTestimonialIndex];
   return (
     <div key={name} className="flex h-full flex-col">
       <motion.div
         className="rounded-b-2xl"
         initial={{ width: 0, overflow: "hidden" }}
+        exit={{ width: 0, overflow: "hidden" }}
         animate={{ width: "100%" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="flex flex-row items-center justify-between rounded-tr-2xl bg-gray-400 p-4">
           <div className="flex flex-col">
@@ -81,9 +94,7 @@ const ExperiencePage: React.FC = () => {
         </div>
       </div>
       <div id="testimonials" className="h-full w-full">
-        {testimonials.map((testimonial) => (
-          <TestimonialItem key={testimonial.name} testimonial={testimonial} />
-        ))}
+          <TestimonialCarousel testimonials={testimonials} />
       </div>
     </div>
   );

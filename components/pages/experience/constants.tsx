@@ -49,15 +49,15 @@ export const experiences: Experience[] = [
         name: "Moataz Gouda",
         role: "Product Manager",
         testimonial: (
-          <>
-            I have had the pleasure of working closely with Joshua for 6 months at Smuncs. He is an exceptional software engineer with a deep understanding of software development principles and never shies away from a challenge. <br />
+            <>
+            I have had the pleasure of working closely with Joshua for 6 months at Smunch. He is an <strong>exceptional</strong> software engineer with a deep understanding of software development principles and never shies away from a challenge. <br />
             <br />
-            Joshua consistently impressed me with his ability to tackle complex technical and product challenges. He played a crucial role in developing necessary features such as a preference sorting algorithm, which helped boost session conversion rate and provided a better user experience. <br />
+            Joshua consistently impressed me with his ability to tackle complex technical and product challenges. He played a crucial role in developing necessary features such as a <strong>preference sorting algorithm</strong>, which helped boost session conversion rate and provided a better user experience. <br />
             <br />
-            Putting Joshua's technical skills aside, he is an amazing team player, is always there to assist his colleagues when needed, and continuously provides feedback on how we can improve things, proposes new ideas from both a technical and business perspective, and is always working on improving his skillset by asking questions and pair programming with other colleagues. <br />
+            Putting Joshua's technical skills aside, he is an amazing <strong>team player</strong>, is always there to assist his colleagues when needed, and continuously provides feedback on how we can improve things, proposes new ideas from both a technical and business perspective, and is always working on improving his skillset by asking questions and pair programming with other colleagues. <br />
             <br />
             I would highly recommend Joshua for any software engineering role, as I believe he would be a valuable asset to any team.
-          </>
+            </>
         )
       },
     ],
@@ -91,10 +91,35 @@ export const experiences: Experience[] = [
     ),
     testimonials: [
       {
-        name: "John Doe",
-        role: "CEO",
-        testimonial: "It was a great experience working with you.",
+        name: "Nick Mazitelli",
+        role: "Founder & Managing Director at Countersight",
+        testimonial: (
+            <>
+            <strong>Josh</strong> is a committed, consistently professional and highly skilful front-end developer and has been a great asset to the team. <br />
+            <br />
+            He has made significant contributions to the design and implementation of several <strong>important projects</strong> and has demonstrated a capacity for <strong>problem-solving</strong> and an ability to develop <strong>innovative solutions</strong> to complex problems. <br />
+            <br />
+            Josh has a strong <strong>work ethic</strong>, attention to detail, and a drive to deliver exceptional results and I have no hesitation in recommending him to anyone fortunate enough to be looking to engage him.
+            </>
+        ),
       },
+      {
+        name: "David Gavin",
+        role: "Senior Software Engineer",
+        testimonial: (
+          <>
+            Joshua has been a highly motivated, responsible and thoughtful team member at Countersight. <br />
+            <br />
+            Members of the team, myself included, rely upon Joshua's extensive knowledge of <strong>Typescript</strong> and <strong>React</strong> as well as client focused web development in general. <br />
+            <br />
+            As a teammate, Joshua is always happy to mentor staff, collaborate with peers and review teammate's merge requests and proposals while providing constructive and polite feedback. <br />
+            <br />
+            Joshua’s designs have been critical to the successful delivery of applications to our clients, while we were sorry to lose him we wish him the best of luck on the next chapter of his career. <br />
+            <br />
+            Joshua would be an asset to any team and I have no hesitation in recommending him.
+          </>
+        )
+      }
     ],
   }
 ];
