@@ -158,6 +158,10 @@
     font-size: var(--text-base);
     font-family: var(--font-andale-mono);
   }
+  span {
+    font-size: var(--text-base);
+    font-family: var(--font-andale-mono);
+  }
   strong {
     font-weight: 900;
     text-decoration: underline;

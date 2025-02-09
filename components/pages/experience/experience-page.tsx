@@ -8,17 +8,21 @@ import {
 import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
 import { experiences } from "./constants";
-import { Experience, Testimonial } from "./types";
-import { delay, motion } from "motion/react";
+import { Testimonial } from "./types";
+import { motion } from "motion/react";
 
 interface TestimonialCarouselProps {
   testimonials: Testimonial[];
 }
 
-const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ testimonials }) => {
+const TestimonialCarousel: FC<TestimonialCarouselProps> = ({
+  testimonials,
+}) => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const nextTestimonial = () => {
-    setCurrentTestimonialIndex((currentTestimonialIndex + 1) % testimonials.length);
+    setCurrentTestimonialIndex(
+      (currentTestimonialIndex + 1) % testimonials.length,
+    );
   };
 
   useEffect(() => {
@@ -27,7 +31,13 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ testimonials }) => 
     return () => clearInterval(interval);
   }, [currentTestimonialIndex]);
 
-  const { name, role, testimonial: content } = testimonials[currentTestimonialIndex];
+  if (testimonials.length === 0) return null;
+
+  const {
+    name,
+    role,
+    testimonial: content,
+  } = testimonials[currentTestimonialIndex];
   return (
     <div key={name} className="flex h-full flex-col">
       <motion.div
@@ -94,7 +104,7 @@ const ExperiencePage: React.FC = () => {
         </div>
       </div>
       <div id="testimonials" className="h-full w-full">
-          <TestimonialCarousel testimonials={testimonials} />
+        <TestimonialCarousel testimonials={testimonials} />
       </div>
     </div>
   );
