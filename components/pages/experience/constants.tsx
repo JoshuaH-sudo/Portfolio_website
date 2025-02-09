@@ -4,7 +4,29 @@ export const experiences: Experience[] = [
   {
     title: "Visi/One",
     date: "2024 - Present",
-    description: "",
+    description: (
+      <>
+        At Smunch, I lead the <strong>frontend development efforts</strong>,
+        collaborating closely with my team to prototype and refine UI/UX designs
+        using Figma. This iterative approach allows us to quickly identify and
+        implement the most effective design solutions. <br />
+        <br />
+        Beyond design, I take a <strong>full-stack role</strong>, developing
+        both the frontend and backend components to bring these ideas to life.{" "}
+        <br />
+        <br />I also spearheaded the development of our{" "}
+        <strong>mobile app</strong>, enhancing our core product from initial
+        design to deployment on the Google Play and Apple App Stores. Using
+        React Native with Expo, I guided the project from concept to release,
+        ensuring a seamless and high-quality user experience. <br />
+        <br />A key aspect of my role is fostering a{" "}
+        <strong>cooperative environment</strong> by constructively challenging
+        ideas, helping the team refine solutions and achieve the best possible
+        outcomes. My work is not just about writing code but about shaping
+        products that meet both business and user needs while maintaining high
+        development standards.
+      </>
+    ),
     testimonials: [],
   },
   {
@@ -12,29 +34,28 @@ export const experiences: Experience[] = [
     date: "2023 - 2024",
     description: (
       <>
-        In my role, I spearheaded the development of new UI interfaces and
+        In my role, I spearheaded the development of new <strong>UI interfaces</strong> and
         features for our applications. Collaborating with diverse disciplinary
-        teams, including product, customer satisfaction, and accounting, was a
+        teams, including <strong>product</strong>, <strong>customer satisfaction</strong>, and <strong>accounting</strong>, was a
         key aspect of my responsibilities. I played a pivotal role in
         translating product team requirements into efficient code and providing
-        guidance to colleagues on CSS techniques for effective troubleshooting.{" "}
+        guidance to colleagues on <strong>CSS techniques</strong> for effective troubleshooting.{" "}
         <br />
         <br />
-        Ensuring continuous deployment was a priority, and I achieved this by
+        Ensuring <strong>continuous deployment</strong> was a priority, and I achieved this by
         creating adaptable code capable of swift adjustments in response to
         evolving business requirements. My achievements include leading the
-        implementation of critical features like a sorting system based on user
-        order history and a user-friendly weekly overview to view their current
+        implementation of critical features like a <strong>sorting system</strong> based on user
+        order history and a user-friendly <strong>weekly overview</strong> to view their current
         orders. <br />
-        <br />
-        I successfully contributed to the transformation of an application
-        burdened by three levels of legacy code into a modernized version,
+        <br />I successfully contributed to the transformation of an application
+        burdened by three levels of <strong>legacy code</strong> into a modernized version,
         receiving high praise from users. Notably, I surpassed deadlines on
         various features by delivering effective solutions and resolved major
-        bugs affecting business-critical components such as customer onboarding.{" "}
+        bugs affecting business-critical components such as <strong>customer onboarding</strong>.{" "}
         <br />
         <br />
-        My extensive knowledge of CSS played a crucial role in troubleshooting
+        My extensive knowledge of <strong>CSS</strong> played a crucial role in troubleshooting
         both common and niche problems. And providing that knowledge to the rest
         of the team. Overall, my commitment to excellence in front-end
         development is demonstrated through the successful delivery of
@@ -84,19 +105,19 @@ export const experiences: Experience[] = [
         development. I am currently the main developer for two big projects for
         our clients. <br />
         <br />
-        The first project, I took lead on constructing the Front-end of the
+        The first project, I took lead on constructing the <strong>Front-end</strong> of the
         application and provide high usability and responsive web front, which
-        utilized a rich UI library that satisfied the clients beyond their
+        utilized a rich <strong>UI library</strong> that satisfied the clients beyond their
         expectations. <br />
         <br />
-        The second project, I had lead on designing both the front and back end
+        The second project, I had lead on designing both the <strong>front</strong> and <strong>back end</strong>
         of the application, to establish a solid foundation for the rest of my
         colleagues to develop from. My design allowed them to easily implement
         more features quickly and easily. <br />
         <br />I am also responsible for more than just constructing solutions, I
-        am relied upon to provide technical direction on projects and which
-        technologies to use, advise my colleagues and assist in problem solving
-        and to conduct code reviews to ensure that our team's work adheres to
+        am relied upon to provide <strong>technical direction</strong> on projects and which
+        technologies to use, advise my colleagues and assist in <strong>problem solving</strong>
+        and to conduct <strong>code reviews</strong> to ensure that our team's work adheres to
         the best code practices.
       </>
     ),

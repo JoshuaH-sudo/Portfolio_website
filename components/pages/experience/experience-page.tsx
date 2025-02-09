@@ -81,7 +81,9 @@ const ExperienceList: FC<ExperienceListProps> = ({ selectTab }) => {
               <AccordionTrigger
                 onClick={() => selectTab && selectTab(index)}
               >{`${title} ${date}`}</AccordionTrigger>
-              <AccordionContent>{description}</AccordionContent>
+              <AccordionContent>
+                <p>{description}</p>
+              </AccordionContent>
             </AccordionItem>
           );
         })}
