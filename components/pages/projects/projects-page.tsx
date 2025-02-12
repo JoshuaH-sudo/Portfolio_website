@@ -5,13 +5,14 @@ import { motion, Variants } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { projectItems } from "./constants";
 
 const ProjectsPage = () => {
   return (
     <div id="projects" className="relative z-10 h-screen">
       <div className="z-1 flex h-full flex-col items-center justify-start">
         <BentoGrid className="mx-auto max-w-4xl">
-          {items.map((item, i) => (
+          {projectItems.map((item, i) => (
             <motion.div
               key={i}
               className={i === 0 || i === 3 ? "md:col-span-2" : ""}
@@ -53,66 +54,3 @@ const cardVariants: Variants = {
 };
 
 export default ProjectsPage;
-
-const items = [
-  {
-    title: (
-      <Link
-        href="https://apsj.com.au/index.php/journal"
-        target="_blank"
-        className="text-blue-500 underline"
-      >
-        The Australian Pharmacy Students Journal (APSJ) 💊
-      </Link>
-    ),
-    description:
-      "It is the only peer-reviewed pharmacy student journal in the world, providing pharmacy students around the world with the opportunity to develop research skills and publish their work.",
-    header: (
-      <Image
-        src="/images/projects/apsj.png"
-        alt="The Australian Pharmacy Students"
-        width={600}
-        height={300}
-      />
-    ),
-  },
-  {
-    title: "Dating Profile Website 😘",
-    description:
-      "A website to show off in my tinder bio, including a survey to see how compatible we are. 🥴",
-    header: (
-      <Image
-        src="/images/projects/dating-website.png"
-        alt="Dating Profile Website"
-        width={400}
-        height={300}
-      />
-    ),
-  },
-  {
-    title: "Helsinki city bike (HSL) station finder",
-    description:
-      "An exercise for Solita Dev Academy, fullstack application with a React frontend and a Node.js backend running on AWS ECS.",
-    header: (
-      <Image
-        src="/images/projects/hsl-transport-app.png"
-        alt="HSL Transport App"
-        width={400}
-        height={300}
-      />
-    ),
-  },
-  {
-    title: "This website... wow!",
-    description:
-      "Wanna see how I made the website your on right now? Check out the repo!",
-    header: (
-      <Image
-        src="/images/projects/website.png"
-        alt="This website"
-        width={600}
-        height={300}
-      />
-    ),
-  },
-];
