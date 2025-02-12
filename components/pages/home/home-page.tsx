@@ -9,6 +9,7 @@ export const HomePage = () => {
     <div
       id="home"
       className="relative flex h-screen flex-col items-center justify-center"
+      // When the user scrolls to this section set the active tab to home
     >
       <div className="relative z-10 flex h-screen flex-col items-center justify-center">
         <h1>Joshua Hoban.</h1>

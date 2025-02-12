@@ -1,7 +1,9 @@
 "use client";
+import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
 const tabs = [
   {
     name: "Home",
@@ -24,12 +26,14 @@ const tabs = [
     href: "#contact",
   },
 ];
-export default function Header() {
-  const [activeTab, setActiveTab] = useState("");
+
+function Header() {
+  const { activeTab, setActiveTab } = useAppStore(
+    (state) => state,
+  );
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.location.hash) setActiveTab(window.location.hash);
-    else setActiveTab("#home");
   }, []);
 
   return (
@@ -61,3 +65,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

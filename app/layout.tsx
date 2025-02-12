@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/header";
 import { CSPostHogProvider } from "./providers";
+import { AppStoreProvider } from "@/providers/app-store-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,10 +28,12 @@ export default function RootLayout({
       <Analytics />
       <SpeedInsights />
       <CSPostHogProvider>
-        <body className={inter.className + " bg-off-white"}>
-          <Header />
-          <div>{children}</div>
-        </body>
+        <AppStoreProvider>
+          <body className={inter.className + " bg-off-white"}>
+            <Header />
+            <div>{children}</div>
+          </body>
+        </AppStoreProvider>
       </CSPostHogProvider>
     </html>
   );
