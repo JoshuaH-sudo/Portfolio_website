@@ -10,6 +10,7 @@ import React, { FC, useEffect, useState } from "react";
 import { experiences } from "./constants";
 import { Testimonial } from "./types";
 import { motion } from "motion/react";
+import { useAppStore } from "@/providers/app-store-provider";
 
 interface TestimonialCarouselProps {
   testimonials: Testimonial[];
@@ -93,22 +94,28 @@ const ExperienceList: FC<ExperienceListProps> = ({ selectTab }) => {
 };
 
 const ExperiencePage: React.FC = () => {
+  const { setActiveTab } = useAppStore((state) => state);
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(0);
   const { testimonials } = experiences[selectedExperienceIndex];
   return (
-    <div
-      id="experience"
-      className="flex h-screen w-full flex-row gap-2 px-20 pt-20 pb-10"
+    <motion.div
+      viewport={{ amount: 0.8 }}
+      onViewportEnter={() => setActiveTab("#experience")}
     >
-      <div id="experience" className="flex h-full min-w-5xl flex-col gap-2">
-        <div className="flex-row items-start justify-between gap-2">
-          <ExperienceList selectTab={setSelectedExperienceIndex} />
+      <div
+        id="experience"
+        className="flex h-screen w-full flex-row gap-2 px-20 pt-20 pb-10"
+      >
+        <div id="experience" className="flex h-full min-w-5xl flex-col gap-2">
+          <div className="flex-row items-start justify-between gap-2">
+            <ExperienceList selectTab={setSelectedExperienceIndex} />
+          </div>
+        </div>
+        <div id="testimonials" className="h-full w-full">
+          <TestimonialCarousel testimonials={testimonials} />
         </div>
       </div>
-      <div id="testimonials" className="h-full w-full">
-        <TestimonialCarousel testimonials={testimonials} />
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

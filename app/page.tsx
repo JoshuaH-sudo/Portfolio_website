@@ -1,3 +1,4 @@
+import ContactPage from "@/components/pages/contact/contact-page";
 import ExperiencePage from "@/components/pages/experience/experience-page";
 import ExpertisePage from "@/components/pages/expertise/expertise-page";
 import { HomePage } from "@/components/pages/home/home-page";
@@ -29,12 +30,7 @@ export default function Home() {
         <ExpertisePage />
         <ProjectsPage />
         <ExperiencePage />
-        <div
-          id="contact"
-          className="flex h-screen flex-col items-center justify-center"
-        >
-          <h1>Contact</h1>
-        </div>
+        <ContactPage />
       </TracingBeam>
     </main>
   );
