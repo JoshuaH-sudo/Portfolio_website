@@ -1,6 +1,7 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BackgroundLines } from "@/components/ui/background-lines";
+import { GlareCard } from "@/components/ui/glare-card";
 import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -19,14 +20,14 @@ const ContactPage = () => {
           className="flex h-screen flex-col items-center justify-center gap-2"
         >
           <h1>Want to get in touch?</h1>
-          <CardContainer className="inter-var" containerClassName="p-0">
+          <GlareCard>
             <Image
               src="/images/josh-card.png"
               alt="me"
               width={372}
               height={520}
             />
-          </CardContainer>
+          </GlareCard>
           <div className="flex h-screen flex-col items-center justify-center">
             <h4>You can find me here!</h4>
             <div
