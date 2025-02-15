@@ -1,17 +1,19 @@
 import Image from "next/image";
+import Location from "./svgs/location";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { resolvedTheme } = useTheme();
   return (
     <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
-        <ul className="text-off-black flex flex-row justify-center gap-5">
+        <ul className="flex flex-row justify-center gap-5">
           <li>
             <span className="flex flex-row items-center gap-1">
-              <Image
-                src="/images/icons/location.svg"
-                alt="location"
+              <Location
                 width={17}
                 height={21}
+                fill={resolvedTheme === "dark" ? "#fff" : "#000"}
               />
               <p>Berlin</p>
             </span>
@@ -31,7 +33,7 @@ export default function Footer() {
 
       <a
         href="mailto:joshua_hoban@proton.me"
-        className="text-off-black text-xl font-extrabold"
+        className="text-xl font-extrabold"
       >
         joshua_hoban@proton.me
       </a>

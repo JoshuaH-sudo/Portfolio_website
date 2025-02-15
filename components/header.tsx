@@ -54,7 +54,7 @@ function Header() {
                 <motion.div
                   layoutId="clickedbutton"
                   transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                  className="h-1 rounded-full bg-gray-800"
+                  className="h-1 rounded-full bg-gray-800 dark:bg-gray-200"
                 />
               )}
             </li>
