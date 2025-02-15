@@ -4,7 +4,18 @@ import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",
-  description: "Joshua Hoban! Aussie Full-Stack Web Developer based in Berlin, Germany.",
+  description:
+    "Aussie freelance Fullstack web developer based in Berlin, Germany.",
+  openGraph: {
+    images: [
+      {
+        url: "https://joshua-hoban.com/images/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Joshua Hoban",
+      },
+    ],
+  },
 };
 
 export default function MyApp({ Component, pageProps }: AppProps) {

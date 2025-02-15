@@ -35,12 +35,14 @@ const ContactPage = () => {
               height={50}
               alt="github"
             />
-            <Image
-              src="/images/icons/mail.svg"
-              width={50}
-              height={50}
-              alt="e-mail"
-            />
+            <a href="mailto:joshua_hoban@proton.me">
+              <Image
+                src="/images/icons/mail.svg"
+                width={50}
+                height={50}
+                alt="e-mail"
+              />
+            </a>
           </div>
         </div>
       </BackgroundLines>
