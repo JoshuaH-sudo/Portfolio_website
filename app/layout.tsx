@@ -6,6 +6,8 @@ import Header from "@/components/header";
 import { CSPostHogProvider } from "./providers";
 import { AppStoreProvider } from "@/providers/app-store-provider";
 import { Metadata } from "next";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,15 +37,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <Analytics />
       <SpeedInsights />
       <CSPostHogProvider>
         <AppStoreProvider>
-          <body className={inter.className + " bg-off-white"}>
-            <Header />
-            <div>{children}</div>
-          </body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <body className={cn(inter.className, "bg-off-white dark:bg-off-black")}>
+              <Header />
+              <div>{children}</div>
+            </body>
+          </ThemeProvider>
         </AppStoreProvider>
       </CSPostHogProvider>
     </html>

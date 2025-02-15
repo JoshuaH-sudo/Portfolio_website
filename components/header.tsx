@@ -3,6 +3,7 @@ import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ui/theme-toggle";
 
 const tabs = [
   {
@@ -28,9 +29,7 @@ const tabs = [
 ];
 
 function Header() {
-  const { activeTab, setActiveTab } = useAppStore(
-    (state) => state,
-  );
+  const { activeTab, setActiveTab } = useAppStore((state) => state);
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.location.hash) setActiveTab(window.location.hash);
@@ -60,6 +59,9 @@ function Header() {
               )}
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </nav>
     </header>

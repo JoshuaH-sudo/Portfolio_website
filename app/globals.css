@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-monomaniac-one: "Monomaniac One", "sans-serif";
@@ -114,7 +115,7 @@
     --default-text-color: var(--color-off-black);
   }
 
-  @media (prefers-color-scheme: dark) {
+  [color-scheme="dark"] {
     :root {
       --default-foreground-rgb: var(--color-off-black);
       --background-start-rgb: 0, 0, 0;

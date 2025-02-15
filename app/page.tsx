@@ -7,7 +7,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
-    <main>
+    <main className="z-[-10]">
       <TracingBeam>
         <HomePage />
         <ExpertisePage />
