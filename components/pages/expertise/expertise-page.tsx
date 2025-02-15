@@ -34,28 +34,29 @@ const ExpertisePage = () => {
           <div className="h-full w-3xl text-left">
             <p id="description" className="text-left text-xl">
               I am a results-driven full-stack web developer with a passion for
-              building impactful digital experiences. I have accelerated project
+              building impactful digital experiences. 🚀 I have accelerated project
               timelines, revitalized a legacy application for 10,000 users, and
               improved conversion rates through personalized sorting algorithms
-              and user engagement features.
+              and user engagement features. 📈
               <br />
               <br />
               By bridging gaps between engineering, product, and customer care
               teams, I improved communication and efficiency, ensuring smoother
-              development cycles. My open approach and humor fostered a
+              development cycles. 🔄 My open approach and humor fostered a
               collaborative atmosphere, strengthening team cohesion and
-              engagement.
+              engagement. 🤝
               <br />
               <br />
               I have led frontend design for major projects, implemented complex
-              plugin systems in weeks, and optimized application security. My
-              problem-solving skills have prevented costly rewrites, enhanced
-              performance, and refined UI/UX to exceed expectations.
+              plugin systems within weeks, and optimized application security. 🔒
+              My problem-solving skills have prevented costly rewrites, enhanced
+              performance, and refined UI/UX to exceed expectations. 💡
               <br />
               <br />
-              Beyond coding, I bring energy and creativity to every team. Open
-              to opportunities across the EU, I’m eager to drive innovation and
-              deliver high-quality solutions.
+              Beyond coding, I love to paint 🎨, travel ✈️, do martial arts 🥋
+              and learn languages (currently aiming for my B1 in German 🇩🇪). As
+              I am always looking to try new things and find ways to how they
+              can be combined together. 🌟
             </p>
           </div>
 

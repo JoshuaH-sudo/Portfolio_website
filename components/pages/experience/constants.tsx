@@ -7,18 +7,18 @@ export const experiences: Experience[] = [
     date: "2024 - Present",
     description: (
       <>
-        At Visi/One, I lead the <strong>frontend development efforts</strong>,
+        At Visi/One, I lead the <strong>frontend development efforts</strong> 🚀,
         collaborating closely with my team to prototype and refine UI/UX designs
         using Figma. This iterative approach allows us to quickly identify and
         implement the most effective design solutions. <br />
         <br />
-        Beyond design, I take a <strong>full-stack role</strong>, developing
+        Beyond design, I take a <strong>full-stack role</strong> 💻, developing
         both the frontend and backend components to bring these ideas to life. I
-        also spearheaded the development of our <strong>mobile app</strong>,
+        also spearheaded the development of our <strong>mobile app</strong> 📱,
         enhancing our core product from initial design to deployment on the
         Google Play and Apple App Stores using React Native with Expo. <br />
         <br />A key aspect of my role is fostering a{" "}
-        <strong>cooperative environment</strong>
+        <strong>cooperative environment</strong> 🤝
         by constructively challenging ideas, helping the team refine solutions
         and achieve the best possible outcomes. My work is not just about
         writing code but about shaping products that meet both business and user
@@ -31,10 +31,10 @@ export const experiences: Experience[] = [
     date: "2023 - 2024",
     description: (
       <>
-        I led the development of new <strong>UI interfaces</strong> and
+        I led the development of new <strong>UI interfaces</strong> 🖥️ and
         features, collaborating with product, customer satisfaction, and
         accounting teams. I translated product requirements into efficient code
-        and guided colleagues on <strong>CSS techniques</strong>. <br />
+        and guided colleagues on <strong>CSS techniques</strong> 🎨. <br />
         <br />I ensured continuous deployment by creating adaptable code. Key
         achievements include implementing a sorting system based on user order
         history and a weekly overview for current orders. <br />
@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
     date: "2020 - 2023",
     description: (
       <>
-        At Countersight, I <strong>research</strong>, design, and implement
+        At Countersight, I <strong>research</strong> 🔍, design, and implement
         software solutions from scratch, ensuring maintainability for future
         development. I lead two major projects, focusing on{" "}
         <strong>front-end development</strong> with a rich UI library and
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
         colleagues.
         <br />
         <br />
-        Additionally, I offer <strong>technical direction</strong>, advise
+        Additionally, I offer <strong>technical direction</strong> 🧭, advise
         colleagues, assist in problem-solving, and conduct code reviews to
         maintain best practices.
       </>
@@ -86,7 +86,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Josh is a committed, consistently professional and highly skilful front-end developer and has been a great asset to the team.",
     name: "Nick Mazitelli",
-    designation: "Founder & Managing Director at Countersight",
+    designation: "Managing Director",
     src: "/images/testimonials/nick-mazitelli.jpg",
   },
 ];
