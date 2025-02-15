@@ -1,13 +1,16 @@
 "use client";
+import Email from "@/components/svgs/email";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { GlareCard } from "@/components/ui/glare-card";
 import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
 const ContactPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
+  const { resolvedTheme } = useTheme();
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
@@ -39,7 +42,7 @@ const ContactPage = () => {
                 target="_blank"
               >
                 <Image
-                  src="/images/icons/linkedIn.png"
+                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedin-white.png" : "linkedin.png"}`}
                   width={50}
                   height={50}
                   alt="linkedIn"
@@ -50,18 +53,17 @@ const ContactPage = () => {
                 target="_blank"
               >
                 <Image
-                  src="/images/icons/github.png"
+                  src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
                   width={50}
                   height={50}
                   alt="github"
                 />
               </a>
               <a href="mailto:joshua_hoban@proton.me">
-                <Image
-                  src="/images/icons/mail.svg"
+                <Email
                   width={50}
                   height={50}
-                  alt="e-mail"
+                  fill={resolvedTheme === "dark" ? "white" : "black"}
                 />
               </a>
             </div>
