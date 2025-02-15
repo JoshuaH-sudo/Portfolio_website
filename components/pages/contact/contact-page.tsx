@@ -12,7 +12,7 @@ const ContactPage = () => {
       onViewportEnter={() => onViewPortEnter("#contact")}
       className="relative"
     >
-      <BackgroundLines className="h-screen">
+      <BackgroundLines>
         <div
           id="contact"
           className="flex h-screen flex-col items-center justify-center"

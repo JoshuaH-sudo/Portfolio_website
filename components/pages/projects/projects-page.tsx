@@ -14,7 +14,7 @@ const ProjectsPage = () => {
       onViewportEnter={() => onViewPortEnter("#projects")}
     >
       <div id="projects" className="relative z-10 h-screen">
-        <div className="z-1 flex h-full flex-col items-center justify-start">
+        <div className="z-1 flex h-full flex-col items-center justify-center">
           <BentoGrid className="mx-auto max-w-4xl">
             {projectItems.map((item, i) => (
               <motion.div
