@@ -74,11 +74,15 @@ interface ExperienceListProps {
 const ExperienceList: FC<ExperienceListProps> = ({ selectTab }) => {
   return (
     <div className="w-full text-left">
-      <Accordion type="single" className="w-full bg-gray-300 p-5">
+      <Accordion
+        type="single"
+        className="w-full bg-gray-300 p-5"
+        defaultValue="0"
+      >
         {experiences.map((experience, index) => {
           const { title, date, description } = experience;
           return (
-            <AccordionItem key={title} value={title}>
+            <AccordionItem key={title} value={index.toString()}>
               <AccordionTrigger
                 onClick={() => selectTab && selectTab(index)}
               >{`${title} ${date}`}</AccordionTrigger>
@@ -94,13 +98,13 @@ const ExperienceList: FC<ExperienceListProps> = ({ selectTab }) => {
 };
 
 const ExperiencePage: React.FC = () => {
-  const { setActiveTab } = useAppStore((state) => state);
+  const { onViewPortEnter } = useAppStore((state) => state);
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(0);
   const { testimonials } = experiences[selectedExperienceIndex];
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
-      onViewportEnter={() => setActiveTab("#experience")}
+      onViewportEnter={() => onViewPortEnter("#experience")}
     >
       <div
         id="experience"

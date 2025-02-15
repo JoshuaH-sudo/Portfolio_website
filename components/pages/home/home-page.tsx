@@ -7,11 +7,11 @@ import { motion } from "motion/react";
 import { useAppStore } from "@/providers/app-store-provider";
 
 export const HomePage = () => {
-  const { setActiveTab } = useAppStore((state) => state);
+  const { onViewPortEnter } = useAppStore((state) => state);
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
-      onViewportEnter={() => setActiveTab("#home")}
+      onViewportEnter={() => onViewPortEnter("#home")}
     >
       <div
         id="home"

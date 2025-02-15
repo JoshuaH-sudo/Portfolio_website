@@ -20,11 +20,11 @@ const logos = [
   "posthog",
 ];
 const ExpertisePage = () => {
-  const { setActiveTab } = useAppStore((state) => state);
+  const { onViewPortEnter } = useAppStore((state) => state);
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
-      onViewportEnter={() => setActiveTab("#expertise")}
+      onViewportEnter={() => onViewPortEnter("#expertise")}
     >
       <EverVault>
         <div

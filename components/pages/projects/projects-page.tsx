@@ -7,11 +7,11 @@ import { projectItems } from "./constants";
 import { useAppStore } from "@/providers/app-store-provider";
 
 const ProjectsPage = () => {
-  const { setActiveTab } = useAppStore((state) => state);
+  const { onViewPortEnter } = useAppStore((state) => state);
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
-      onViewportEnter={() => setActiveTab("#projects")}
+      onViewportEnter={() => onViewPortEnter("#projects")}
     >
       <div id="projects" className="relative z-10 h-screen">
         <div className="z-1 flex h-full flex-col items-center justify-start">
