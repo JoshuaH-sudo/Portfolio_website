@@ -5,6 +5,24 @@ import BackgroundBeams from "@/components/ui/background-beams";
 import Footer from "@/components/footer";
 import { motion } from "motion/react";
 import { useAppStore } from "@/providers/app-store-provider";
+import { FlipWords } from "@/components/ui/flip-words";
+
+const words = [
+  "Front-end Savvy",
+  "Full-stack Maestro",
+  "React Expert",
+  "Typescript Tinkerer",
+  "CSS Wizard",
+  "Mobile Magic",
+  "Aussie",
+  "JavaScript Ninja",
+  "UI/UX Enthusiast",
+  "Node.js Developer",
+  "Tech Speaker",
+  "Agile Practitioner",
+  "Problem Solver",
+  "Team Player",
+];
 
 export const HomePage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
@@ -20,7 +38,10 @@ export const HomePage = () => {
       >
         <div className="relative z-10 flex h-screen flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
-          <h5>Front-end Specialized Full-stack Freelance Developer.</h5>
+          <h5 className="self-end">
+            <FlipWords words={words} className="font-andale-mono text-2xl" />
+            Freelance Developer.
+          </h5>
           <div
             style={{
               width: "322px",
