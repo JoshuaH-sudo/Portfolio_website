@@ -23,18 +23,25 @@ const ContactPage = () => {
             id="socials"
             className="mt-10 flex items-center justify-center gap-2"
           >
-            <Image
-              src="/images/icons/linkedIn.png"
-              width={50}
-              height={50}
-              alt="linkedIn"
-            />
-            <Image
-              src="/images/icons/github.png"
-              width={50}
-              height={50}
-              alt="github"
-            />
+            <a href="https://www.linkedin.com/in/joshua-hoban/" target="_blank">
+              <Image
+                src="/images/icons/linkedIn.png"
+                width={50}
+                height={50}
+                alt="linkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/JoshuaH-sudo?tab=repositories"
+              target="_blank"
+            >
+              <Image
+                src="/images/icons/github.png"
+                width={50}
+                height={50}
+                alt="github"
+              />
+            </a>
             <a href="mailto:joshua_hoban@proton.me">
               <Image
                 src="/images/icons/mail.svg"
