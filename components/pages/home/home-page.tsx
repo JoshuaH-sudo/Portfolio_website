@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { motion } from "motion/react";
 import { useAppStore } from "@/providers/app-store-provider";
 import { FlipWords } from "@/components/ui/flip-words";
+import Link from "next/link";
 
 const words = [
   "Front-end Savvy",
@@ -25,7 +26,7 @@ const words = [
 ];
 
 export const HomePage = () => {
-  const { onViewPortEnter } = useAppStore((state) => state);
+  const { onViewPortEnter, setActiveTab } = useAppStore((state) => state);
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
@@ -51,12 +52,14 @@ export const HomePage = () => {
             <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
           </div>
         </div>
-        <div
-          className="absolute bottom-0"
+        <Link
+          href="#expertise"
+          className="absolute bottom-0 z-30"
           style={{ width: "100px", height: "100px" }}
+          onClick={() => setActiveTab("#expertise")}
         >
           <DotLottieReact src="/lottie/arrow-indicator.json" loop autoplay />
-        </div>
+        </Link>
         <Footer />
         <BackgroundBeams />
       </div>
