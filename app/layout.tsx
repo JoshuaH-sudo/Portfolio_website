@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -6,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/header";
 import { CSPostHogProvider } from "./providers";
 import { AppStoreProvider } from "@/providers/app-store-provider";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +15,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Joshua Hoban",
-  description: "Fullstack web developer based in Berlin",
+  description:
+    "Aussie freelance Fullstack web developer based in Berlin, Germany.",
+  openGraph: {
+    images: [
+      {
+        url: "https://joshua-hoban.com/images/josh-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Joshua Hoban",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
