@@ -162,7 +162,10 @@
     font-size: var(--text-2xl);
     font-family: var(--font-andale-mono);
   }
-
+  header {
+    color: rgb(var(--default-text-color));
+    background-color: rgb(var(--default-foreground-rgb));
+  }
   body {
     color: rgb(var(--default-text-color));
     background-color: rgb(var(--default-foreground-rgb));
