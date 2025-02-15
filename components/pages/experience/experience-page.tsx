@@ -44,7 +44,7 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex h-screen w-full flex-row justify-between gap-2 px-20 py-20"
+        className="flex h-screen w-full flex-row justify-between gap-2 px-20 py-20 pt-30"
       >
         <div id="experience" className="flex h-full w-6xl flex-col gap-2">
           <BackgroundGradient animate={true}>

@@ -29,7 +29,7 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="flex h-screen flex-row items-center justify-center py-20"
+          className="flex h-screen flex-row items-center justify-center py-20 pt-30"
         >
           <div className="h-full w-3xl text-left">
             <p id="description" className="text-left text-xl">
