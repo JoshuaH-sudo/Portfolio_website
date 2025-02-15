@@ -146,7 +146,19 @@
     font-family: var(--font-monomaniac-one);
   }
   h2 {
-    font-size: var(--text-lg);
+    font-size: var(--text-6xl);
+    font-family: var(--font-andale-mono);
+  }
+  h3 {
+    font-size: var(--text-4xl);
+    font-family: var(--font-andale-mono);
+  }
+  h4 {
+    font-size: var(--text-3xl);
+    font-family: var(--font-andale-mono);
+  }
+  h5 {
+    font-size: var(--text-2xl);
     font-family: var(--font-andale-mono);
   }
 

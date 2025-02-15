@@ -1,6 +1,10 @@
 "use client";
+import { Boxes } from "@/components/ui/background-boxes";
+import { BackgroundLines } from "@/components/ui/background-lines";
 import { useAppStore } from "@/providers/app-store-provider";
+import { Icon } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const ContactPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
@@ -8,10 +12,40 @@ const ContactPage = () => {
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#contact")}
+      className="relative"
     >
-      <div id="contact" className="flex h-screen items-center justify-center">
-        <h1>Contact</h1>
-      </div>
+      <BackgroundLines className="h-screen">
+        <div
+          id="contact"
+          className="flex h-screen flex-col items-center justify-center overflow-hidden"
+        >
+          <h1>Want to get in touch?</h1>
+          <h4>You can find me here!</h4>
+          <div
+            id="socials"
+            className="mt-10 flex items-center justify-center gap-2"
+          >
+            <Image
+              src="/images/icons/linkedIn.png"
+              width={50}
+              height={50}
+              alt="linkedIn"
+            />
+            <Image
+              src="/images/icons/github.png"
+              width={50}
+              height={50}
+              alt="github"
+            />
+            <Image
+              src="/images/icons/mail.svg"
+              width={50}
+              height={50}
+              alt="e-mail"
+            />
+          </div>
+        </div>
+      </BackgroundLines>
     </motion.div>
   );
 };

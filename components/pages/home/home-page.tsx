@@ -20,7 +20,7 @@ export const HomePage = () => {
       >
         <div className="relative z-10 flex h-screen flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
-          <h2>Front-end Specialized Full-stack Freelance Developer.</h2>
+          <h5>Front-end Specialized Full-stack Freelance Developer.</h5>
           <div
             style={{
               width: "322px",
