@@ -1,8 +1,6 @@
 "use client";
-import { Boxes } from "@/components/ui/background-boxes";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { useAppStore } from "@/providers/app-store-provider";
-import { Icon } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -17,7 +15,7 @@ const ContactPage = () => {
       <BackgroundLines className="h-screen">
         <div
           id="contact"
-          className="flex h-screen flex-col items-center justify-center overflow-hidden"
+          className="flex h-screen flex-col items-center justify-center"
         >
           <h1>Want to get in touch?</h1>
           <h4>You can find me here!</h4>
