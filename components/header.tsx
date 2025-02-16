@@ -37,36 +37,36 @@ function Header() {
   }, []);
 
   return (
-    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-screen items-center gap-2 justify-end md:justify-between px-5 md:px-20 py-1 transition-colors duration-300 flex-row">
-      <Link href="#home">
+    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-screen flex-row items-center justify-end gap-2 px-5 py-1 transition-colors duration-300 md:justify-between md:px-20">
+      <Link href="#home" className="ml-10 grow md:ml-0 md:grow-0">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
         </p>
       </Link>
 
-      <nav className="hidden text-lg font-bold md:block">
-        <ul className="flex flex-row justify-center gap-5">
-          {tabs.map((tab) => (
-            <li key={tab.name} className="group py-1 transition duration-300">
-              <Link href={tab.href} onClick={() => setActiveTab(tab.href)}>
-                {tab.name}
-              </Link>
-              {activeTab === tab.href && (
-                <motion.div
-                  layoutId="clickedbutton"
-                  transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                  className="h-1 rounded-full bg-gray-800 dark:bg-gray-200"
-                />
-              )}
-            </li>
-          ))}
-          <li>
-            <ThemeToggle />
-          </li>
-        </ul>
-      </nav>
-
       <MobileNavigation />
+
+      <div className="flex flex-row items-center gap-5">
+        <nav className="hidden text-lg font-bold md:block">
+          <ul className="flex flex-row justify-center gap-5">
+            {tabs.map((tab) => (
+              <li key={tab.name} className="group py-1 transition duration-300">
+                <Link href={tab.href} onClick={() => setActiveTab(tab.href)}>
+                  {tab.name}
+                </Link>
+                {activeTab === tab.href && (
+                  <motion.div
+                    layoutId="clickedbutton"
+                    transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+                    className="h-1 rounded-full bg-gray-800 dark:bg-gray-200"
+                  />
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

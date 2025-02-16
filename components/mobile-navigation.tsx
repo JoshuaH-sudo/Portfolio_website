@@ -22,7 +22,7 @@ const MobileNavigation = () => {
           <MenuIcon />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="dark:bg-off-black bg-off-white w-30 z-1000">
         <DropdownMenuGroup>
           {tabs.map((tab) => (
             <DropdownMenuItem key={tab.name}>
