@@ -23,7 +23,7 @@ const ContactPage = () => {
           className="flex h-screen flex-col items-center justify-center gap-2 py-20"
         >
           <h1>Want to get in touch?</h1>
-          <GlareCard>
+          <GlareCard className="mb-10">
             <Image
               src="/images/josh-card.png"
               alt="me"
