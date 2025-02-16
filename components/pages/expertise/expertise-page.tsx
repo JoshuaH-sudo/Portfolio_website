@@ -29,9 +29,9 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="page flex h-screen flex-col items-center justify-center md:flex-row"
+          className="page flex flex-col items-center justify-center md:flex-row"
         >
-          <div className="h-full w-auto md:w-3xl text-left overflow-auto">
+          <div className="w-auto md:w-3xl text-left">
             <p id="description" className="text-left text-base md:text-xl md:h-full">
               I am a results-driven full-stack web developer with a passion for
               building impactful digital experiences. 🚀 I have accelerated
@@ -74,7 +74,7 @@ const ExpertisePage = () => {
                 whileDrag={{ scale: 0.95 }}
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={0.3}
-                className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-36 md:w-36"
+                className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-36 md:w-36"
                 drag
               >
                 <div className="pointer-events-none flex items-center justify-center p-1">
