@@ -42,7 +42,7 @@ const ContactPage = () => {
                 target="_blank"
               >
                 <Image
-                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedin-white.png" : "linkedin.png"}`}
+                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
                   width={50}
                   height={50}
                   alt="linkedIn"
