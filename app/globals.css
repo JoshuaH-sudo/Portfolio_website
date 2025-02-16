@@ -218,7 +218,9 @@
 
   @media screen and (max-width: 640px) {
     .page {
-      padding-block: calc(var(--spacing) * 5);
+      padding-left: calc(var(--spacing) * 5);
+      padding-right: calc(var(--spacing) * 10);
+      margin-left: calc(var(--spacing) * 10);
     }
   }
 }

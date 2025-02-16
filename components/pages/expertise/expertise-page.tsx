@@ -29,15 +29,15 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="flex h-screen flex-row items-center justify-center page"
+          className="page flex h-screen flex-col items-center justify-center md:flex-row"
         >
-          <div className="h-full w-3xl text-left">
-            <p id="description" className="text-left text-xl">
+          <div className="h-full w-auto md:w-3xl text-left overflow-auto">
+            <p id="description" className="text-left text-base md:text-xl md:h-full">
               I am a results-driven full-stack web developer with a passion for
-              building impactful digital experiences. 🚀 I have accelerated project
-              timelines, revitalized a legacy application for 10,000 users, and
-              improved conversion rates through personalized sorting algorithms
-              and user engagement features. 📈
+              building impactful digital experiences. 🚀 I have accelerated
+              project timelines, revitalized a legacy application for 10,000
+              users, and improved conversion rates through personalized sorting
+              algorithms and user engagement features. 📈
               <br />
               <br />
               By bridging gaps between engineering, product, and customer care
@@ -60,11 +60,11 @@ const ExpertisePage = () => {
             </p>
           </div>
 
-          <div className="mx-5 h-full w-2 rounded-full bg-gray-500" />
+          <div className="my-5 md:mx-5 md:my-0 h-2 w-full rounded-full bg-gray-500 md:h-full md:w-2" />
 
           <div
             id="tools"
-            className="grid h-full min-w-fit grid-cols-3 items-start gap-5"
+            className="grid h-full min-w-fit grid-cols-4 md:grid-cols-3 items-start gap-2 md:gap-5"
           >
             {logos.map((logo) => (
               <motion.div
@@ -74,7 +74,7 @@ const ExpertisePage = () => {
                 whileDrag={{ scale: 0.95 }}
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={0.3}
-                className="flex h-36 w-36 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg"
+                className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-36 md:w-36"
                 drag
               >
                 <div className="pointer-events-none flex items-center justify-center p-1">
