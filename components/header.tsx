@@ -2,10 +2,11 @@
 import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ThemeToggle } from "./ui/theme-toggle";
+import MobileNavigation from "./mobile-navigation";
 
-const tabs = [
+export const tabs = [
   {
     name: "Home",
     href: "#home",
@@ -36,14 +37,14 @@ function Header() {
   }, []);
 
   return (
-    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-full flex-col items-center justify-between px-20 py-1 transition-colors duration-300 md:flex-row">
+    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-screen items-center gap-2 justify-end md:justify-between px-5 md:px-20 py-1 transition-colors duration-300 flex-row">
       <Link href="#home">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
         </p>
       </Link>
 
-      <nav className="text-lg font-bold">
+      <nav className="hidden text-lg font-bold md:block">
         <ul className="flex flex-row justify-center gap-5">
           {tabs.map((tab) => (
             <li key={tab.name} className="group py-1 transition duration-300">
@@ -64,6 +65,8 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      <MobileNavigation />
     </header>
   );
 }
