@@ -24,7 +24,7 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
   }, []);
 
   useEffect(() => {
-    if (hasConsent) {
+    if (hasConsent && window.location.hostname !== "localhost") {
       posthog.opt_in_capturing();
     } else {
       posthog.opt_out_capturing();

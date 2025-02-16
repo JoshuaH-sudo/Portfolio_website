@@ -7,7 +7,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
-    <main className="z-[-10]">
+    <main className="z-[-10] py-22">
       <TracingBeam>
         <HomePage />
         <ExpertisePage />

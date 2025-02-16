@@ -29,7 +29,7 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="flex h-screen flex-row items-center justify-center py-20 pt-30"
+          className="flex h-screen flex-row items-center justify-center py-30"
         >
           <div className="h-full w-3xl text-left">
             <p id="description" className="text-left text-xl">
@@ -42,15 +42,15 @@ const ExpertisePage = () => {
               <br />
               By bridging gaps between engineering, product, and customer care
               teams, I improved communication and efficiency, ensuring smoother
-              development cycles. 🔄 My open approach and humor fostered a
+              development cycles. My open approach and humor fostered a
               collaborative atmosphere, strengthening team cohesion and
               engagement. 🤝
               <br />
               <br />
               I have led frontend design for major projects, implemented complex
-              plugin systems within weeks, and optimized application security. 🔒
+              plugin systems within weeks, and optimized application security.
               My problem-solving skills have prevented costly rewrites, enhanced
-              performance, and refined UI/UX to exceed expectations. 💡
+              performance, and refined UI/UX to exceed expectations.
               <br />
               <br />
               Beyond coding, I love to paint 🎨, travel ✈️, do martial arts 🥋
