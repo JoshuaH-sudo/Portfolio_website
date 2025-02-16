@@ -17,7 +17,7 @@ const ExperienceList: FC = () => {
   return (
     <Accordion
       type="single"
-      className="rounded-2xl bg-gray-300 p-5"
+      className="rounded-2xl bg-gray-300 dark:bg-neutral-800 p-5"
       defaultValue="0"
     >
       {experiences.map((experience, index) => {
