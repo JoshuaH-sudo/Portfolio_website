@@ -4,8 +4,8 @@ import { useTheme } from "next-themes";
 export default function Footer() {
   const { resolvedTheme } = useTheme();
   return (
-    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 md:pl-20 transition-colors duration-300">
-      <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
+    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 transition-colors duration-300 md:pl-20">
+      <nav className="flex flex-row justify-end pr-2 pb-0.5 text-base font-bold md:text-lg">
         <ul className="flex flex-row justify-center gap-5">
           <li>
             <span className="flex flex-row items-center gap-1">
@@ -17,7 +17,7 @@ export default function Footer() {
               <p>Berlin</p>
             </span>
           </li>
-          <li>
+          <li className="hidden md:block">
             <a
               href="https://www.linkedin.com/in/joshua-hoban"
               target="_blank"
@@ -26,7 +26,7 @@ export default function Footer() {
               //LinkedIn
             </a>
           </li>
-          <li>
+          <li className="hidden md:block">
             <a
               href="https://github.com/JoshuaH-sudo"
               target="_blank"
@@ -40,7 +40,7 @@ export default function Footer() {
 
       <a
         href="mailto:joshua_hoban@proton.me"
-        className="text-xl font-extrabold"
+        className="hidden text-xl font-extrabold md:block"
       >
         joshua_hoban@proton.me
       </a>
