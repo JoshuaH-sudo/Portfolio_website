@@ -36,7 +36,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-100 flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
+    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex w-full items-center justify-between py-1 px-20 h-15 transition-colors duration-300">
       <Link href="#home">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
