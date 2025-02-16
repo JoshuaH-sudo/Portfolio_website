@@ -9,20 +9,18 @@ import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 
 const words = [
-  "Front-end Savvy",
-  "Full-stack Maestro",
-  "React Expert",
-  "Typescript Tinkerer",
-  "CSS Wizard",
-  "Mobile Magic",
+  "Front-end",
+  "Back-end",
+  "Full-stack",
+  "React",
+  "Typescript",
+  "CSS",
+  "Mobile",
   "Aussie",
-  "JavaScript Ninja",
-  "UI/UX Enthusiast",
-  "Node.js Developer",
-  "Tech Speaker",
-  "Agile Practitioner",
-  "Problem Solver",
-  "Team Player",
+  "JavaScript",
+  "NodeJs",
+  "Agile",
+  "Web"
 ];
 
 export const HomePage = () => {
@@ -39,16 +37,11 @@ export const HomePage = () => {
       >
         <div className="relative z-10 flex h-screen flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
-          <h5 className="self-end">
+          <h5 className="flex flex-row justify-center items-end">
             <FlipWords words={words} className="font-andale-mono text-2xl" />
-            Freelance Developer.
+            Developer.
           </h5>
-          <div
-            style={{
-              width: "322px",
-              height: "322px",
-            }}
-          >
+          <div className="h-40 w-40 md:h-96 md:w-96">
             <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
           </div>
         </div>

@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Location from "./svgs/location";
 import { useTheme } from "next-themes";
 
 export default function Footer() {
   const { resolvedTheme } = useTheme();
   return (
-    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 pl-20 transition-colors duration-300">
+    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 md:pl-20 transition-colors duration-300">
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-lg font-bold">
         <ul className="flex flex-row justify-center gap-5">
           <li>
@@ -19,12 +18,20 @@ export default function Footer() {
             </span>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/joshua-hoban" target="_blank" rel="noopener noreferrer" >
+            <a
+              href="https://www.linkedin.com/in/joshua-hoban"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               //LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/JoshuaH-sudo" target="_blank" rel="noopener noreferrer" >
+            <a
+              href="https://github.com/JoshuaH-sudo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               //GitHub
             </a>
           </li>

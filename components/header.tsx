@@ -36,14 +36,14 @@ function Header() {
   }, []);
 
   return (
-    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex w-full items-center justify-between py-1 px-20 h-15 transition-colors duration-300">
+    <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-full flex-col items-center justify-between px-20 py-1 transition-colors duration-300 md:flex-row">
       <Link href="#home">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
         </p>
       </Link>
 
-      <nav className="flex flex-row justify-end pr-2 py-1 text-lg font-bold">
+      <nav className="text-lg font-bold">
         <ul className="flex flex-row justify-center gap-5">
           {tabs.map((tab) => (
             <li key={tab.name} className="group py-1 transition duration-300">

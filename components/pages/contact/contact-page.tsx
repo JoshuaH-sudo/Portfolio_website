@@ -1,6 +1,5 @@
 "use client";
 import Email from "@/components/svgs/email";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { GlareCard } from "@/components/ui/glare-card";
 import { useAppStore } from "@/providers/app-store-provider";
