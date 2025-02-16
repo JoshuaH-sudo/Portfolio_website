@@ -19,7 +19,7 @@ const ContactPage = () => {
       <BackgroundLines>
         <div
           id="contact"
-          className="flex h-screen flex-col items-center justify-center gap-2 py-20"
+          className="flex h-screen flex-col items-center justify-center gap-2 page"
         >
           <h1>Want to get in touch?</h1>
           <GlareCard className="mb-10">

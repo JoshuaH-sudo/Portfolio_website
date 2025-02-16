@@ -185,6 +185,7 @@
     }
     
   }
+
   header {
     color: rgb(var(--default-text-color));
     background-color: rgb(var(--default-foreground-rgb));
@@ -207,5 +208,17 @@
   }
   body[data-scroll-locked] {
     margin-right: 0 !important;
+  }
+}
+
+@layer components {
+  .page {
+    padding-block: calc(var(--spacing) * 20);
+  }
+
+  @media screen and (max-width: 640px) {
+    .page {
+      padding-block: calc(var(--spacing) * 5);
+    }
   }
 }
