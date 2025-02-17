@@ -29,42 +29,31 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="page flex flex-col items-center justify-center md:flex-row"
+          className="page relative flex flex-col items-center justify-center md:flex-row"
         >
-          <div className="w-auto md:w-3xl text-left">
-            <p id="description" className="text-left text-base md:text-xl md:h-full">
-              I am a results-driven full-stack web developer with a passion for
-              building impactful digital experiences. 🚀 I have accelerated
-              project timelines, revitalized a legacy application for 10,000
-              users, and improved conversion rates through personalized sorting
-              algorithms and user engagement features. 📈
-              <br />
-              <br />
-              By bridging gaps between engineering, product, and customer care
-              teams, I improved communication and efficiency, ensuring smoother
-              development cycles. My open approach and humor fostered a
-              collaborative atmosphere, strengthening team cohesion and
-              engagement. 🤝
-              <br />
-              <br />
-              I have led frontend design for major projects, implemented complex
-              plugin systems within weeks, and optimized application security.
-              My problem-solving skills have prevented costly rewrites, enhanced
-              performance, and refined UI/UX to exceed expectations.
-              <br />
-              <br />
-              Beyond coding, I love to paint 🎨, travel ✈️, do martial arts 🥋
-              and learn languages (currently aiming for my B1 in German 🇩🇪). As
-              I am always looking to try new things and find ways to how they
-              can be combined together. 🌟
+          <div className="w-full overflow-auto md:h-full md:w-3xl">
+            <p
+              id="description"
+              className="rounded-2xl border-white/50 p-2 text-sm md:h-full md:text-xl"
+            >
+              I'm a <strong>full-stack web developer</strong> passionate about
+              building impactful digital experiences. 🚀 I’ve optimized
+              performance, revitalized a <strong>legacy app</strong> for 10,000
+              users, and improved
+              <strong> conversion rates</strong>. I bridge gaps between teams,
+              streamline development, and foster a{" "}
+              <strong>collaborative atmosphere</strong>. 🤝 Beyond coding, I
+              love <strong>painting</strong> 🎨, <strong>traveling</strong> ✈️,
+              and learning languages—currently working on my B1 in{" "}
+              <strong>German</strong> 🇩🇪.
             </p>
           </div>
 
-          <div className="my-5 md:mx-5 md:my-0 h-2 w-full rounded-full bg-gray-500 md:h-full md:w-2" />
+          <div className="my-5 h-2 w-full rounded-full bg-gray-500 md:mx-5 md:my-0 md:h-80 md:w-2" />
 
           <div
             id="tools"
-            className="grid h-full min-w-fit grid-cols-4 md:grid-cols-3 items-start gap-2 md:gap-5"
+            className="grid h-full grid-cols-4 items-start gap-2 pr-2 md:grid-cols-3 md:gap-5 md:pr-0"
           >
             {logos.map((logo) => (
               <motion.div
@@ -74,14 +63,14 @@ const ExpertisePage = () => {
                 whileDrag={{ scale: 0.95 }}
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={0.3}
-                className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-36 md:w-36"
+                className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-30 md:w-30"
                 drag
               >
                 <div className="pointer-events-none flex items-center justify-center p-1">
                   <Image
                     src={`/images/logos/${logo}.svg`}
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     alt={logo}
                   />
                 </div>

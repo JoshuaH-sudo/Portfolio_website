@@ -22,7 +22,7 @@ const ContactPage = () => {
           className="flex h-screen flex-col items-center justify-center gap-2 page"
         >
           <h1>Want to get in touch?</h1>
-          <GlareCard className="mb-10">
+          <GlareCard className="mb-10 h-fit">
             <Image
               src="/images/josh-card.png"
               alt="me"

@@ -214,6 +214,7 @@
 @layer components {
   .page {
     padding-block: calc(var(--spacing) * 20);
+    margin-top: calc(var(--spacing) * 10);
   }
 
   @media screen and (max-width: 640px) {
@@ -221,6 +222,7 @@
       padding-left: calc(var(--spacing) * 5);
       padding-right: calc(var(--spacing) * 10);
       margin-left: calc(var(--spacing) * 10);
+      margin-top: calc(var(--spacing) * 20);
     }
   }
 }
