@@ -11,7 +11,7 @@ export default function Home() {
       <TracingBeam>
         <HomePage />
         <ExpertisePage />
-        {/* <ProjectsPage /> */}
+        <ProjectsPage />
         {/* <ExperiencePage /> */}
         {/* <ContactPage /> */}
       </TracingBeam>
