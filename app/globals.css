@@ -213,18 +213,17 @@
 
 @layer components {
   .page {
-    scroll-snap-align: start;
     padding-block: calc(var(--spacing) * 20);
-    margin-top: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 10);
+    height: 100vh;
   }
 
   @media screen and (max-width: 640px) {
     .page {
-      scroll-snap-align: start;
       padding-left: calc(var(--spacing) * 5);
       padding-right: calc(var(--spacing) * 10);
-      margin-left: calc(var(--spacing) * 10);
-      margin-top: calc(var(--spacing) * 20);
+      padding-top: calc(var(--spacing) * 50);
+
     }
   }
 }
