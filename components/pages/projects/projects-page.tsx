@@ -8,12 +8,13 @@ import { useAppStore } from "@/providers/app-store-provider";
 
 const ProjectsPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
+  const isMobile = window.matchMedia("(max-width: 640px)").matches;
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#projects")}
     >
-      <div id="projects" className="relative min-h-screen md:h-screen page">
+      <div id="projects" className="relative page">
         <div className="flex h-full flex-col items-center justify-center">
           <BentoGrid className="mx-auto max-w-4xl">
             {projectItems.map((item, i) => (
@@ -24,7 +25,7 @@ const ProjectsPage = () => {
                 whileInView="onscreen"
                 viewport={{ amount: 0.8 }}
               >
-                <motion.div variants={cardVariants}>
+                <motion.div variants={!isMobile ? cardVariants : {}}>
                   <BentoGridItem key={i} {...item} />
                 </motion.div>
               </motion.div>

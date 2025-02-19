@@ -52,7 +52,7 @@ export const EverVault = ({
 };
 
 export function CardPattern({ mouseX, mouseY, randomString }: any) {
-  const isMobile = !window.matchMedia("(min-width: 640px)").matches;
+  const isMobile = window.matchMedia("(max-width: 640px)").matches;
   let maskImage = useMotionTemplate`radial-gradient(250px at ${!isMobile ? mouseX : 50}px ${!isMobile ? mouseY : 50}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 

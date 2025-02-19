@@ -183,7 +183,6 @@
       font-size: "0.5rem";
       font-family: var(--font-andale-mono);
     }
-    
   }
 
   header {
@@ -214,16 +213,15 @@
 @layer components {
   .page {
     padding-block: calc(var(--spacing) * 20);
-    padding-top: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 15);
     height: 100vh;
   }
 
   @media screen and (max-width: 640px) {
     .page {
-      padding-left: calc(var(--spacing) * 10);
-      padding-right: calc(var(--spacing) * 10);
-      padding-top: calc(var(--spacing) * 50);
-
+      padding-block: calc(var(--spacing) * 10);
+      padding-top: calc(var(--spacing) * 15);
+      height: 100vh;
     }
   }
 }

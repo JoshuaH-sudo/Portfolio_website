@@ -31,10 +31,10 @@ const ExpertisePage = () => {
           id="expertise"
           className="page relative flex flex-col items-center justify-center md:flex-row"
         >
-          <div className="w-full overflow-auto md:h-full md:w-3xl">
+          <div className="w-full overflow-auto md:w-3xl my-auto">
             <p
               id="description"
-              className="rounded-2xl border-white/50 p-2 text-sm md:h-full md:text-xl"
+              className="rounded-2xl border-white/50 p-2 text-sm md:text-xl"
             >
               I'm a <strong>full-stack web developer</strong> passionate about
               building impactful digital experiences. 🚀 I’ve optimized
@@ -53,7 +53,7 @@ const ExpertisePage = () => {
 
           <div
             id="tools"
-            className="grid h-full grid-cols-4 items-start gap-2 pr-2 md:grid-cols-3 md:gap-5 md:pr-0"
+            className="grid my-auto grid-cols-4 items-start gap-2 pr-2 md:grid-cols-3 md:gap-5 md:pr-0"
           >
             {logos.map((logo) => (
               <motion.div
