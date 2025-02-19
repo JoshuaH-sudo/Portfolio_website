@@ -29,7 +29,7 @@ const ExpertisePage = () => {
       <EverVault>
         <div
           id="expertise"
-          className="page relative flex flex-col items-center justify-center md:flex-row"
+          className="page relative scroll-px-20 flex flex-col items-center justify-center md:flex-row"
         >
           <div className="w-full overflow-auto md:h-full md:w-3xl">
             <p

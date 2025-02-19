@@ -7,13 +7,13 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
-    <main>
+    <main className="snap-y snap-mandatory">
       <TracingBeam>
         <HomePage />
         <ExpertisePage />
         <ProjectsPage />
         <ExperiencePage />
-        {/* <ContactPage /> */}
+        <ContactPage />
       </TracingBeam>
     </main>
   );
