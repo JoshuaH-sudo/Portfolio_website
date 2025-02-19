@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 export default function Footer() {
   const { resolvedTheme } = useTheme();
   return (
-    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 transition-colors duration-300 md:pl-20">
+    <footer className="font-andale-mono flex w-full items-center justify-between py-1 pr-5 transition-colors duration-300 md:pl-20 absolute bottom-0 left-0">
       <nav className="flex flex-row justify-end pr-2 pb-0.5 text-base font-bold md:text-lg">
         <ul className="flex flex-row justify-center gap-5">
           <li>
