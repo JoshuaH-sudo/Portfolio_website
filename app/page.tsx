@@ -12,7 +12,7 @@ export default function Home() {
         <HomePage />
         <ExpertisePage />
         <ProjectsPage />
-        {/* <ExperiencePage /> */}
+        <ExperiencePage />
         {/* <ContactPage /> */}
       </TracingBeam>
     </main>

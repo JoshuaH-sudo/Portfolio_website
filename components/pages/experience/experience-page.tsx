@@ -44,15 +44,15 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex h-screen w-full flex-row justify-between gap-2 px-20 py-30"
+        className="flex min-h-screen md:h-screen w-full flex-col md:flex-row justify-between gap-2 page"
       >
-        <div id="experience" className="flex h-full w-6xl flex-col gap-2">
+        <div id="experience" className="flex md:h-full w-full md:w-6xl flex-col gap-2">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>
         </div>
 
-        <div id="testimonials" className="h-full w-full">
+        <div id="testimonials" className="">
           <AnimatedTestimonials testimonials={testimonials} autoplay />
         </div>
       </div>
