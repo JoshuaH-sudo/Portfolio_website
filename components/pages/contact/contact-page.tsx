@@ -22,7 +22,7 @@ const ContactPage = () => {
           className="flex h-screen flex-col items-center justify-center gap-2 page"
         >
           <h1>Want to get in touch?</h1>
-          <GlareCard className="mb-10 h-fit">
+          <GlareCard>
             <Image
               src="/images/josh-card.png"
               alt="me"
@@ -30,7 +30,7 @@ const ContactPage = () => {
               height={520}
             />
           </GlareCard>
-          <div className="flex h-screen flex-col items-center justify-center">
+          <div className="mt-10 flex h-screen flex-col items-center justify-center">
             <h4>You can find me here!</h4>
             <div
               id="socials"
@@ -39,6 +39,7 @@ const ContactPage = () => {
               <a
                 href="https://www.linkedin.com/in/joshua-hoban/"
                 target="_blank"
+                className="transition-transform hover:scale-110"
               >
                 <Image
                   src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
@@ -50,6 +51,7 @@ const ContactPage = () => {
               <a
                 href="https://github.com/JoshuaH-sudo?tab=repositories"
                 target="_blank"
+                className="transition-transform hover:scale-110"
               >
                 <Image
                   src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
@@ -58,7 +60,10 @@ const ContactPage = () => {
                   alt="github"
                 />
               </a>
-              <a href="mailto:joshua_hoban@proton.me">
+              <a
+                href="mailto:joshua_hoban@proton.me"
+                className="transition-transform hover:scale-110"
+              >
                 <Email
                   width={50}
                   height={50}
