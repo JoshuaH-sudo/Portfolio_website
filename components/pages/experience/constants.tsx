@@ -70,21 +70,21 @@ export const experiences: Experience[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "He is an exceptional software engineer with a deep understanding of software development principles and never shies away from a challenge.",
+      "He is an exceptional software engineer with a deep understanding of software development principles and never shies away from a challenge...",
     name: "Moataz Gouda",
     designation: "Product Manager",
     src: "/images/testimonials/moataz-gouda.jpg",
   },
   {
     quote:
-      "Joshua has been a highly motivated, responsible and thoughtful team member at Countersight.",
+      "Joshua has been a highly motivated, responsible and thoughtful team member at Countersight...",
     name: "David Gavin",
     designation: "Senior Software Engineer",
     src: "/images/testimonials/david-gavin.jpg",
   },
   {
     quote:
-      "Josh is a committed, consistently professional and highly skilful front-end developer and has been a great asset to the team.",
+      "Josh is a committed, consistently professional and highly skilful front-end developer and has been a great asset to the team...",
     name: "Nick Mazitelli",
     designation: "Managing Director",
     src: "/images/testimonials/nick-mazitelli.jpg",
