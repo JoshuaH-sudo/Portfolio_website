@@ -41,13 +41,12 @@ const ExperiencePage: React.FC = () => {
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#experience")}
-      className="bg-red-500"
     >
       <div
         id="experience"
-        className="flex w-full flex-col md:flex-row justify-between gap-2 page"
+        className="flex flex-col md:flex-row justify-between gap-2 page"
       >
-        <div id="experience" className="flex md:h-full w-full md:w-6xl flex-col gap-2">
+        <div id="resume" className="md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>

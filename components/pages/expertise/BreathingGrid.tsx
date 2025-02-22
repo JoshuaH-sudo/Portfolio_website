@@ -1,10 +1,11 @@
+import useScreen from "@/components/hooks/useScreen";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const staggerDuration = 0.5; // Base stagger time
 
 const BreathingGrid = ({ logos }: { logos: string[] }) => {
-  const isMobile = window.matchMedia("(max-width: 640px)").matches;
+  const { isMobile } = useScreen();
   const columns = isMobile ? 4 : 3; // Adjust to match your grid cols
   const rows = Math.ceil(logos.length / columns);
 

@@ -212,15 +212,16 @@
 
 @layer components {
   .page {
-    padding-block: calc(var(--spacing) * 20);
+    margin-left: calc(var(--spacing) * 10);
+    margin-right: calc(var(--spacing) * 10);
     padding-top: calc(var(--spacing) * 15);
     height: 100vh;
   }
 
   @media screen and (max-width: 640px) {
     .page {
-      padding-left: calc(var(--spacing) * 8);
-      padding-block: calc(var(--spacing) * 10);
+      margin-left: calc(var(--spacing) * 8);
+      margin-right: calc(var(--spacing) * 8);
       padding-top: calc(var(--spacing) * 15);
       height: 100%;
       min-height: 100vh;
