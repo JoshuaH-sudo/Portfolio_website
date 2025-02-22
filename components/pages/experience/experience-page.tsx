@@ -17,7 +17,7 @@ const ExperienceList: FC = () => {
   return (
     <Accordion
       type="single"
-      className="rounded-2xl bg-gray-300 dark:bg-neutral-800 p-5 page"
+      className="rounded-2xl bg-gray-300 dark:bg-neutral-800 p-5"
       defaultValue="0"
     >
       {experiences.map((experience, index) => {
@@ -25,7 +25,7 @@ const ExperienceList: FC = () => {
         return (
           <AccordionItem key={title} value={index.toString()}>
             <AccordionTrigger>{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="h-52 md:h-96 overflow-y-auto">
               <p>{description}</p>
             </AccordionContent>
           </AccordionItem>
@@ -41,10 +41,11 @@ const ExperiencePage: React.FC = () => {
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#experience")}
+      className="bg-red-500"
     >
       <div
         id="experience"
-        className="flex min-h-screen md:h-screen w-full flex-col md:flex-row justify-between gap-2 page"
+        className="flex w-full flex-col md:flex-row justify-between gap-2 page"
       >
         <div id="experience" className="flex md:h-full w-full md:w-6xl flex-col gap-2">
           <BackgroundGradient animate={true}>

@@ -14,7 +14,7 @@ const ProjectsPage = () => {
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#projects")}
     >
-      <div id="projects" className="page relative h-screen">
+      <div id="projects" className="page relative">
         <div className="flex h-full flex-col items-center justify-center">
           <BentoGrid className="px-5 w-full md:w-auto md:mx-auto h-full max-w-4xl">
             {projectItems.map((item, i) => (

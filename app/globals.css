@@ -222,7 +222,8 @@
       padding-left: calc(var(--spacing) * 8);
       padding-block: calc(var(--spacing) * 10);
       padding-top: calc(var(--spacing) * 15);
-      height: 100vh;
+      height: 100%;
+      min-height: 100vh;
     }
   }
 }
