@@ -16,7 +16,7 @@ const ProjectsPage = () => {
     >
       <div id="projects" className="page relative h-screen">
         <div className="flex h-full flex-col items-center justify-center">
-          <BentoGrid className="px-5 md:mx-auto h-full max-w-4xl">
+          <BentoGrid className="px-5 w-full md:w-auto md:mx-auto h-full max-w-4xl">
             {projectItems.map((item, i) => (
               <motion.div
                 key={i}
