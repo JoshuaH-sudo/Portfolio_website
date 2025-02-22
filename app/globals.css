@@ -216,8 +216,9 @@
     overflow: hidden;
   }
   .scrollPage {
+    margin-top: calc(var(--spacing) * 15);
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - var(--spacing) * 15);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
@@ -229,17 +230,17 @@
     scroll-snap-align: start;
     margin-left: calc(var(--spacing) * 10);
     margin-right: calc(var(--spacing) * 10);
-    padding-top: calc(var(--spacing) * 15);
-    height: 100vh;
+    /* padding-top: calc(var(--spacing) * 15); */
+    height: calc(100vh - var(--spacing) * 15);
   }
 
   @media screen and (max-width: 640px) {
     .page {
       margin-left: calc(var(--spacing) * 8);
       margin-right: calc(var(--spacing) * 8);
-      padding-top: calc(var(--spacing) * 15);
+      /* padding-top: calc(var(--spacing) * 15); */
       height: 100%;
-      min-height: 100vh;
+      min-height: calc(100vh - var(--spacing) * 15);
     }
   }
 }
