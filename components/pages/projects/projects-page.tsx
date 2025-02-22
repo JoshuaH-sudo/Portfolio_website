@@ -14,9 +14,9 @@ const ProjectsPage = () => {
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#projects")}
     >
-      <div id="projects" className="relative page">
+      <div id="projects" className="page relative h-screen">
         <div className="flex h-full flex-col items-center justify-center">
-          <BentoGrid className="mx-auto max-w-4xl">
+          <BentoGrid className="px-5 md:mx-auto h-full max-w-4xl">
             {projectItems.map((item, i) => (
               <motion.div
                 key={i}
@@ -25,7 +25,7 @@ const ProjectsPage = () => {
                 whileInView="onscreen"
                 viewport={{ amount: 0.8 }}
               >
-                <motion.div variants={!isMobile ? cardVariants : {}}>
+                <motion.div variants={isMobile ? {} : cardVariants}>
                   <BentoGridItem key={i} {...item} />
                 </motion.div>
               </motion.div>

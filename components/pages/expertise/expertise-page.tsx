@@ -25,11 +25,12 @@ const ExpertisePage = () => {
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#expertise")}
+      className="h-screen"
     >
       <EverVault>
         <div
           id="expertise"
-          className="page relative flex flex-col items-center justify-center md:flex-row"
+          className="page relative flex flex-col items-center justify-center md:flex-row h-full"
         >
           <div className="w-full overflow-auto md:w-3xl my-auto">
             <p
