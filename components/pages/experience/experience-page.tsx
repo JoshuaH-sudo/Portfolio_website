@@ -25,7 +25,7 @@ const ExperienceList: FC = () => {
         return (
           <AccordionItem key={title} value={index.toString()}>
             <AccordionTrigger>{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="h-52 md:h-96 overflow-y-auto">
               <p>{description}</p>
             </AccordionContent>
           </AccordionItem>
@@ -44,15 +44,15 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex h-screen w-full flex-row justify-between gap-2 px-20 py-30"
+        className="flex flex-col md:flex-row justify-between gap-0 md:gap-2 page px-2 h-150vh"
       >
-        <div id="experience" className="flex h-full w-6xl flex-col gap-2">
+        <div id="resume" className="md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>
         </div>
 
-        <div id="testimonials" className="h-full w-full">
+        <div id="testimonials">
           <AnimatedTestimonials testimonials={testimonials} autoplay />
         </div>
       </div>

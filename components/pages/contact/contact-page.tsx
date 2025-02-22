@@ -1,4 +1,5 @@
 "use client";
+import useScreen from "@/components/hooks/useScreen";
 import Email from "@/components/svgs/email";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { GlareCard } from "@/components/ui/glare-card";
@@ -10,18 +11,18 @@ import Image from "next/image";
 const ContactPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
   const { resolvedTheme } = useTheme();
+  const { isMobile } = useScreen();
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#contact")}
-      className="relative"
     >
       <BackgroundLines>
         <div
           id="contact"
-          className="flex h-screen flex-col items-center justify-center gap-2 py-20"
+          className="flex flex-col items-center justify-center gap-2 page"
         >
-          <h1>Want to get in touch?</h1>
+          <h1 className="mb-2 whitespace-nowrap">Want to get in touch?</h1>
           <GlareCard>
             <Image
               src="/images/josh-card.png"
@@ -30,7 +31,7 @@ const ContactPage = () => {
               height={520}
             />
           </GlareCard>
-          <div className="mt-10 flex h-screen flex-col items-center justify-center">
+          <div className="mt-2 md:mt-10 flex flex-col items-center justify-center">
             <h4>You can find me here!</h4>
             <div
               id="socials"
@@ -65,8 +66,8 @@ const ContactPage = () => {
                 className="transition-transform hover:scale-110"
               >
                 <Email
-                  width={50}
-                  height={50}
+                  width={60}
+                  height={60}
                   fill={resolvedTheme === "dark" ? "white" : "black"}
                 />
               </a>

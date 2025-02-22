@@ -113,6 +113,7 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
     --default-text-color: var(--color-off-black);
+    scrollbar-width: thin;
   }
 
   [color-scheme="dark"] {
@@ -121,6 +122,7 @@
       --background-start-rgb: 0, 0, 0;
       --background-end-rgb: 0, 0, 0;
       --default-text-color: var(--color-off-white);
+      scrollbar-width: thin;
     }
   }
   @font-face {
@@ -162,6 +164,29 @@
     font-size: var(--text-2xl);
     font-family: var(--font-andale-mono);
   }
+
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: var(--text-4xl);
+    }
+    h2 {
+      font-size: var(--text-3xl);
+    }
+    h3 {
+      font-size: var(--text-2xl);
+    }
+    h4 {
+      font-size: var(--text-xl);
+    }
+    h5 {
+      font-size: var(--text-lg);
+    }
+    p {
+      font-size: "0.5rem";
+      font-family: var(--font-andale-mono);
+    }
+  }
+
   header {
     color: rgb(var(--default-text-color));
     background-color: rgb(var(--default-foreground-rgb));
@@ -181,5 +206,27 @@
   strong {
     font-weight: 900;
     text-decoration: underline;
+  }
+  body[data-scroll-locked] {
+    margin-right: 0 !important;
+  }
+}
+
+@layer components {
+  .page {
+    margin-left: calc(var(--spacing) * 10);
+    margin-right: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 15);
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 640px) {
+    .page {
+      margin-left: calc(var(--spacing) * 8);
+      margin-right: calc(var(--spacing) * 8);
+      padding-top: calc(var(--spacing) * 15);
+      height: 100%;
+      min-height: 100vh;
+    }
   }
 }

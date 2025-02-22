@@ -5,17 +5,19 @@ import { motion, Variants } from "motion/react";
 import React from "react";
 import { projectItems } from "./constants";
 import { useAppStore } from "@/providers/app-store-provider";
+import useScreen from "@/components/hooks/useScreen";
 
 const ProjectsPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
+  const { isMobile } = useScreen();
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#projects")}
     >
-      <div id="projects" className="relative h-screen">
+      <div id="projects" className="page relative">
         <div className="flex h-full flex-col items-center justify-center">
-          <BentoGrid className="mx-auto max-w-4xl">
+          <BentoGrid className="h-full w-full max-w-4xl px-2 md:mx-auto md:w-auto">
             {projectItems.map((item, i) => (
               <motion.div
                 key={i}
@@ -24,7 +26,7 @@ const ProjectsPage = () => {
                 whileInView="onscreen"
                 viewport={{ amount: 0.8 }}
               >
-                <motion.div variants={cardVariants}>
+                <motion.div variants={isMobile ? {} : cardVariants}>
                   <BentoGridItem key={i} {...item} />
                 </motion.div>
               </motion.div>
