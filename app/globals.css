@@ -113,6 +113,7 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
     --default-text-color: var(--color-off-black);
+    scrollbar-width: thin;
   }
 
   [color-scheme="dark"] {
@@ -121,6 +122,7 @@
       --background-start-rgb: 0, 0, 0;
       --background-end-rgb: 0, 0, 0;
       --default-text-color: var(--color-off-white);
+      scrollbar-width: thin;
     }
   }
   @font-face {

@@ -44,7 +44,7 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex flex-col md:flex-row justify-between gap-2 page px-2"
+        className="flex flex-col md:flex-row justify-between gap-0 md:gap-2 page px-2"
       >
         <div id="resume" className="md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>
@@ -52,7 +52,7 @@ const ExperiencePage: React.FC = () => {
           </BackgroundGradient>
         </div>
 
-        <div id="testimonials" className="">
+        <div id="testimonials">
           <AnimatedTestimonials testimonials={testimonials} autoplay />
         </div>
       </div>
