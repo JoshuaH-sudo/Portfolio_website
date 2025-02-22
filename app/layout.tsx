@@ -50,7 +50,7 @@ export default function RootLayout({
           >
             <body className={cn(inter.className, "bg-off-white dark:bg-off-black")}>
               <Header />
-              <div>{children}</div>
+              <main>{children}</main>
             </body>
           </ThemeProvider>
         </AppStoreProvider>

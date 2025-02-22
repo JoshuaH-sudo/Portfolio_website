@@ -7,14 +7,12 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
-    <main>
-      <TracingBeam>
-        <HomePage />
-        <ExpertisePage />
-        <ProjectsPage />
-        <ExperiencePage />
-        <ContactPage />
-      </TracingBeam>
-    </main>
+    <TracingBeam>
+      <HomePage />
+      <ExpertisePage />
+      <ProjectsPage />
+      <ExperiencePage />
+      <ContactPage />
+    </TracingBeam>
   );
 }
