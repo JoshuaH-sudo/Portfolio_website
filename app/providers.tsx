@@ -61,13 +61,13 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
           <div className="flex gap-2 self-end md:self-center">
             <button
               onClick={() => handleConsent(true)}
-              className="border-off-black mr-2 rounded-md border-2 px-3 py-1"
+              className="border-off-black text-off-white dark:text-off-black mr-2 rounded-md border-2 px-3 py-1"
             >
               Accept
             </button>
             <button
               onClick={() => handleConsent(false)}
-              className="border-off-black rounded-md border-2 px-3 py-1"
+              className="border-off-black text-off-white dark:text-off-black rounded-md border-2 px-3 py-1"
             >
               Decline
             </button>
