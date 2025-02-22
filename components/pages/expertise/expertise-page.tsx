@@ -26,14 +26,13 @@ const ExpertisePage = () => {
     <motion.div
       viewport={{ amount: 0.8 }}
       onViewportEnter={() => onViewPortEnter("#expertise")}
-      className="h-screen"
     >
-      <EverVault>
+      <EverVault className=" snap-start">
         <div
           id="expertise"
-          className="page relative flex flex-col items-center justify-center md:flex-row h-screen"
+          className="page flex flex-col items-center justify-center md:flex-row"
         >
-          <div className="w-full overflow-auto md:w-3xl my-auto">
+          <div className="my-auto w-full overflow-auto md:w-3xl">
             <p
               id="description"
               className="rounded-2xl border-white/50 p-2 text-sm md:text-xl"

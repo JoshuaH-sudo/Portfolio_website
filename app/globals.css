@@ -210,10 +210,23 @@
   body[data-scroll-locked] {
     margin-right: 0 !important;
   }
+  html,
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .scrollPage {
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
   .page {
+    position: relative;
+    scroll-snap-align: start;
     margin-left: calc(var(--spacing) * 10);
     margin-right: calc(var(--spacing) * 10);
     padding-top: calc(var(--spacing) * 15);
