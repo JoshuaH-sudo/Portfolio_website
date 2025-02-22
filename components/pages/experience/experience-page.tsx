@@ -44,7 +44,7 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex flex-col md:flex-row justify-between gap-0 md:gap-2 page px-2"
+        className="flex flex-col md:flex-row justify-between gap-0 md:gap-2 page px-2 h-150vh"
       >
         <div id="resume" className="md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>

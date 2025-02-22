@@ -22,7 +22,7 @@ const ContactPage = () => {
           id="contact"
           className="flex flex-col items-center justify-center gap-2 page"
         >
-          <h1 className="mb-2">Want to get in touch?</h1>
+          <h1 className="mb-2 whitespace-nowrap">Want to get in touch?</h1>
           <GlareCard>
             <Image
               src="/images/josh-card.png"

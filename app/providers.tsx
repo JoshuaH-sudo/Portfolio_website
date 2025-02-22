@@ -55,19 +55,19 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
       <PostHogProvider client={posthog}>{children}</PostHogProvider>
       {showBanner && (
         <div className="bg-off-black dark:bg-off-white fixed right-0 bottom-30 left-0 z-100 flex flex-col items-center justify-between gap-2 py-2 md:py-5 px-20 md:flex-row">
-          <p className="text-off-black">
+          <p>
             This website uses cookies to enhance the user experience.
           </p>
           <div className="flex gap-2 self-end md:self-center">
             <button
               onClick={() => handleConsent(true)}
-              className="border-off-black text-off-white bg-off-black mr-2 rounded-md border-2 px-3 py-1"
+              className="border-off-black mr-2 rounded-md border-2 px-3 py-1"
             >
               Accept
             </button>
             <button
               onClick={() => handleConsent(false)}
-              className="border-off-black text-off-black rounded-md border-2 px-3 py-1"
+              className="border-off-black rounded-md border-2 px-3 py-1"
             >
               Decline
             </button>
