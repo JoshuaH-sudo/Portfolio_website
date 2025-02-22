@@ -54,20 +54,20 @@ export function CSPostHogProvider({ children }: PropsWithChildren<{}>) {
     <>
       <PostHogProvider client={posthog}>{children}</PostHogProvider>
       {showBanner && (
-        <div className="bg-off-black dark:bg-off-white fixed right-0 bottom-30 left-0 z-100 flex flex-col items-center justify-between gap-2 py-2 md:py-5 px-20 md:flex-row">
-          <p>
+        <div className="bg-off-black dark:bg-off-white border-off-white dark:border-off-black fixed right-0 bottom-30 left-0 z-100 flex flex-col items-center justify-between gap-2 border-2 px-20 py-2 md:flex-row md:py-5">
+          <p className="text-off-white dark:text-off-black">
             This website uses cookies to enhance the user experience.
           </p>
           <div className="flex gap-2 self-end md:self-center">
             <button
               onClick={() => handleConsent(true)}
-              className="border-off-black text-off-white dark:text-off-black mr-2 rounded-md border-2 px-3 py-1"
+              className="border-off-white dark:border-off-black text-off-white dark:text-off-black mr-2 rounded-md border-2 px-3 py-1"
             >
               Accept
             </button>
             <button
               onClick={() => handleConsent(false)}
-              className="border-off-black text-off-white dark:text-off-black rounded-md border-2 px-3 py-1"
+              className="border-off-white dark:border-off-black text-off-white dark:text-off-black rounded-md border-2 px-3 py-1"
             >
               Decline
             </button>
