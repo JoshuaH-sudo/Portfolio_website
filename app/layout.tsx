@@ -38,23 +38,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <Analytics />
-      <SpeedInsights />
-      <CSPostHogProvider>
-        <AppStoreProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <body className={cn(inter.className, "bg-off-white dark:bg-off-black")}>
+      <body className={cn(inter.className, "bg-off-white dark:bg-off-black")}>
+        <Analytics />
+        <SpeedInsights />
+        <CSPostHogProvider>
+          <AppStoreProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
               <Header />
               <main>{children}</main>
-            </body>
-          </ThemeProvider>
-        </AppStoreProvider>
-      </CSPostHogProvider>
+            </ThemeProvider>
+          </AppStoreProvider>
+        </CSPostHogProvider>
+      </body>
     </html>
   );
 }
