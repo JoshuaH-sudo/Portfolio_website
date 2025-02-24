@@ -1,10 +1,10 @@
 "use client";
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent,
-} from "@radix-ui/react-accordion";
+} from "@/components/ui/accordion";
 import { FC } from "react";
 import { experiences } from "./constants";
 
