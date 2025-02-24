@@ -37,13 +37,25 @@ export const HomePage = () => {
       >
         <div className="relative z-10 my-auto flex flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
+
           <h5 className="flex flex-row items-end justify-center">
             <FlipWords words={words} className="font-andale-mono text-2xl" />
             Developer.
           </h5>
-          <div className="expand h-40 w-40 md:h-96 md:w-96">
-            <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
-          </div>
+          <motion.div
+            initial={{ scale: 1, opacity: 0.9 }}
+            animate={{ scale: [1, 1.05, 1], opacity: [0.9, 1, 0.9] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+          >
+            <div className="expand h-40 w-40 md:h-96 md:w-96">
+              <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
+            </div>
+          </motion.div>
         </div>
         <Link
           href="#expertise"
