@@ -1,3 +1,4 @@
+"use client";
 import { SVGProps } from "react";
 
 const Location = (props: SVGProps<SVGSVGElement>) => (

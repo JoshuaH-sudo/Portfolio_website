@@ -1,3 +1,4 @@
+"use client";
 import { SVGProps } from "react";
 
 const Email = (props: SVGProps<SVGSVGElement>) => (
@@ -5,7 +6,7 @@ const Email = (props: SVGProps<SVGSVGElement>) => (
     width="800px"
     height="800px"
     viewBox="0 0 24 24"
-    fill="none"
+    fill=""
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
