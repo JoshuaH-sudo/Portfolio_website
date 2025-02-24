@@ -20,7 +20,7 @@ const words = [
   "JavaScript",
   "NodeJs",
   "Agile",
-  "Web"
+  "Web",
 ];
 
 export const HomePage = () => {
@@ -32,22 +32,22 @@ export const HomePage = () => {
     >
       <div
         id="home"
-        className="relative page mx-auto"
+        className="page relative mx-auto"
         // When the user scrolls to this section set the active tab to home
       >
-        <div className="relative z-10 flex flex-col items-center justify-center my-auto">
+        <div className="relative z-10 my-auto flex flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
-          <h5 className="flex flex-row justify-center items-end">
+          <h5 className="flex flex-row items-end justify-center">
             <FlipWords words={words} className="font-andale-mono text-2xl" />
             Developer.
           </h5>
-          <div className="h-40 w-40 md:h-96 md:w-96">
+          <div className="expand h-40 w-40 md:h-96 md:w-96">
             <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
           </div>
         </div>
         <Link
           href="#expertise"
-          className="z-30 absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-20 md:w-35 md:h-35"
+          className="expand absolute bottom-0 left-1/2 z-30 h-20 w-20 -translate-x-1/2 transform md:h-35 md:w-35"
           onClick={() => setActiveTab("#expertise")}
         >
           <DotLottieReact src="/lottie/arrow-indicator.json" loop autoplay />

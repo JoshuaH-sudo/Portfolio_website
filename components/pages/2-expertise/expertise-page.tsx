@@ -4,7 +4,7 @@ import { useAppStore } from "@/providers/app-store-provider";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
-import BreathingGrid from "./BreathingGrid";
+import BreathingGrid from "./breathing-grid";
 
 const logos = [
   "react",

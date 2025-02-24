@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <header className="font-andale-mono bg-off-white dark:bg-off-black fixed top-0 z-1000 flex h-15 w-full flex-row items-center justify-end gap-2 px-5 py-1 transition-colors duration-300 md:justify-between md:px-20">
-      <Link href="#home" className="pl-10 grow md:pl-0 md:grow-0">
+      <Link href="#home" className="pl-10 grow md:pl-0 md:grow-0 expand">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
         </p>
@@ -50,7 +50,7 @@ function Header() {
         <nav className="hidden text-lg font-bold md:block">
           <ul className="flex flex-row justify-center gap-5">
             {tabs.map((tab) => (
-              <li key={tab.name} className="group py-1 transition duration-300">
+              <li key={tab.name} className="group py-1 transition duration-300 expand">
                 <Link href={tab.href} onClick={() => setActiveTab(tab.href)}>
                   {tab.name}
                 </Link>

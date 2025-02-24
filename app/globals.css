@@ -221,6 +221,14 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
+
+  .expand {
+    transition: transform 0.5s;
+  }
+
+  .expand:hover {
+    transform: scale(1.1);
+  }
 }
 
 @layer components {

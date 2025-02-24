@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
+const staggerDuration = 0.5; // Base stagger time
 const ContactPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
   const { resolvedTheme } = useTheme();
@@ -20,7 +21,7 @@ const ContactPage = () => {
       <BackgroundLines>
         <div
           id="contact"
-          className="flex flex-col items-center justify-center gap-2 page"
+          className="page flex flex-col items-center justify-center gap-2"
         >
           <h1 className="mb-2 whitespace-nowrap">Want to get in touch?</h1>
           <GlareCard>
@@ -31,46 +32,82 @@ const ContactPage = () => {
               height={520}
             />
           </GlareCard>
-          <div className="mt-2 md:mt-10 flex flex-col items-center justify-center">
+          <div className="mt-2 flex flex-col items-center justify-center md:mt-10">
             <h4>You can find me here!</h4>
             <div
               id="socials"
-              className="flex items-center justify-center gap-2"
+              className="breath flex items-center justify-center gap-2"
             >
-              <a
-                href="https://www.linkedin.com/in/joshua-hoban/"
-                target="_blank"
-                className="transition-transform hover:scale-110"
+              <motion.div
+                initial={{ scale: 1, opacity: 0.8 }}
+                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 3,
+                  delay: 1 * staggerDuration,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.1, opacity: 1 }}
               >
-                <Image
-                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
-                  width={50}
-                  height={50}
-                  alt="linkedIn"
-                />
-              </a>
-              <a
-                href="https://github.com/JoshuaH-sudo?tab=repositories"
-                target="_blank"
-                className="transition-transform hover:scale-110"
+                <a
+                  href="https://www.linkedin.com/in/joshua-hoban/"
+                  target="_blank"
+                  className="expand"
+                >
+                  <Image
+                    src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
+                    width={50}
+                    height={50}
+                    alt="linkedIn"
+                  />
+                </a>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 1, opacity: 0.8 }}
+                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 3,
+                  delay: 2 * staggerDuration,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.1, opacity: 1 }}
               >
-                <Image
-                  src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
-                  width={50}
-                  height={50}
-                  alt="github"
-                />
-              </a>
-              <a
-                href="mailto:joshua_hoban@proton.me"
-                className="transition-transform hover:scale-110"
+                <a
+                  href="https://github.com/JoshuaH-sudo?tab=repositories"
+                  target="_blank"
+                  className="expand"
+                >
+                  <Image
+                    src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
+                    width={50}
+                    height={50}
+                    alt="github"
+                  />
+                </a>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 1, opacity: 0.8 }}
+                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 3,
+                  delay: 3 * staggerDuration,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.1, opacity: 1 }}
               >
-                <Email
-                  width={60}
-                  height={60}
-                  fill={resolvedTheme === "dark" ? "white" : "black"}
-                />
-              </a>
+                <a href="mailto:joshua_hoban@proton.me" className="expand">
+                  <Email
+                    width={60}
+                    height={60}
+                    fill={resolvedTheme === "dark" ? "white" : "black"}
+                  />
+                </a>
+              </motion.div>
             </div>
           </div>
         </div>
