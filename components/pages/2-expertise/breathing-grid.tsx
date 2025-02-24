@@ -31,12 +31,7 @@ const BreathingGrid = ({ logos }: { logos: string[] }) => {
               delay: diagonalIndex * staggerDuration,
               ease: "easeInOut",
             }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.95 }}
-            drag
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragElastic={0.3}
-            className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-30 md:w-30"
+            className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-30 md:w-30 select-none"
           >
             <div className="pointer-events-none flex items-center justify-center p-1">
               <Image

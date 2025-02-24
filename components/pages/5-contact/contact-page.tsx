@@ -48,7 +48,7 @@ const ContactPage = () => {
                   delay: 1 * staggerDuration,
                   ease: "easeInOut",
                 }}
-                whileHover={{ scale: 1.1, opacity: 1 }}
+                whileHover={{ scale: 1.2, opacity: 1, transition: { repeat: 0 } }}
               >
                 <a
                   href="https://www.linkedin.com/in/joshua-hoban/"
@@ -73,7 +73,7 @@ const ContactPage = () => {
                   delay: 2 * staggerDuration,
                   ease: "easeInOut",
                 }}
-                whileHover={{ scale: 1.1, opacity: 1 }}
+                whileHover={{ scale: 1.2, opacity: 1, transition: { repeat: 0 } }}
               >
                 <a
                   href="https://github.com/JoshuaH-sudo?tab=repositories"
@@ -98,7 +98,7 @@ const ContactPage = () => {
                   delay: 3 * staggerDuration,
                   ease: "easeInOut",
                 }}
-                whileHover={{ scale: 1.1, opacity: 1 }}
+                whileHover={{ scale: 1.2, opacity: 1, transition: { repeat: 0 } }}
               >
                 <a href="mailto:joshua_hoban@proton.me" className="expand">
                   <Email
