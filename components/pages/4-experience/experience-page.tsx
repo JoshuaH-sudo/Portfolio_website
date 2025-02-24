@@ -1,39 +1,11 @@
 "use client";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Image from "next/image";
-import React, { FC, useEffect, useState } from "react";
-import { experiences, testimonials } from "./constants";
+import React from "react";
+import { testimonials } from "./constants";
 import { motion } from "motion/react";
 import { useAppStore } from "@/providers/app-store-provider";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-
-const ExperienceList: FC = () => {
-  return (
-    <Accordion
-      type="single"
-      className="rounded-2xl bg-gray-300 dark:bg-neutral-800 p-5"
-      defaultValue="0"
-    >
-      {experiences.map((experience, index) => {
-        const { title, date, description } = experience;
-        return (
-          <AccordionItem key={title} value={index.toString()}>
-            <AccordionTrigger>{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent className="h-52 md:h-96 overflow-y-auto">
-              <p>{description}</p>
-            </AccordionContent>
-          </AccordionItem>
-        );
-      })}
-    </Accordion>
-  );
-};
+import ExperienceList from "./experience-list";
 
 const ExperiencePage: React.FC = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
@@ -44,9 +16,9 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="flex flex-col md:flex-row justify-between gap-0 md:gap-2 page px-2 h-150vh my-15"
+        className="page h-150vh my-15 flex flex-col justify-between gap-0 px-2 md:flex-row md:gap-2"
       >
-        <div id="resume" className="md:h-full md:w-6xl mt-15">
+        <div id="resume" className="mt-15 md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>
