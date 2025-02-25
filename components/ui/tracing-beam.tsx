@@ -122,7 +122,7 @@ export const TracingBeam = ({
           </defs>
         </svg>
       </div>
-      <div ref={contentRef} className="scrollPage">{children}</div>
+      <div ref={contentRef}>{children}</div>
     </motion.div>
   );
 };

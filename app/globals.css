@@ -210,17 +210,6 @@
   body[data-scroll-locked] {
     margin-right: 0 !important;
   }
-  html,
-  body {
-    height: 100vh;
-    overflow: hidden;
-  }
-  .scrollPage {
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
 
   .expand {
     transition: transform 0.5s;
