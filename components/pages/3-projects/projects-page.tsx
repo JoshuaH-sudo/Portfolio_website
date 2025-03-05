@@ -26,9 +26,13 @@ const ProjectsPage = () => {
                 whileInView="onscreen"
                 viewport={{ amount: 0.8 }}
               >
-                <motion.div variants={isMobile ? {} : cardVariants}>
+                {isMobile ? (
                   <BentoGridItem key={i} {...item} />
-                </motion.div>
+                ) : (
+                  <motion.div variants={cardVariants}>
+                    <BentoGridItem key={i} {...item} />
+                  </motion.div>
+                )}
               </motion.div>
             ))}
           </BentoGrid>
