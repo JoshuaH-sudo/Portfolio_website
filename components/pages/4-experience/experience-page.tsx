@@ -7,8 +7,10 @@ import { useAppStore } from "@/providers/app-store-provider";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import ExperienceList from "./experience-list";
+import useScreen from "@/components/hooks/useScreen";
 
 const ExperiencePage: React.FC = () => {
+  const { isMobile } = useScreen();
   const { onViewPortEnter } = useAppStore((state) => state);
   return (
     <motion.div
@@ -17,7 +19,7 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="page flex flex-col justify-between gap-10 px-2 md:flex-row md:gap-2"
+        className="page flex flex-col justify-between gap-10 px-2 md:flex-row"
       >
         <div id="resume" className="h-full md:mt-15 md:w-6xl">
           <BackgroundGradient animate={true}>
@@ -26,7 +28,7 @@ const ExperiencePage: React.FC = () => {
         </div>
 
         <div id="testimonials" className="h-full">
-          <AnimatedTestimonials testimonials={testimonials} autoplay />
+          <AnimatedTestimonials testimonials={testimonials} autoplay={!isMobile} />
         </div>
       </div>
     </motion.div>

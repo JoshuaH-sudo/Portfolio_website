@@ -1,9 +1,9 @@
 "use client";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type Testimonial = {
   quote: string;
@@ -18,6 +18,8 @@ export const AnimatedTestimonials = ({
   testimonials: Testimonial[];
   autoplay?: boolean;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const [active, setActive] = useState(0);
   const [rotations, setRotations] = useState<number[]>([]);
 
@@ -45,10 +47,10 @@ export const AnimatedTestimonials = ({
   }, [testimonials]);
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 snap-start">
+    <div className="mx-auto max-w-sm snap-start px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-20">
         <div>
-          <div className="relative h-40 w-40 md:h-80 md:w-full">
+          <div ref={ref} className="relative h-40 w-40 md:h-80 md:w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -146,7 +148,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 mt-4 m:mt-2">
+          <div className="m:mt-2 mt-4 flex gap-4">
             <button
               onClick={handlePrev}
               className="group/button border-off-black dark:border-off-white flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
