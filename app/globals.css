@@ -215,8 +215,7 @@
     font-family: var(--font-andale-mono);
   }
   strong {
-    font-weight: 900;
-    text-decoration: underline;
+    font-weight: bolder;
   }
   body[data-scroll-locked] {
     margin-right: 0 !important;
