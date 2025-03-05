@@ -12,15 +12,15 @@ const ExperienceList: FC = () => {
   return (
     <Accordion
       type="single"
-      className="rounded-2xl bg-gray-300 p-5 dark:bg-neutral-800"
+      className="rounded-2xl bg-gray-200 py-5 px-2 dark:bg-neutral-700"
       defaultValue="0"
     >
       {experiences.map((experience, index) => {
         const { title, date, description } = experience;
         return (
-          <AccordionItem key={title} value={index.toString()}>
+          <AccordionItem key={title} value={index.toString()} className="py-2 bg-gray-300 dark:bg-neutral-800 p-2 rounded-xl mb-1">
             <AccordionTrigger>{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent className="h-52 overflow-y-auto md:h-96">
+            <AccordionContent className="h-52 overflow-y-auto md:h-96 ">
               <p>{description}</p>
             </AccordionContent>
           </AccordionItem>

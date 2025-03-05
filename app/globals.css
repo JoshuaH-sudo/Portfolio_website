@@ -114,6 +114,7 @@
     --background-end-rgb: 255, 255, 255;
     --default-text-color: var(--color-off-black);
     scrollbar-width: thin;
+    --color-highlight: var(--color-primary-dark)
   }
 
   [color-scheme="dark"] {
@@ -123,6 +124,7 @@
       --background-end-rgb: 0, 0, 0;
       --default-text-color: var(--color-off-white);
       scrollbar-width: thin;
+      --color-highlight: var(--color-primary-light)
     }
   }
   @font-face {
@@ -215,7 +217,8 @@
     font-family: var(--font-andale-mono);
   }
   strong {
-    font-weight: bolder;
+    font-weight: 900;
+    color: var(--color-highlight);
   }
   body[data-scroll-locked] {
     margin-right: 0 !important;

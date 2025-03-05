@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Joshua has been a highly motivated, responsible and thoughtful team member at Countersight...",
+      "Joshua has been a highly motivated, responsible and thoughtful team member...",
     name: "David Gavin",
     designation: "Senior Software Engineer",
     src: "/images/testimonials/david-gavin.jpg",
