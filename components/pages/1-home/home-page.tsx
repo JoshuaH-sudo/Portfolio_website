@@ -7,6 +7,8 @@ import { motion } from "motion/react";
 import { useAppStore } from "@/providers/app-store-provider";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
+import Image from "next/image";
+import { GlareCard } from "@/components/ui/glare-card";
 
 const words = [
   "Front-end",
@@ -38,24 +40,18 @@ export const HomePage = () => {
         <div className="relative z-10 my-auto flex flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
 
-          <h5 className="flex flex-row items-end justify-center">
+          <h5 className="flex flex-row items-end justify-center mb-2">
             <FlipWords words={words} className="font-andale-mono text-2xl" />
             Developer.
           </h5>
-          <motion.div
-            initial={{ scale: 1, opacity: 0.9 }}
-            animate={{ scale: [1, 1.05, 1], opacity: [0.9, 1, 0.9] }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 3,
-              ease: "easeInOut",
-            }}
-          >
-            <div className="expand h-40 w-40 md:h-96 md:w-96">
-              <DotLottieReact src="/lottie/profile-pic.json" loop autoplay />
-            </div>
-          </motion.div>
+          <GlareCard>
+            <Image
+              src="/images/josh-card.png"
+              alt="me"
+              width={372}
+              height={520}
+            />
+          </GlareCard>
         </div>
         <Link
           href="#expertise"
