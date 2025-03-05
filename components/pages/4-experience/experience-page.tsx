@@ -17,15 +17,15 @@ const ExperiencePage: React.FC = () => {
     >
       <div
         id="experience"
-        className="page h-150vh my-15 flex flex-col justify-between gap-0 px-2 md:flex-row md:gap-2"
+        className="page flex flex-col justify-between gap-10 px-2 md:flex-row md:gap-2"
       >
-        <div id="resume" className="mt-15 md:h-full md:w-6xl">
+        <div id="resume" className="h-full md:mt-15 md:w-6xl">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>
         </div>
 
-        <div id="testimonials">
+        <div id="testimonials" className="h-full">
           <AnimatedTestimonials testimonials={testimonials} autoplay />
         </div>
       </div>
