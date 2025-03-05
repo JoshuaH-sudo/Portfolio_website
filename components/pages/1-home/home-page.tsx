@@ -59,7 +59,7 @@ export const HomePage = () => {
         </div>
         <Link
           href="#expertise"
-          className="expand absolute bottom-0 left-1/2 z-30 h-20 w-20 -translate-x-1/2 transform md:h-35 md:w-35"
+          className="expand absolute bottom-0 left-1/2 z-20 h-10 w-10 -translate-x-1/2 transform md:h-20 md:w-20"
           onClick={() => setActiveTab("#expertise")}
         >
           <DotLottieReact src="/lottie/arrow-indicator.json" loop autoplay />
