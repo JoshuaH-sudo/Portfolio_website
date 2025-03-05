@@ -49,8 +49,10 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <Header />
-              <main>{children}</main>
+              <main>
+                <Header />
+                <section>{children}</section>
+              </main>
             </ThemeProvider>
           </AppStoreProvider>
         </CSPostHogProvider>
