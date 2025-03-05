@@ -45,88 +45,37 @@ const ContactPage = () => {
               id="socials"
               className="breath flex items-center justify-center gap-2"
             >
-              <motion.div
-                initial={{ scale: 1, opacity: 0.8 }}
-                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  duration: 3,
-                  delay: 1 * staggerDuration,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 1,
-                  transition: { repeat: 0 },
-                }}
+              <a
+                href="https://www.linkedin.com/in/joshua-hoban/"
+                target="_blank"
+                className="expand"
               >
-                <a
-                  href="https://www.linkedin.com/in/joshua-hoban/"
-                  target="_blank"
-                  className="expand"
-                >
-                  <Image
-                    src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
-                    width={50}
-                    height={50}
-                    alt="linkedIn"
-                  />
-                </a>
-              </motion.div>
-              <motion.div
-                initial={{ scale: 1, opacity: 0.8 }}
-                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  duration: 3,
-                  delay: 2 * staggerDuration,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 1,
-                  transition: { repeat: 0 },
-                }}
+                <Image
+                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
+                  width={50}
+                  height={50}
+                  alt="linkedIn"
+                />
+              </a>
+              <a
+                href="https://github.com/JoshuaH-sudo?tab=repositories"
+                target="_blank"
+                className="expand"
               >
-                <a
-                  href="https://github.com/JoshuaH-sudo?tab=repositories"
-                  target="_blank"
-                  className="expand"
-                >
-                  <Image
-                    src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
-                    width={50}
-                    height={50}
-                    alt="github"
-                  />
-                </a>
-              </motion.div>
-              <motion.div
-                initial={{ scale: 1, opacity: 0.8 }}
-                animate={{ scale: [1, 1.1, 1], opacity: [0.9, 1, 0.9] }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  duration: 3,
-                  delay: 3 * staggerDuration,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 1,
-                  transition: { repeat: 0 },
-                }}
-              >
-                <a href="mailto:joshua_hoban@proton.me" className="expand">
-                  <Email
-                    width={60}
-                    height={60}
-                    fill={resolvedTheme === "dark" ? "white" : "black"}
-                  />
-                </a>
-              </motion.div>
+                <Image
+                  src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
+                  width={50}
+                  height={50}
+                  alt="github"
+                />
+              </a>
+              <a href="mailto:joshua_hoban@proton.me" className="expand">
+                <Email
+                  width={60}
+                  height={60}
+                  fill={resolvedTheme === "dark" ? "white" : "black"}
+                />
+              </a>
             </div>
           </div>
         </div>
