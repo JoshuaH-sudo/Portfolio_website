@@ -32,7 +32,7 @@ const ExpertisePage = () => {
           id="expertise"
           className="page flex flex-col items-center justify-center md:flex-row"
         >
-          <div className="my-auto w-full overflow-auto md:w-3xl">
+          <div className="my-auto w-full overflow-auto md:w-3xl bg-off-white/[0.75] dark:bg-off-black/[0.75] rounded-xl">
             <p
               id="description"
               className="rounded-2xl border-white/50 p-2 text-sm md:text-xl"
@@ -50,7 +50,7 @@ const ExpertisePage = () => {
             </p>
           </div>
 
-          <div className="my-5 h-2 w-full rounded-full bg-gray-500 md:mx-5 md:my-0 md:h-80 md:w-2" />
+          <div className="my-5 h-2 w-full rounded-full bg-gray-500/[0.25] md:mx-5 md:my-0 md:h-80 md:w-2" />
 
           <BreathingGrid logos={logos} />
         </div>

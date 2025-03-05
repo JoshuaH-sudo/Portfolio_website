@@ -31,7 +31,7 @@ const BreathingGrid = ({ logos }: { logos: string[] }) => {
               delay: diagonalIndex * staggerDuration,
               ease: "easeInOut",
             }}
-            className="flex h-15 w-15 items-center justify-center rounded-full border-2 border-black bg-white p-2 shadow-lg md:h-30 md:w-30 select-none"
+            className="flex h-15 w-15 items-center justify-center rounded-full bg-white p-2 shadow-lg md:h-30 md:w-30 select-none"
           >
             <div className="pointer-events-none flex items-center justify-center p-1">
               <Image
