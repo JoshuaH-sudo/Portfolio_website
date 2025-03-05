@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
   }, [testimonials]);
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 snap-start">
       <div className="relative grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-20">
         <div>
           <div className="relative h-40 w-40 md:h-80 md:w-full">
@@ -146,16 +146,16 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-2">
             <button
               onClick={handlePrev}
-              className="group/button border-primary-dark dark:border-primary-light flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
+              className="group/button border-off-black dark:border-off-white flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
             >
               <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button border-primary-dark dark:border-primary-light flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
+              className="group/button border-off-black dark:border-off-white flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
             >
               <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
