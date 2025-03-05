@@ -46,9 +46,9 @@ export const AnimatedTestimonials = ({
 
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2">
+      <div className="relative grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-20">
         <div>
-          <div className="relative w-40 h-40 md:h-80 md:w-full">
+          <div className="relative h-40 w-40 md:h-80 md:w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -120,7 +120,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-4 md:mt-8 text-base md:text-lg text-gray-500 dark:text-neutral-300 h-40">
+            <motion.p className="mt-4 h-40 text-base text-gray-500 md:mt-8 md:text-lg dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -149,13 +149,13 @@ export const AnimatedTestimonials = ({
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button border-primary-dark dark:border-primary-light flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
             >
               <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button border-primary-dark dark:border-primary-light flex h-7 w-7 items-center justify-center rounded-full border bg-gray-100 dark:bg-neutral-800"
             >
               <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>

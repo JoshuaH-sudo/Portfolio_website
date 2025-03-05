@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
     date: "2020 - 2023",
     description: (
       <>
-        At Countersight, I <strong>research</strong> 🔍, design, and implement
+        At Countersight, I <strong>researched</strong> 🔍, designed, and implemented
         software solutions from scratch, ensuring maintainability for future
         development. I lead two major projects, focusing on{" "}
         <strong>front-end development</strong> with a rich UI library and
@@ -59,8 +59,8 @@ export const experiences: Experience[] = [
         colleagues.
         <br />
         <br />
-        Additionally, I offer <strong>technical direction</strong> 🧭, advise
-        colleagues, assist in problem-solving, and conduct code reviews to
+        Additionally, I offered <strong>technical direction</strong> 🧭, advised
+        colleagues by assisting in problem-solving and conduct code reviews to
         maintain best practices.
       </>
     ),
@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Joshua has been a highly motivated, responsible and thoughtful team member...",
+      "Joshua has been a highly motivated, responsible and thoughtful team member at Countersight...",
     name: "David Gavin",
     designation: "Senior Software Engineer",
     src: "/images/testimonials/david-gavin.jpg",
