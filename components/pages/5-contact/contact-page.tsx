@@ -1,6 +1,8 @@
 "use client";
 import useScreen from "@/components/hooks/useScreen";
 import Email from "@/components/svgs/email";
+import Github from "@/components/svgs/github";
+import LinkedIn from "@/components/svgs/linked-in";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { GlareCard } from "@/components/ui/glare-card";
 import { useAppStore } from "@/providers/app-store-provider";
@@ -50,11 +52,10 @@ const ContactPage = () => {
                 target="_blank"
                 className="expand"
               >
-                <Image
-                  src={`/images/icons/${resolvedTheme === "dark" ? "linkedIn-white.png" : "linkedIn.png"}`}
-                  width={50}
-                  height={50}
-                  alt="linkedIn"
+                <LinkedIn
+                  width={60}
+                  height={60}
+                  fill={resolvedTheme === "dark" ? "white" : "black"}
                 />
               </a>
               <a
@@ -62,11 +63,10 @@ const ContactPage = () => {
                 target="_blank"
                 className="expand"
               >
-                <Image
-                  src={`/images/icons/${resolvedTheme === "dark" ? "github-white.png" : "github.png"}`}
-                  width={50}
-                  height={50}
-                  alt="github"
+                <Github
+                  width={60}
+                  height={60}
+                  fill={resolvedTheme === "dark" ? "white" : "black"}
                 />
               </a>
               <a href="mailto:joshua_hoban@proton.me" className="expand">

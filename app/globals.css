@@ -227,7 +227,7 @@
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    /* scroll-padding-top: calc(var(--spacing) * 15); */
+    scroll-padding-top: calc(var(--spacing) * 15);
     scroll-behavior: smooth;
   }
 }
@@ -238,7 +238,6 @@
     scroll-snap-align: start;
     margin-left: calc(var(--spacing) * 10);
     margin-right: calc(var(--spacing) * 10);
-    padding-top: calc(var(--spacing) * 15);
     padding-bottom: calc(var(--spacing) * 15);
     height: 100vh;
   }
@@ -250,7 +249,7 @@
       margin-left: calc(var(--spacing) * 2);
       margin-right: calc(var(--spacing) * 2);
       height: 100%;
-      min-height: 100vh;
+      min-height: calc(100vh - (var(--spacing) * 15));
     }
   }
 }

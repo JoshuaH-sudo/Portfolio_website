@@ -1,6 +1,6 @@
 "use client";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import React, { useEffect } from "react";
+import React from "react";
 import BackgroundBeams from "@/components/ui/background-beams";
 import Footer from "@/components/footer";
 import { motion } from "motion/react";
@@ -28,7 +28,6 @@ const words = [
 
 export const HomePage = () => {
   const { onViewPortEnter, setActiveTab } = useAppStore((state) => state);
-  const { isMobile } = useScreen();
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
@@ -36,7 +35,7 @@ export const HomePage = () => {
     >
       <div
         id="home"
-        className="page relative mx-auto"
+        className="page relative mx-auto md:pt-15 md:mb-1"
         // When the user scrolls to this section set the active tab to home
       >
         <div className="relative z-10 my-auto flex flex-col items-center justify-center">
