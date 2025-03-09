@@ -9,6 +9,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 import Image from "next/image";
 import { GlareCard } from "@/components/ui/glare-card";
+import useScreen from "@/components/hooks/useScreen";
 
 const words = [
   "Front-end",
@@ -27,6 +28,7 @@ const words = [
 
 export const HomePage = () => {
   const { onViewPortEnter, setActiveTab } = useAppStore((state) => state);
+  const { isMobile } = useScreen();
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
