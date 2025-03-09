@@ -21,7 +21,7 @@ const ExperiencePage: React.FC = () => {
         id="experience"
         className="page flex flex-col justify-between gap-10 px-2 md:flex-row md:pt-30"
       >
-        <div id="resume" className="h-screen md:h-full md:w-6xl">
+        <div id="resume" className="h-screen py-20 md:py-0 md:h-full md:w-6xl">
           <BackgroundGradient animate={true}>
             <ExperienceList />
           </BackgroundGradient>
