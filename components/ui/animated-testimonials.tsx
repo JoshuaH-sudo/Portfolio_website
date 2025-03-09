@@ -47,7 +47,7 @@ export const AnimatedTestimonials = ({
   }, [testimonials]);
 
   return (
-    <div className="mx-auto max-w-sm snap-start px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm snap-start md:snap-align-none px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-20">
         <div>
           <div ref={ref} className="relative h-40 w-40 md:h-80 md:w-full">

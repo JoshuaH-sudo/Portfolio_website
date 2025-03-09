@@ -1,6 +1,6 @@
 "use client";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import React from "react";
+import React, { useEffect } from "react";
 import BackgroundBeams from "@/components/ui/background-beams";
 import Footer from "@/components/footer";
 import { motion } from "motion/react";
@@ -40,7 +40,7 @@ export const HomePage = () => {
         <div className="relative z-10 my-auto flex flex-col items-center justify-center">
           <h1>Joshua Hoban.</h1>
 
-          <h5 className="flex flex-row items-end justify-center mb-2">
+          <h5 className="mb-2 flex flex-row items-end justify-center">
             <FlipWords words={words} className="font-andale-mono text-2xl" />
             Developer.
           </h5>

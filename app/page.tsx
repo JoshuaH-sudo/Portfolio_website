@@ -19,9 +19,5 @@ export default function Home() {
     </>
   );
 
-  if (isMobile) { 
     return pageComponents;
-  } else {
-    return <TracingBeam>{pageComponents}</TracingBeam>;
-  }
 }

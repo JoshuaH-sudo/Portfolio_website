@@ -37,7 +37,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="font-andale-mono bg-off-white[.5] dark:bg-off-black/[.5] sticky top-0 z-1000 flex h-15 w-full flex-row items-center justify-end gap-2 px-5 py-1 backdrop-blur-3xl transition-colors duration-300 md:justify-between md:px-20">
+    <header className="font-andale-mono bg-off-white[.5] dark:bg-off-black/[.5] fixed top-0 z-500 flex h-15 w-full flex-row items-center justify-end gap-2 px-5 py-1 backdrop-blur-3xl transition-colors duration-300 md:justify-between md:px-20">
       <Link href="#home" className="expand grow pl-10 md:grow-0 md:pl-0">
         <p className="font-monomaniac-one text-xl font-extrabold">
           Joshua Hoban
