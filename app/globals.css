@@ -250,5 +250,13 @@
       height: 100%;
       min-height: 100vh;
     }
+
+    main {
+      height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-padding: calc(var(--spacing) * 15);
+      scroll-behavior: smooth;
+    }
   }
 }
