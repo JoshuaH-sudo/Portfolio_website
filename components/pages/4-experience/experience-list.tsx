@@ -20,7 +20,7 @@ const ExperienceList: FC = () => {
         return (
           <AccordionItem key={title} value={index.toString()}>
             <AccordionTrigger>{`${title} ${date}`}</AccordionTrigger>
-            <AccordionContent className="h-52 overflow-y-auto md:h-96">
+            <AccordionContent className="h-90 overflow-y-auto md:h-96">
               <p>{description}</p>
             </AccordionContent>
           </AccordionItem>
