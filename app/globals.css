@@ -227,7 +227,6 @@
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    scroll-padding-top: calc(var(--spacing) * 15);
     scroll-behavior: smooth;
   }
 }
@@ -249,7 +248,7 @@
       margin-left: calc(var(--spacing) * 2);
       margin-right: calc(var(--spacing) * 2);
       height: 100%;
-      min-height: calc(100vh - (var(--spacing) * 15));
+      min-height: 100vh;
     }
   }
 }
