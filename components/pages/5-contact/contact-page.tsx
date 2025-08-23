@@ -10,12 +10,21 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const staggerDuration = 0.5; // Base stagger time
 const ContactPage = () => {
   const { onViewPortEnter } = useAppStore((state) => state);
   const { resolvedTheme } = useTheme();
   const { isMobile } = useScreen();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent hydration mismatch by using fallback color until mounted
+  const iconColor = mounted ? (resolvedTheme === "dark" ? "white" : "black") : "black";
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
@@ -55,7 +64,7 @@ const ContactPage = () => {
                 <LinkedIn
                   width={60}
                   height={60}
-                  fill={resolvedTheme === "dark" ? "white" : "black"}
+                  fill={iconColor}
                 />
               </a>
               <a
@@ -66,14 +75,14 @@ const ContactPage = () => {
                 <Github
                   width={60}
                   height={60}
-                  fill={resolvedTheme === "dark" ? "white" : "black"}
+                  fill={iconColor}
                 />
               </a>
               <a href="mailto:joshua_hoban@proton.me" className="expand">
                 <Email
                   width={60}
                   height={60}
-                  fill={resolvedTheme === "dark" ? "white" : "black"}
+                  fill={iconColor}
                 />
               </a>
             </div>
