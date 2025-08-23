@@ -24,7 +24,8 @@ const ContactPage = () => {
   }, []);
 
   // Prevent hydration mismatch by using fallback color until mounted
-  const iconColor = mounted ? (resolvedTheme === "dark" ? "white" : "black") : "black";
+  // Use a neutral gray color as fallback that works on both themes
+  const iconColor = mounted ? (resolvedTheme === "dark" ? "white" : "black") : "#666666";
   return (
     <motion.div
       viewport={{ amount: 0.8 }}
