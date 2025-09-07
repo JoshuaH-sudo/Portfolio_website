@@ -8,7 +8,6 @@ import { AppStoreProvider } from "@/providers/app-store-provider";
 import { Metadata } from "next";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const inter = Inter({
   subsets: ["latin"],
