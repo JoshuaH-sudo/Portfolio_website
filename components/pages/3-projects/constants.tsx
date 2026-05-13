@@ -4,8 +4,7 @@ import Link from "next/link";
 export const projectItems = [
     {
     title: (
-      <Link href="https://apps.apple.com/de/app/friend-zone-travel-planner/id6763764427?l=en-GB
-friend-zone-travel-planner" target="_blank">
+      <Link href="https://www.friend-zone.app/" target="_blank">
         <span className="text-blue-500 underline dark:text-blue-300">
           Friend Zone Travel Planner
         </span>{" "}
