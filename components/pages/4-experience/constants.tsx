@@ -4,7 +4,7 @@ import { Experience } from "./types";
 export const experiences: Experience[] = [
   {
     title: "Visi/One",
-    date: "2024 - Present",
+    date: "2024 - 2026",
     description: (
       <>
         At Visi/One, I lead the <strong>frontend development efforts</strong> 🚀,

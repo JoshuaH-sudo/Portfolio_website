@@ -2,6 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const projectItems = [
+    {
+    title: (
+      <Link href="https://apps.apple.com/de/app/friend-zone-travel-planner/id6763764427?l=en-GB
+friend-zone-travel-planner" target="_blank">
+        <span className="text-blue-500 underline dark:text-blue-300">
+          Friend Zone Travel Planner
+        </span>{" "}
+        🌍
+      </Link>
+    ),
+    description:
+      "Friend Zone Travel Planner is an app that helps you plan trips with friends, making it easier to coordinate schedules, share itineraries, and discover new destinations together.",
+    header: (
+      <Image
+        src="/images/projects/friend-zone-travel-planner.png"
+        alt="Friend Zone Travel Planner"
+        width={600}
+        height={300}
+      />
+    ),
+  },
   {
     title: (
       <Link href="https://apsj.com.au/index.php/journal" target="_blank">
