@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const projectItems = [
-    {
+  {
     title: (
-      <Link href="https://www.friend-zone.app/" target="_blank">
+      <Link href="https://www.friend-zone.app/" target="_blank" rel="noopener noreferrer">
         <span className="text-blue-500 underline dark:text-blue-300">
           Friend Zone Travel Planner
         </span>{" "}
@@ -24,7 +24,7 @@ export const projectItems = [
   },
   {
     title: (
-      <Link href="https://apsj.com.au/index.php/journal" target="_blank">
+      <Link href="https://apsj.com.au/index.php/journal" target="_blank" rel="noopener noreferrer">
         <span className="text-blue-500 underline dark:text-blue-300">
           The Australian Pharmacy Students Journal (APSJ)
         </span>{" "}
@@ -47,6 +47,7 @@ export const projectItems = [
       <Link
         href="https://github.com/JoshuaH-sudo/dating_profile_website"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <span className="text-blue-500 underline dark:text-blue-300">
           Dating Profile Website
@@ -70,6 +71,7 @@ export const projectItems = [
       <Link
         href="https://github.com/JoshuaH-sudo/dev-academy-2023-exercise"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <span className="text-blue-500 underline dark:text-blue-300">
           HSL Transport App
@@ -93,6 +95,7 @@ export const projectItems = [
       <Link
         href="https://github.com/JoshuaH-sudo/Portfolio_website"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <span className="text-blue-500 underline dark:text-blue-300">
           This website... wow!
